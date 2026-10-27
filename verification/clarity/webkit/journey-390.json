@@ -1,0 +1,11 @@
+{
+  "browser": "webkit",
+  "width": 390,
+  "status": "passed",
+  "files_distinct": true,
+  "original_deadline_preserved": true,
+  "evidence_cannot_resume": true,
+  "critical_serious_axe_violations": 0,
+  "errors": [],
+  "human_observation": false
+}

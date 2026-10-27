@@ -1,0 +1,17 @@
+{
+  "negative_control": "clean-reset-on-clone",
+  "actual_product_defect": false,
+  "seed": 761921,
+  "path": "1:3:2:2",
+  "shrinks": 3,
+  "minimized": "{\"kind\":\"action\",\"action\":{\"type\":\"advance\",\"ticks\":4}},{\"kind\":\"restore\"} /*replayPath=\"J:B\"*/",
+  "reproduced": true,
+  "engine_sequences": {
+    "seed": 761903,
+    "runs": 100
+  },
+  "session_sequences": {
+    "seed": 761911,
+    "runs": 70
+  }
+}

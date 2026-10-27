@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-27T13:18:02.237Z",
+  "implementation_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "tooling": {
+    "status": "passed",
+    "tests": {
+      "replay": {
+        "passed": 40,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-replay-tests.json"
+      },
+      "mcp": {
+        "passed": 55,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-mcp-tests.json"
+      }
+    }
+  },
+  "genuine_recording": {
+    "status": "passed",
+    "reason": "Actual assessed-model board calls retained unchanged, replayed and qualified. One selected demonstration, not a model success-rate estimate.",
+    "evidence": "evidence/recording-status.json",
+    "selection": {
+      "id": "codex-2026-10-26-001",
+      "category": "live_model",
+      "recording": {
+        "path": "recordings/curated/codex-2026-10-26-001.json",
+        "sha256": "9af8adac33ce0bfbd0a1ee30225825debfabe5a981f897ad10ebd000f0e5a292"
+      },
+      "qualification": {
+        "path": "recordings/curated/codex-2026-10-26-001-qualification.json",
+        "sha256": "bf5058428b1366988f18958987b322ff1dcaebaab76ad2ef33daeaeaf457b62e"
+      }
+    },
+    "captured_application_commit": "ad569447495af9bacbd28874042add32f3b9ba6a",
+    "requested_model": "gpt-6.1-sol",
+    "returned_model": null,
+    "harness_version": "ata-codex-cli-v1/0.160.1",
+    "model_requests": null,
+    "tool_calls": 5,
+    "token_usage": {
+      "input": 25203,
+      "output": 261
+    },
+    "cost_usd": null,
+    "unavailable_reason": "Codex exposes the resolved requested model, but not provider-returned model identity or individual provider request counts.",
+    "observed": true,
+    "observed_model_requests": null
+  },
+  "provider_bridge": {
+    "status": "not_run",
+    "reason": "Existing subscription CLI route used; paid API route not invoked."
+  },
+  "behavioral_verification": {
+    "status": "passed",
+    "passing_cases": 12,
+    "negative_transcripts": 2
+  },
+  "evidence_class": "actual_genuine_capture_with_separate_fixture_and_mocked_provider_software_tests"
+}

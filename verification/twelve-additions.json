@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "implementation_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "evidence_class": "automated_local_software",
+  "features": [
+    {
+      "number": 1,
+      "name": "Factual failure explanations",
+      "status": "passed"
+    },
+    {
+      "number": 2,
+      "name": "Immediate edit receipts",
+      "status": "passed"
+    },
+    {
+      "number": 3,
+      "name": "Event-stop Run",
+      "status": "passed"
+    },
+    {
+      "number": 4,
+      "name": "Recent pulse timeline",
+      "status": "passed"
+    },
+    {
+      "number": 5,
+      "name": "Concurrent-tab protection",
+      "status": "passed"
+    },
+    {
+      "number": 6,
+      "name": "Complete verification packet",
+      "status": "passed"
+    },
+    {
+      "number": 7,
+      "name": "Controlled repair laboratory",
+      "status": "passed"
+    },
+    {
+      "number": 8,
+      "name": "Replay annotations",
+      "status": "passed"
+    },
+    {
+      "number": 9,
+      "name": "Keyboard command menu",
+      "status": "passed"
+    },
+    {
+      "number": 10,
+      "name": "Browser readiness",
+      "status": "passed"
+    },
+    {
+      "number": 11,
+      "name": "Guided MCP requests",
+      "status": "passed"
+    },
+    {
+      "number": 12,
+      "name": "Reproducible static builds",
+      "status": "passed"
+    }
+  ],
+  "browser_tests": [
+    {
+      "file": "twelve-exploration.spec.ts",
+      "title": "same-base lab preserves the live control state and deadline, supports standby repair and frame navigation",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-exploration.spec.ts",
+      "title": "notes preserve exact source bytes, pin and navigate jobs, import separately and reject mismatched files",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-exploration.spec.ts",
+      "title": "exploration tools reflow on a narrow viewport and expose named keyboard controls",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-exploration.spec.ts",
+      "title": "switching the shared base clears edits before applying old job identifiers to a new candidate",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-exploration.spec.ts",
+      "title": "pending replay notes import locks edits through file reading and worker validation, and cancellation ignores late reads",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-reliability.spec.ts",
+      "title": "command dialog steps the actual board and restores trigger focus",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-reliability.spec.ts",
+      "title": "distinct live attempts keep separate autosaves in the same browser",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-reliability.spec.ts",
+      "title": "transfer flushes an accepted edit behind a delayed autosave and retains the original deadline",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-reliability.spec.ts",
+      "title": "optional browser checks clean disposable resources and export statuses without browser or attempt data",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-reliability.spec.ts",
+      "title": "reset leaves earlier evidence saved but refuses to resume that abandoned attempt",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-reliability.spec.ts",
+      "title": "failed transfer cannot reactivate an attempt abandoned by its previous owner",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-reliability.spec.ts",
+      "title": "restarting a recorded attempt retains only the playback source bound by the new session",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-workbench.spec.ts",
+      "title": "trace-backed explanation describes the actual stale-queue mismatch",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-workbench.spec.ts",
+      "title": "trace-backed explanation describes the actual duplicate-clock mismatch",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-workbench.spec.ts",
+      "title": "trace-backed explanation describes the actual cached-gate mismatch",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-workbench.spec.ts",
+      "title": "edit receipt preserves queued duplicate work and live timeline exposes both pulses",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-workbench.spec.ts",
+      "title": "event run stops at delivery and manual Step interrupts without hiding the original deadline",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-workbench.spec.ts",
+      "title": "actual browser packet reproduces all checks independently and rejects a later forged verdict",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-workbench.spec.ts",
+      "title": "new workbench reflows with exact pulse counts and keyboard controls at narrow 200 percent zoom",
+      "status": "passed"
+    },
+    {
+      "file": "twelve-workbench.spec.ts",
+      "title": "all public additions are absent from the frozen matched rehearsal",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/twelve/browser/workbench-narrow.png",
+      "sha256": "a76651244cdf5c4eba8fae9b08c8e23a9316328daa73f1cb61c9f57ea3eb302e"
+    },
+    {
+      "path": "evidence/twelve/browser/workbench-zoom.png",
+      "sha256": "43b2e7a69d04b258978a498a037d8f1d7fdc14c4da2d39d07481b05028ed7779"
+    },
+    {
+      "path": "evidence/twelve/exploration/repair-lab-mobile.png",
+      "sha256": "91403b0b60e51d4c418b2f91524b859eecc4e69d4f5ddfbe5090889ae4a50006"
+    },
+    {
+      "path": "evidence/twelve/reliability/integrated/commands.png",
+      "sha256": "aad26ea0abd81582d4b226da7b3885ab50682e7f3d6b6784d5fece49e7b25d6e"
+    },
+    {
+      "path": "evidence/twelve/reliability/integrated/readiness.png",
+      "sha256": "15515644aee26d84b13380303b65ab198f7f3a699ec41bb417e9d378945a2132"
+    }
+  ],
+  "reproducibility": {
+    "receipt": "evidence/twelve/reproducible/receipt.json",
+    "inventory_sha256": "52d2f69d516c58d35c0b7fdfecca4e8ffa771dca809fff4680fa6924e7cdd9dc",
+    "release_id": "dc677c0b05c296644c4de4de32218c396d222242ac3ff301ac2725e52055c322"
+  },
+  "claim_ceiling": "All twelve added software capabilities exercised. No genuine-model, unfamiliar-human, research-launch or hosted-release evidence is established."
+}

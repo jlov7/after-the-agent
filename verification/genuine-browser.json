@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "source": {
+    "id": "codex-2026-10-26-001",
+    "category": "live_model",
+    "recording": {
+      "path": "recordings/curated/codex-2026-10-26-001.json",
+      "sha256": "9af8adac33ce0bfbd0a1ee30225825debfabe5a981f897ad10ebd000f0e5a292"
+    },
+    "qualification": {
+      "path": "recordings/curated/codex-2026-10-26-001-qualification.json",
+      "sha256": "bf5058428b1366988f18958987b322ff1dcaebaab76ad2ef33daeaeaf457b62e"
+    }
+  },
+  "category": "live_model",
+  "unchanged_model_commands": 5,
+  "controller_fault_separate": true,
+  "inherited_queue_preserved": true,
+  "failed_oracle_exit": 1,
+  "repaired_oracle_exit": 0,
+  "passing_cases": 12,
+  "page_errors": [],
+  "external_requests": [],
+  "axe_violations": 0,
+  "human_observation": false
+}

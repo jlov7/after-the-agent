@@ -1,0 +1,51 @@
+JSON report written to <local>/evidence/gate-oracle-tests.json
+npm notice run after-the-agent@1.1.0 test:oracle
+npm notice run npm run build:packages && vitest run tests/oracle --reporter=json --outputFile=evidence/gate-oracle-tests.json
+npm notice run after-the-agent@1.1.0 build:packages
+npm notice run tsc -p tsconfig.build.json
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found
+WARN `--no-project` was provided, but no project was found

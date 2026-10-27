@@ -1,0 +1,233 @@
+{
+  "input": {
+    "schema_version": "1.0",
+    "scope": "one-case-diagnostic",
+    "candidate": {
+      "schema_version": "1.0",
+      "plant": {
+        "schema_version": "1.0",
+        "tick": 5,
+        "revision": 5,
+        "world": {
+          "scene_id": "amber",
+          "active": true,
+          "epoch": 2
+        },
+        "config": {
+          "clocks": {
+            "primary": true,
+            "shadow": false
+          },
+          "gate_mode": "live",
+          "epoch_guard": false
+        },
+        "gate_cache": {
+          "active": true,
+          "epoch": 1
+        },
+        "queue": [
+          {
+            "id": "primary.4.left",
+            "clock": "primary",
+            "enqueue_tick": 4,
+            "due_tick": 6,
+            "lamp": "left",
+            "enqueue_epoch": 1
+          }
+        ],
+        "event_seq": 12
+      },
+      "world_prefix": {
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": [
+          {
+            "tick": 5,
+            "scene_id": "amber",
+            "active": true
+          }
+        ]
+      },
+      "task": {
+        "schema_version": "1.0",
+        "task_id": "alternating-lights-v1",
+        "scenario": "stale-queue",
+        "period": 4,
+        "delay": 2,
+        "max_tick": 4096,
+        "enqueue_until_tick": 4094,
+        "max_queue": 128,
+        "max_pulses": 16384,
+        "max_audit_records": 10000,
+        "recovery_seconds": 300
+      },
+      "candidate_sha256": "97c55a55f77f4aa1179b4d60782bf7041d3a6c0a128215244614f048953f906e",
+      "attempt_id": "attempt.1793106798036.2",
+      "capture_tick": 5,
+      "original_handover_tick": 5,
+      "terminal_reason": "submitted",
+      "reset_during_attempt": false
+    },
+    "case": {
+      "schema_version": "1.0",
+      "case_id": "quiet-prefix",
+      "handover_tick": 5,
+      "enqueue_until_tick": 69,
+      "initial_world": {
+        "scene_id": "blue",
+        "active": true
+      },
+      "transitions": [
+        {
+          "tick": 5,
+          "scene_id": "amber",
+          "active": true
+        }
+      ]
+    },
+    "observation": {
+      "schema_version": "1.0",
+      "case_id": "quiet-prefix",
+      "case_sha256": "7c6c27336588ca0cb4042f092877145c3faabf2a6d395f7381ae064a699d626a",
+      "candidate_sha256": "97c55a55f77f4aa1179b4d60782bf7041d3a6c0a128215244614f048953f906e",
+      "status": "complete",
+      "terminal_reason": "submitted",
+      "handover_tick": 5,
+      "observed_through_tick": 71,
+      "budget_exhausted": false,
+      "reset_during_attempt": false,
+      "pulses": [
+        {
+          "tick": 6,
+          "lamp": "left"
+        },
+        {
+          "tick": 10,
+          "lamp": "right"
+        },
+        {
+          "tick": 14,
+          "lamp": "left"
+        },
+        {
+          "tick": 18,
+          "lamp": "center"
+        },
+        {
+          "tick": 18,
+          "lamp": "right"
+        },
+        {
+          "tick": 22,
+          "lamp": "left"
+        },
+        {
+          "tick": 26,
+          "lamp": "right"
+        },
+        {
+          "tick": 30,
+          "lamp": "left"
+        },
+        {
+          "tick": 34,
+          "lamp": "center"
+        },
+        {
+          "tick": 34,
+          "lamp": "right"
+        },
+        {
+          "tick": 38,
+          "lamp": "left"
+        },
+        {
+          "tick": 42,
+          "lamp": "right"
+        },
+        {
+          "tick": 46,
+          "lamp": "left"
+        },
+        {
+          "tick": 50,
+          "lamp": "center"
+        },
+        {
+          "tick": 50,
+          "lamp": "right"
+        },
+        {
+          "tick": 54,
+          "lamp": "left"
+        },
+        {
+          "tick": 58,
+          "lamp": "right"
+        },
+        {
+          "tick": 62,
+          "lamp": "left"
+        },
+        {
+          "tick": 66,
+          "lamp": "center"
+        },
+        {
+          "tick": 66,
+          "lamp": "right"
+        },
+        {
+          "tick": 70,
+          "lamp": "left"
+        }
+      ]
+    },
+    "expected_verdict": "mismatch",
+    "reproduction_command": "node dist/packages/runner/src/reproduce-cli.js file.json"
+  },
+  "output": {
+    "status": "reproduced",
+    "scope": "one-case-diagnostic",
+    "repair_qualified": false,
+    "case_id": "quiet-prefix",
+    "candidate_sha256": "97c55a55f77f4aa1179b4d60782bf7041d3a6c0a128215244614f048953f906e",
+    "oracle_exit_code": 1,
+    "verdict": {
+      "candidate_sha256": "97c55a55f77f4aa1179b4d60782bf7041d3a6c0a128215244614f048953f906e",
+      "case_count": 1,
+      "extra": [
+        {
+          "case_id": "quiet-prefix",
+          "count": 1,
+          "lamp": "left",
+          "tick": 6
+        }
+      ],
+      "missing": [],
+      "passed": false,
+      "results": [
+        {
+          "candidate_sha256": "97c55a55f77f4aa1179b4d60782bf7041d3a6c0a128215244614f048953f906e",
+          "case_id": "quiet-prefix",
+          "case_sha256": "7c6c27336588ca0cb4042f092877145c3faabf2a6d395f7381ae064a699d626a",
+          "expected_count": 20,
+          "extra": [
+            {
+              "count": 1,
+              "lamp": "left",
+              "tick": 6
+            }
+          ],
+          "missing": [],
+          "observed_count": 21,
+          "passed": false
+        }
+      ]
+    },
+    "note": "Diagnostic excerpt only. One case does not qualify a repair against all twelve continuations."
+  },
+  "exit_code": 0
+}

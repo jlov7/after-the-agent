@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "implementation_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "evidence_class": "automated_software_verification",
+  "tests": [
+    {
+      "file": "inspection-upgrade.spec.ts",
+      "title": "a counterexample opens playable frozen continuation frames through the final drain",
+      "status": "passed"
+    },
+    {
+      "file": "inspection-upgrade.spec.ts",
+      "title": "a queue row follows the actual recorded job to its terminal outcome",
+      "status": "passed"
+    },
+    {
+      "file": "inspection-upgrade.spec.ts",
+      "title": "two retained frozen checks expose exact repair differences and context warnings",
+      "status": "passed"
+    },
+    {
+      "file": "inspection-upgrade.spec.ts",
+      "title": "debrief navigation reselects its latest frozen check after an older check was inspected",
+      "status": "passed"
+    },
+    {
+      "file": "inspection-upgrade.spec.ts",
+      "title": "repeated job navigation follows the requested job after a different job was selected",
+      "status": "passed"
+    },
+    {
+      "file": "learning-mobile.spec.ts",
+      "title": "isolated engine lessons require a prediction and reveal actual queue, guard and cache outcomes",
+      "status": "passed"
+    },
+    {
+      "file": "learning-mobile.spec.ts",
+      "title": "public narrow repair dock stays visible while editing and checking, including 200 percent reflow",
+      "status": "passed"
+    },
+    {
+      "file": "learning-mobile.spec.ts",
+      "title": "desktop repair controls remain in normal board layout",
+      "status": "passed"
+    },
+    {
+      "file": "upgrade-isolation.spec.ts",
+      "title": "scrubbing a frozen continuation leaves the live commands, plant and original deadline unchanged",
+      "status": "passed"
+    },
+    {
+      "file": "upgrade-isolation.spec.ts",
+      "title": "the original recovery deadline expires while behavior inspection remains open",
+      "status": "passed"
+    },
+    {
+      "file": "upgrade-isolation.spec.ts",
+      "title": "a new attempt cannot reopen a previous attempt inspection or comparison",
+      "status": "passed"
+    },
+    {
+      "file": "upgrade-isolation.spec.ts",
+      "title": "concept lessons do not start recovery, save commands or change the authored handover",
+      "status": "passed"
+    },
+    {
+      "file": "upgrade-isolation.spec.ts",
+      "title": "public concept and inspection aids are absent in matched local rehearsal",
+      "status": "passed"
+    },
+    {
+      "file": "upgrade-isolation.spec.ts",
+      "title": "a failed continuation worker reports unavailable without changing the active repair",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/ui-browser/screenshots/concept-lessons.png",
+      "sha256": "62994fd8e488a73cc493cb681494bb93eded4681c03584c362f5ec5cd3ef06df"
+    },
+    {
+      "path": "evidence/ui-browser/screenshots/continuation-inspection.png",
+      "sha256": "a52c9c1558dbb08bb4d48a1ff8dd6dcdf2de8da6c3a6dd36c62c2593f1b1eda6"
+    },
+    {
+      "path": "evidence/ui-browser/screenshots/mobile-edit.png",
+      "sha256": "ba5e34aa650916ee8419af8f23d1c163cb356092adb79631627f8544c4597318"
+    },
+    {
+      "path": "evidence/ui-browser/screenshots/mobile-edit-zoom-200.png",
+      "sha256": "bee72a9eb03f23d8d3b776fe9af8c5724d9b6462d734882199dfc825db8c9702"
+    }
+  ],
+  "continuation_worker": {
+    "forbidden_dependencies": []
+  },
+  "claim_ceiling": "Actual automated engine/browser checks. Human usability, learning benefit and genuine assessed-model recording remain unobserved. Research remains disabled."
+}

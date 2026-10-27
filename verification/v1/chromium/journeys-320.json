@@ -1,0 +1,48 @@
+{
+  "browser": "chromium",
+  "version": "156.0.8078.4",
+  "errors": [],
+  "external": [],
+  "receipts": [
+    {
+      "fault": "stale-queue",
+      "width": 320,
+      "tick": 5,
+      "checks": [
+        "mismatch",
+        "pass"
+      ],
+      "commands_replayed": 7,
+      "packet_exact_roundtrip": true,
+      "original_deadline_preserved": true,
+      "critical_serious_axe_violations": 0
+    },
+    {
+      "fault": "duplicate-clock",
+      "width": 320,
+      "tick": 5,
+      "checks": [
+        "mismatch",
+        "pass"
+      ],
+      "commands_replayed": 5,
+      "packet_exact_roundtrip": true,
+      "original_deadline_preserved": true,
+      "critical_serious_axe_violations": 0
+    },
+    {
+      "fault": "cached-gate",
+      "width": 320,
+      "tick": 5,
+      "checks": [
+        "mismatch",
+        "pass"
+      ],
+      "commands_replayed": 4,
+      "packet_exact_roundtrip": true,
+      "original_deadline_preserved": true,
+      "critical_serious_axe_violations": 0
+    }
+  ],
+  "claim_ceiling": "Automated software journeys, not human observation."
+}

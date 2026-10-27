@@ -1,0 +1,42 @@
+{
+  "label": "PLANNING SCENARIO — not exact power or spending authorization",
+  "method": "equal-arm independent binary normal approximation, two-sided, no continuity correction",
+  "assumptions": {
+    "p0": 0.5,
+    "p1": 0.7,
+    "alpha": 0.05,
+    "power": 0.8
+  },
+  "sample_size": {
+    "per_arm": 93,
+    "total_analyzed": 186
+  },
+  "budget_scenarios": [
+    {
+      "participants": 224,
+      "minutes": 30,
+      "hourly_rate_usd": 15,
+      "platform_fee_fraction": 0.42857,
+      "participant_rewards_usd": 1680.0,
+      "platform_fee_usd": 720.0,
+      "total_usd": 2400.0
+    },
+    {
+      "participants": 224,
+      "minutes": 45,
+      "hourly_rate_usd": 15,
+      "platform_fee_fraction": 0.42857,
+      "participant_rewards_usd": 2520.0,
+      "platform_fee_usd": 1080.0,
+      "total_usd": 3600.0
+    }
+  ],
+  "limits": [
+    "Unknown true effects and baseline rates; confirm assumptions before preregistration.",
+    "Approximation can be poor near boundary probabilities or small expected counts.",
+    "Budget headcount is independent of calculated sample size; no implicit adequacy claim.",
+    "Excludes pilot, review, taxes, screening, extra compensation, publication and infrastructure.",
+    "Corporate fee assumption 0.42857 checked 2026-10-11; verify current quote before launch."
+  ]
+}
+WARN `--no-project` was provided, but no project was found

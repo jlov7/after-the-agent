@@ -1,0 +1,1871 @@
+{
+  "schema_version": "1.0",
+  "evidence_class": "local_software_verification",
+  "implementation_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "clean_at_start": true,
+  "started_at": "2026-10-27T13:12:38.124Z",
+  "finished_at": "2026-10-27T13:18:02.820Z",
+  "software": {
+    "status": "passed"
+  },
+  "commands": [
+    {
+      "name": "external-reference",
+      "executable": "uv",
+      "arguments": [
+        "run",
+        "--no-project",
+        "python",
+        "scripts/verify_reference.py",
+        "--manifest",
+        "PUBLIC_REFERENCE_MANIFEST.json",
+        "--expected-manifest-sha",
+        "b30d96406f0b7344e135bd4f09b70a29543ef3d4e2d6e23ed72d421e33e18901"
+      ],
+      "scope": "retained_reference",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:38.155Z",
+      "finished_at": "2026-10-27T13:12:38.201Z",
+      "tests": null,
+      "log": "verification/commands/gate-external-reference.log",
+      "original_log_sha256": "d8d7c6c7f0137289351f0e551dea1354c40df49594849c3fb267b4a73fa4b7ca",
+      "published_log_sha256": "d8d7c6c7f0137289351f0e551dea1354c40df49594849c3fb267b4a73fa4b7ca"
+    },
+    {
+      "name": "candidate-reference",
+      "executable": "uv",
+      "arguments": [
+        "run",
+        "--no-project",
+        "python",
+        "scripts/verify_reference.py",
+        "--manifest",
+        "PUBLIC_REFERENCE_MANIFEST.json",
+        "--expected-manifest-sha",
+        "b30d96406f0b7344e135bd4f09b70a29543ef3d4e2d6e23ed72d421e33e18901"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:38.202Z",
+      "finished_at": "2026-10-27T13:12:38.237Z",
+      "tests": null,
+      "log": "verification/commands/gate-candidate-reference.log",
+      "original_log_sha256": "d8d7c6c7f0137289351f0e551dea1354c40df49594849c3fb267b4a73fa4b7ca",
+      "published_log_sha256": "d8d7c6c7f0137289351f0e551dea1354c40df49594849c3fb267b4a73fa4b7ca"
+    },
+    {
+      "name": "clean-install",
+      "executable": "npm",
+      "arguments": [
+        "ci",
+        "--ignore-scripts"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:38.237Z",
+      "finished_at": "2026-10-27T13:12:40.044Z",
+      "tests": null,
+      "log": "verification/commands/gate-clean-install.log",
+      "original_log_sha256": "9a007833bd2867facdcd23331a43bcff527c798d2aeca86c58dd11c38da87dfb",
+      "published_log_sha256": "9a007833bd2867facdcd23331a43bcff527c798d2aeca86c58dd11c38da87dfb"
+    },
+    {
+      "name": "generate-contracts",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "generate:contracts"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:40.044Z",
+      "finished_at": "2026-10-27T13:12:40.261Z",
+      "tests": null,
+      "log": "verification/commands/gate-generate-contracts.log",
+      "original_log_sha256": "d8a81b2b31bdd224a77a166630780e594fe09c29badd0a24d7f8aefe9596bfb0",
+      "published_log_sha256": "d8a81b2b31bdd224a77a166630780e594fe09c29badd0a24d7f8aefe9596bfb0"
+    },
+    {
+      "name": "typecheck",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "typecheck"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:40.270Z",
+      "finished_at": "2026-10-27T13:12:42.971Z",
+      "tests": null,
+      "log": "verification/commands/gate-typecheck.log",
+      "original_log_sha256": "96e493f0a920e01d173c68f0f49f24a51f8653cbcd2ef42e3ad398fd4a487c06",
+      "published_log_sha256": "96e493f0a920e01d173c68f0f49f24a51f8653cbcd2ef42e3ad398fd4a487c06"
+    },
+    {
+      "name": "lint",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "lint"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:42.972Z",
+      "finished_at": "2026-10-27T13:12:44.716Z",
+      "tests": null,
+      "log": "verification/commands/gate-lint.log",
+      "original_log_sha256": "2325bacadad4b166ab86473754adc966adbfb16fcab6667ad860d0bfcaa03743",
+      "published_log_sha256": "2325bacadad4b166ab86473754adc966adbfb16fcab6667ad860d0bfcaa03743"
+    },
+    {
+      "name": "contract",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "test:contract",
+        "--",
+        "--reporter=json",
+        "--outputFile=evidence/gate-contract-tests.json"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:44.716Z",
+      "finished_at": "2026-10-27T13:12:45.509Z",
+      "tests": {
+        "passed": 24,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-contract-tests.json"
+      },
+      "log": "verification/commands/gate-contract.log",
+      "original_log_sha256": "123b6c2acc6d3690d9678f4adaf470bc606cbb25dc55129452a99fc8d916bd0c",
+      "published_log_sha256": "5bf0674e2294f67e0af3419c05a6fe8e1d5df8ff756cde75f707dbeaf430310b"
+    },
+    {
+      "name": "engine",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "test:engine",
+        "--",
+        "--reporter=json",
+        "--outputFile=evidence/gate-engine-tests.json"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:45.509Z",
+      "finished_at": "2026-10-27T13:12:47.812Z",
+      "tests": {
+        "passed": 130,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-engine-tests.json"
+      },
+      "log": "verification/commands/gate-engine.log",
+      "original_log_sha256": "a2f012a9a58670a3ae2e800750b5249b661071ace2ce33d3f15bd51e83a11570",
+      "published_log_sha256": "9e57db21e9200944565be9c857e9e07e0bd2bfac0d89c59b172e27b6c6654a65"
+    },
+    {
+      "name": "oracle",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "test:oracle",
+        "--",
+        "--reporter=json",
+        "--outputFile=evidence/gate-oracle-tests.json"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:47.812Z",
+      "finished_at": "2026-10-27T13:12:52.883Z",
+      "tests": {
+        "passed": 76,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-oracle-tests.json"
+      },
+      "log": "verification/commands/gate-oracle.log",
+      "original_log_sha256": "77e762ee234c38c165decf246d19ee4ecb1c1a99da9434f356768f95c141ab99",
+      "published_log_sha256": "594a52a44a8f83030e8ff65e00634f012f08479413e78f0f2f71e43eb1824505"
+    },
+    {
+      "name": "replay",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "test:replay",
+        "--",
+        "--reporter=json",
+        "--outputFile=evidence/gate-replay-tests.json"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:52.884Z",
+      "finished_at": "2026-10-27T13:12:53.723Z",
+      "tests": {
+        "passed": 40,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-replay-tests.json"
+      },
+      "log": "verification/commands/gate-replay.log",
+      "original_log_sha256": "0e5c9c1fe03044f05c090b60f0c252e0204b28d68b5b21c952b81d8f0c1cf241",
+      "published_log_sha256": "39d9d438194975abdfd8098c298f22cb0e062e2adcd6842b9a336529c94185d3"
+    },
+    {
+      "name": "mcp",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "test:mcp",
+        "--",
+        "--reporter=json",
+        "--outputFile=evidence/gate-mcp-tests.json"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:12:53.723Z",
+      "finished_at": "2026-10-27T13:13:01.487Z",
+      "tests": {
+        "passed": 55,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-mcp-tests.json"
+      },
+      "log": "verification/commands/gate-mcp.log",
+      "original_log_sha256": "af7ac8a353ed11db27b06a634b80c20359e7f60b8f568f85e760e39112b38e31",
+      "published_log_sha256": "db1fa38b05962f0b93a8e8e2e246b2f1a2872ec462ca20bfa52e82edb68c8f12"
+    },
+    {
+      "name": "mutants",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "test:mutants",
+        "--",
+        "--reporter=json",
+        "--outputFile=evidence/gate-mutants-tests.json"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:13:01.487Z",
+      "finished_at": "2026-10-27T13:13:03.338Z",
+      "tests": {
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-mutants-tests.json"
+      },
+      "log": "verification/commands/gate-mutants.log",
+      "original_log_sha256": "ce8499b1b89e38cfab8ababc7e1bdb4c114df4c7b34f6f6f241b02dcf195928a",
+      "published_log_sha256": "489d513476dc3e100a6a6ca9aab2381a73c7bd6b3f182ebac4e214c046bf4406"
+    },
+    {
+      "name": "python-reference",
+      "executable": "uv",
+      "arguments": [
+        "run",
+        "--no-project",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:13:03.340Z",
+      "finished_at": "2026-10-27T13:13:03.707Z",
+      "tests": {
+        "passed": 72,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-python-reference.log"
+      },
+      "log": "verification/commands/gate-python-reference.log",
+      "original_log_sha256": "097dfece434510c7eea35fbc6210bc81f66a6ec1bef67a41b741170644cdc712",
+      "published_log_sha256": "097dfece434510c7eea35fbc6210bc81f66a6ec1bef67a41b741170644cdc712"
+    },
+    {
+      "name": "power-planning",
+      "executable": "uv",
+      "arguments": [
+        "run",
+        "--no-project",
+        "python",
+        "research/power_budget.py",
+        "--p0",
+        ".5",
+        "--p1",
+        ".7",
+        "--recruits",
+        "224"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:13:03.707Z",
+      "finished_at": "2026-10-27T13:13:03.755Z",
+      "tests": null,
+      "log": "verification/commands/gate-power-planning.log",
+      "original_log_sha256": "1b241ab641fcb3b5e2533da1341530307c635a0b92584736e08e39ae0a08db0e",
+      "published_log_sha256": "1b241ab641fcb3b5e2533da1341530307c635a0b92584736e08e39ae0a08db0e"
+    },
+    {
+      "name": "synthetic-analysis",
+      "executable": "uv",
+      "arguments": [
+        "run",
+        "--no-project",
+        "python",
+        "research/analysis.py",
+        "research/example_outcomes.json"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:13:03.755Z",
+      "finished_at": "2026-10-27T13:13:03.805Z",
+      "tests": null,
+      "log": "verification/commands/gate-synthetic-analysis.log",
+      "original_log_sha256": "fcd03b5c1395506eb20f62d8a80bb4225552d2f1eb531d4226437f5215740d12",
+      "published_log_sha256": "fcd03b5c1395506eb20f62d8a80bb4225552d2f1eb531d4226437f5215740d12"
+    },
+    {
+      "name": "build",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "build"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:13:03.805Z",
+      "finished_at": "2026-10-27T13:13:05.698Z",
+      "tests": null,
+      "log": "verification/commands/gate-build.log",
+      "original_log_sha256": "4bfab57d64410f2ef500c1d7ea02fd03fda16c26e4b0dd05f0f8e199e155c410",
+      "published_log_sha256": "4bfab57d64410f2ef500c1d7ea02fd03fda16c26e4b0dd05f0f8e199e155c410"
+    },
+    {
+      "name": "ui",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "test:ui",
+        "--",
+        "--reporter=list,json"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:13:05.698Z",
+      "finished_at": "2026-10-27T13:15:44.676Z",
+      "tests": {
+        "passed": 138,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-ui-tests.json"
+      },
+      "log": "verification/commands/gate-ui.log",
+      "original_log_sha256": "37b881665fc0b0e8234b8d58852291249ddc342be3e6ad202208191fc487a92d",
+      "published_log_sha256": "37b881665fc0b0e8234b8d58852291249ddc342be3e6ad202208191fc487a92d"
+    },
+    {
+      "name": "cross-browser",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "test:ui:cross",
+        "--",
+        "--reporter=list,json"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:15:44.677Z",
+      "finished_at": "2026-10-27T13:17:36.054Z",
+      "tests": {
+        "passed": 56,
+        "failed": 0,
+        "skipped": 0,
+        "report": "evidence/gate-cross-browser-tests.json"
+      },
+      "log": "verification/commands/gate-cross-browser.log",
+      "original_log_sha256": "7a2136893103f1e9d963ba9a19a2d4f60c775eabad6a278c9b1d3ace5ce96400",
+      "published_log_sha256": "7a2136893103f1e9d963ba9a19a2d4f60c775eabad6a278c9b1d3ace5ce96400"
+    },
+    {
+      "name": "complete-packet",
+      "executable": "node",
+      "arguments": [
+        "dist/packages/runner/src/evidence-packet-cli.js",
+        "evidence/twelve/browser/attempt.packet.json"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:17:36.076Z",
+      "finished_at": "2026-10-27T13:17:36.459Z",
+      "tests": null,
+      "log": "verification/commands/gate-complete-packet.log",
+      "original_log_sha256": "f603b3ad9a3880168fde403ccb6cd6a0d4a22ca0552b4a2f59e1cafa4865cf07",
+      "published_log_sha256": "f603b3ad9a3880168fde403ccb6cd6a0d4a22ca0552b4a2f59e1cafa4865cf07"
+    },
+    {
+      "name": "reproducible-builds",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "verify:reproducible"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:17:36.459Z",
+      "finished_at": "2026-10-27T13:17:44.557Z",
+      "tests": null,
+      "log": "verification/commands/gate-reproducible-builds.log",
+      "original_log_sha256": "a2e3fe2d0256a8e22d94b409fb630a058b57014c5d03306ca02bacf3914c7e6b",
+      "published_log_sha256": "a2e3fe2d0256a8e22d94b409fb630a058b57014c5d03306ca02bacf3914c7e6b"
+    },
+    {
+      "name": "benchmark",
+      "executable": "npm",
+      "arguments": [
+        "run",
+        "benchmark:product"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:17:44.581Z",
+      "finished_at": "2026-10-27T13:17:59.351Z",
+      "tests": null,
+      "log": "verification/commands/gate-benchmark.log",
+      "original_log_sha256": "82912afb969ff2b9c2351158e0613bcce44435ba20a3213ddde6973eaa25f0b2",
+      "published_log_sha256": "82912afb969ff2b9c2351158e0613bcce44435ba20a3213ddde6973eaa25f0b2"
+    },
+    {
+      "name": "secret-scan",
+      "executable": "node",
+      "arguments": [
+        "scripts/scan-secrets.mjs"
+      ],
+      "scope": "product",
+      "exit_code": 0,
+      "started_at": "2026-10-27T13:17:59.352Z",
+      "finished_at": "2026-10-27T13:18:02.225Z",
+      "tests": null,
+      "log": "verification/commands/gate-secret-scan.log",
+      "original_log_sha256": "03db7f9eaee678c8acbd22b5b8a95d0d8fc36fe7f708abf1d824eee27bafc7c9",
+      "published_log_sha256": "03db7f9eaee678c8acbd22b5b8a95d0d8fc36fe7f708abf1d824eee27bafc7c9"
+    }
+  ],
+  "required_artifact_checks": [
+    {
+      "path": "evidence/v1/browser/chromium/journeys-1440.json",
+      "description": "all three chromium faults at 1440px restore commands and original deadlines, retain failed and passed checks and roundtrip packets",
+      "status": "passed",
+      "sha256": "b930d9c31280cde37f9b107e26fec7074ded51eff76f6919a07c95a191e4942d"
+    },
+    {
+      "path": "evidence/v1/browser/chromium/journeys-390.json",
+      "description": "all three chromium faults at 390px restore commands and original deadlines, retain failed and passed checks and roundtrip packets",
+      "status": "passed",
+      "sha256": "545ff12259492c5d01d7f4c5c6c708a5625d9741b5924d797a8f4dc07bad417c"
+    },
+    {
+      "path": "evidence/v1/browser/chromium/journeys-320.json",
+      "description": "all three chromium faults at 320px restore commands and original deadlines, retain failed and passed checks and roundtrip packets",
+      "status": "passed",
+      "sha256": "fdc2007f1a731dd19f579469c5c5f6f99be5209c0c93f4a987a59b06723d39a4"
+    },
+    {
+      "path": "evidence/v1/browser/chromium/offline-repair.json",
+      "description": "chromium repairs an evicted offline cache without changing attempt or notebook bytes",
+      "status": "passed",
+      "sha256": "45d25a1456dec8e8f1953ebcb1e1b69876e699260095b860182c12847a458e0a"
+    },
+    {
+      "path": "evidence/clarity/browser/chromium/journey-1440.json",
+      "description": "chromium clarity at 1440px preserves distinct files, deadlines and accessible repair feedback",
+      "status": "passed",
+      "sha256": "43acf051b980eec92f943c52c041fb6fc6c227078c70798dec31d6cffe6b4209"
+    },
+    {
+      "path": "evidence/clarity/browser/chromium/journey-390.json",
+      "description": "chromium clarity at 390px preserves distinct files, deadlines and accessible repair feedback",
+      "status": "passed",
+      "sha256": "edfbb10be8836f9e6095328a80eafa3f4c3cea130e27ecc686bbd5b80f88848b"
+    },
+    {
+      "path": "evidence/v1/browser/firefox/journeys-1440.json",
+      "description": "all three firefox faults at 1440px restore commands and original deadlines, retain failed and passed checks and roundtrip packets",
+      "status": "passed",
+      "sha256": "4c19e7f67753d9174af432a16a80df3b632b8f28dffdd1cbe622789a33dd36d5"
+    },
+    {
+      "path": "evidence/v1/browser/firefox/journeys-390.json",
+      "description": "all three firefox faults at 390px restore commands and original deadlines, retain failed and passed checks and roundtrip packets",
+      "status": "passed",
+      "sha256": "662f77a140172c903f15c4c2f8ac68d6e8b1ae2547157c3becf17cced804676c"
+    },
+    {
+      "path": "evidence/v1/browser/firefox/journeys-320.json",
+      "description": "all three firefox faults at 320px restore commands and original deadlines, retain failed and passed checks and roundtrip packets",
+      "status": "passed",
+      "sha256": "3e4cd8f460e308a222738e85d3096d0e3f0c2543e5489e2ba55f8e9f4016f0cf"
+    },
+    {
+      "path": "evidence/v1/browser/firefox/offline-repair.json",
+      "description": "firefox repairs an evicted offline cache without changing attempt or notebook bytes",
+      "status": "passed",
+      "sha256": "e04568ba55e2079272a8e35ef92712b362cc8973805c9d097c6e6653836bbdd3"
+    },
+    {
+      "path": "evidence/clarity/browser/firefox/journey-1440.json",
+      "description": "firefox clarity at 1440px preserves distinct files, deadlines and accessible repair feedback",
+      "status": "passed",
+      "sha256": "82f54c3bba7ae781f9d8e5a98272d0e690ddc75373c9b4ff7ee3b1fcdb2c997a"
+    },
+    {
+      "path": "evidence/clarity/browser/firefox/journey-390.json",
+      "description": "firefox clarity at 390px preserves distinct files, deadlines and accessible repair feedback",
+      "status": "passed",
+      "sha256": "3d76de62ed59a36734bedbd484af9c6286acf75a463ab526ad96d19e016e6706"
+    },
+    {
+      "path": "evidence/v1/browser/webkit/journeys-1440.json",
+      "description": "all three webkit faults at 1440px restore commands and original deadlines, retain failed and passed checks and roundtrip packets",
+      "status": "passed",
+      "sha256": "4ca89e51c6150302aaa5d141814e62b8c30171ef587b36151a289be9fe46a6c5"
+    },
+    {
+      "path": "evidence/v1/browser/webkit/journeys-390.json",
+      "description": "all three webkit faults at 390px restore commands and original deadlines, retain failed and passed checks and roundtrip packets",
+      "status": "passed",
+      "sha256": "e646e32420e40c8c4373874825f66503d1c4757e10e184dd7ad8c63e1585af87"
+    },
+    {
+      "path": "evidence/v1/browser/webkit/journeys-320.json",
+      "description": "all three webkit faults at 320px restore commands and original deadlines, retain failed and passed checks and roundtrip packets",
+      "status": "passed",
+      "sha256": "b460179e95a6eb336762e1ca696565fb73e5dbd7043e19b23f4f78d1c436d15e"
+    },
+    {
+      "path": "evidence/v1/browser/webkit/offline-repair.json",
+      "description": "webkit repairs an evicted offline cache without changing attempt or notebook bytes",
+      "status": "passed",
+      "sha256": "8ca8224668894e64be0aa8db6b0b84ccf5a86ecf2352caa0b058640c98fddf28"
+    },
+    {
+      "path": "evidence/clarity/browser/webkit/journey-1440.json",
+      "description": "webkit clarity at 1440px preserves distinct files, deadlines and accessible repair feedback",
+      "status": "passed",
+      "sha256": "8d6958a03bcc4276ec88ff19c235fef33025bbc2723e6a75fcfb6a57e4d64fa5"
+    },
+    {
+      "path": "evidence/clarity/browser/webkit/journey-390.json",
+      "description": "webkit clarity at 390px preserves distinct files, deadlines and accessible repair feedback",
+      "status": "passed",
+      "sha256": "c5d7a7fd086ddc45d3e31dc3841cf1894660a024fbd3586dca5647129d999e37"
+    },
+    {
+      "path": "evidence/portability/browser/packet-roundtrip.json",
+      "description": "complete browser-exported packet reopens without changing its embedded attempt, live board, deadline or provenance ceiling",
+      "status": "passed",
+      "sha256": "97e4b67d0684dc13f853a79260f558f1c8ece2803e7041552c92b0103f15ad9d"
+    },
+    {
+      "path": "evidence/portability/browser/notebook-roundtrip.json",
+      "description": "named notebook records move between browser contexts with exact dates/bytes and idempotent merge",
+      "status": "passed",
+      "sha256": "60a6da9fb071e4ea8d2ef46d696197b29066e54448af5d5f52b54bab35c28bc4"
+    },
+    {
+      "path": "evidence/portability/browser/autosave-rescue.json",
+      "description": "an abandoned retained autosave remains exactly downloadable without reviving it",
+      "status": "passed",
+      "sha256": "221e821656cae838df86c7631e7e31d5ca806d6e065b28b1ff93357dab19b690"
+    },
+    {
+      "path": "evidence/portability/browser/offline-audit.json",
+      "description": "offline cache loss and corruption are detected without network or plant mutations",
+      "status": "passed",
+      "sha256": "391cb0b401949930d8e9f1f1b28ef961613adb4ffb2dfe1d4295325b27a715ba"
+    },
+    {
+      "path": "evidence/portability/software.json",
+      "description": "four bounded additions, source substitution and corruption/conflict/quota rejection, keyboard phone reflow and actual cache eviction were exercised",
+      "status": "passed",
+      "sha256": "13f88595b3c9d42cc9b17227d987658f677202ac384a00a239d7894d8fb7b3da"
+    },
+    {
+      "path": "evidence/genuine-browser/verification.json",
+      "description": "the actual genuine default replays unchanged calls, separates the controller fault, preserves inherited work and reproduces both browser verdicts through independent Python",
+      "status": "passed",
+      "sha256": "c4f1748e71d9ce51e77cd60b10fe7c60a55f00f31b1b43cf186b37f03e8f4260"
+    },
+    {
+      "path": "evidence/clarity/construction-oracle.json",
+      "description": "independent reference accepts either clock and rejects each missing construction setting",
+      "status": "passed",
+      "sha256": "6ab0d5ef2788ef61dd29c72e49d437eca330a0a25ff2f914957c4b145e6cb2f6"
+    },
+    {
+      "path": "evidence/twelve/browser/workbench-checks.json",
+      "description": "new public workbench uses real controls at narrow width and 200 percent zoom without page errors or external requests",
+      "status": "passed",
+      "sha256": "a002633093da9ad7205f0771a9bc7629f462b5f6fc84829033d17cb5b5d8168e"
+    },
+    {
+      "path": "evidence/twelve/browser/packet-verification.json",
+      "description": "a browser-downloaded full packet independently reproduces every retained check without a public-practice primary success claim",
+      "status": "passed",
+      "sha256": "9689635bab4f94750a401b0e05f7d5b591c730f9664c17b56532f9df4dd75575"
+    },
+    {
+      "path": "evidence/twelve/browser/packet-tamper-rejection.json",
+      "description": "changing a later retained result fails independent whole-attempt verification",
+      "status": "passed",
+      "sha256": "dc7667e820dcd08086c610d840ec9d143e7c4b3e2511d49ec29f09b5ebc8525d"
+    },
+    {
+      "path": "evidence/twelve/reproducible/receipt.json",
+      "description": "two isolated clean installs produce byte-identical static artifacts and a changed-file negative control is detected",
+      "status": "passed",
+      "sha256": "448384444a138c2bff9e8857a7ddb60479f8275fb67279b346f7e4babdfa6ad1"
+    },
+    {
+      "path": "evidence/twelve/software.json",
+      "description": "all twelve approved additions and their actual production browser/reproducibility evidence",
+      "status": "passed",
+      "sha256": "c64110ad43bc83bcc5454d4da24a27c5daf2c2f1fd8ccd8625c7710893d14912"
+    },
+    {
+      "path": "evidence/instrument-upgrade.json",
+      "description": "the five additive features, original-state and deadline isolation, keyboard reflow and rehearsal exclusion were exercised",
+      "status": "passed",
+      "sha256": "6e41108ed31cb50c17328858c174c3a1a0efdb42fc509ebd17d08de0422f6d64"
+    },
+    {
+      "path": "evidence/offline-verification.json",
+      "description": "closed-browser offline reopen, three repaired faults, all static assets and the original recovery deadline",
+      "status": "passed",
+      "sha256": "96bec2944483bab29ff12be63af354d9d49074256298c80a7be8bd3c5c242880"
+    },
+    {
+      "path": "evidence/full-roadmap/browser-diagnostic.json",
+      "description": "an actual browser-exported counterexample independently reproduced as a diagnostic mismatch",
+      "status": "passed",
+      "sha256": "cb0d9a31e30af2e8f2ef81b1ea197778df16248d29ab4d669ddb07ae88eddcd5"
+    },
+    {
+      "path": "evidence/full-roadmap/stateful-negative-control.json",
+      "description": "stateful generated sequences and a real minimized negative-control failure, without claiming an existing engine defect",
+      "status": "passed",
+      "sha256": "6d950e0cf68f5ebe6dcca741bc519958e001ec87fbff076a8d2bfc6a2c4e0431"
+    },
+    {
+      "path": "evidence/full-roadmap/software.json",
+      "description": "the sixteen-feature software scope with genuine model content explicitly separate",
+      "status": "passed",
+      "sha256": "e10a4ac19c036f986c43a9155ad2b956201276577157735bcf4b3e7bf9f1b2cd"
+    },
+    {
+      "path": "evidence/quality/benchmark.json",
+      "description": "three rounds of request-bound real browser interaction and twelve-case scoring stay within the fixed baseline-derived ceilings",
+      "status": "passed",
+      "sha256": "382d9d4df3d20c73bc4c0d3ca4757a4cf184ad9d7698b561a832b6c42c7c395c"
+    },
+    {
+      "path": "evidence/secret-scan.json",
+      "description": "current files and intended Git history contain no scanner findings",
+      "status": "passed",
+      "sha256": "c2584370dcefd3a8e65c57c5008bb38553db89637dec12ac321ea12554f4a572"
+    },
+    {
+      "path": "evidence/oracle-conformance.json",
+      "description": "independent Python/browser goldens, all twelve patterns and generated comparisons are complete",
+      "status": "passed",
+      "sha256": "5435c2b4d5ba7861c44583f2b08225f03e5777fb452d5b35fbed482010777935"
+    },
+    {
+      "path": "evidence/oracle-candidates.json",
+      "description": "real inherited candidate preserves valid pending work and clear-all fails independent evaluation",
+      "status": "passed",
+      "sha256": "46ef47cb2e961066b9e2ce16eb35780b981acb7027f6b24b3ce6048e27f1e711"
+    },
+    {
+      "path": "evidence/mutants.json",
+      "description": "all eleven named broken behaviors are detected and valid standby is accepted",
+      "status": "passed",
+      "sha256": "19f1c927c4b67b9ffea23e6e9b30c879891ff7bb5b256c27967e3dc2ad442cd5"
+    },
+    {
+      "path": "evidence/ui-verification.json",
+      "description": "complete production-browser repair, accessibility, offline, deadline, resume and curated playback evidence",
+      "status": "passed",
+      "sha256": "751742f65dbebd53e4d0d6fd84537e73824eb19f07f2b0a27d53c80652bad101"
+    },
+    {
+      "path": "evidence/ui-browser/browser-to-python.json",
+      "description": "valid and broken actual browser exports agree with independent Python and exclude forbidden dependencies",
+      "status": "passed",
+      "sha256": "80152695c8c4dff005cbb2c67e2751b06a0fd92eb993ec4025fa318ed6c0c106"
+    },
+    {
+      "path": "evidence/ui-browser/study-equivalence.json",
+      "description": "two synthetic conditions preserve exact facts, actions, exposure and handover commitments",
+      "status": "passed",
+      "sha256": "4ea967e9b14109580d08c35bcac97836eca02d23e69cb72082d29ec0388a6c10"
+    },
+    {
+      "path": "evidence/recording-dry-run/behavioral-verification.json",
+      "description": "retained actual MCP fixture passes all twelve anchored independent continuations",
+      "status": "passed",
+      "sha256": "b3e95f6fe5bae739ab8c5e5a4fd823a4359612fb945e555b6b25f53001fea366"
+    },
+    {
+      "path": "evidence/recording-behavior-no-clock/behavioral-verification.json",
+      "description": "complete no-clock recording is retained as a target-behavior failure",
+      "status": "passed",
+      "sha256": "f49c9fbebf00e86254d1c92bba8e5687ef0462ec915997773df1f7c507fe286e"
+    },
+    {
+      "path": "evidence/recording-behavior-duplicate-clock/behavioral-verification.json",
+      "description": "complete duplicate-clock recording is retained as a target-behavior failure",
+      "status": "passed",
+      "sha256": "9c5dde24e37d64e655d70e794fe806e1ddcb08d4df49e59a800611a6117a368d"
+    }
+  ],
+  "environment": {
+    "captured_at": "2026-10-27T13:18:02.314Z",
+    "node": "v24.19.0",
+    "npm": "12.0.0",
+    "uv": "uv 0.13.5 (Homebrew 2026-10-22 aarch64-apple-darwin)",
+    "python": "Python 3.13.15\nWARN `--no-project` was provided, but no project was found",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verified_static_base": "/after-the-agent/",
+    "dependencies": {
+      "@apidevtools/json-schema-ref-parser": "11.9.3",
+      "@axe-core/playwright": "4.13.0",
+      "@cacheable/memory": "2.2.0",
+      "@cacheable/utils": "2.5.0",
+      "@esbuild/aix-ppc64": "0.28.2",
+      "@esbuild/android-arm": "0.28.2",
+      "@esbuild/android-arm64": "0.28.2",
+      "@esbuild/android-x64": "0.28.2",
+      "@esbuild/darwin-arm64": "0.28.2",
+      "@esbuild/darwin-x64": "0.28.2",
+      "@esbuild/freebsd-arm64": "0.28.2",
+      "@esbuild/freebsd-x64": "0.28.2",
+      "@esbuild/linux-arm": "0.28.2",
+      "@esbuild/linux-arm64": "0.28.2",
+      "@esbuild/linux-ia32": "0.28.2",
+      "@esbuild/linux-loong64": "0.28.2",
+      "@esbuild/linux-mips64el": "0.28.2",
+      "@esbuild/linux-ppc64": "0.28.2",
+      "@esbuild/linux-riscv64": "0.28.2",
+      "@esbuild/linux-s390x": "0.28.2",
+      "@esbuild/linux-x64": "0.28.2",
+      "@esbuild/netbsd-arm64": "0.28.2",
+      "@esbuild/netbsd-x64": "0.28.2",
+      "@esbuild/openbsd-arm64": "0.28.2",
+      "@esbuild/openbsd-x64": "0.28.2",
+      "@esbuild/openharmony-arm64": "0.28.2",
+      "@esbuild/sunos-x64": "0.28.2",
+      "@esbuild/win32-arm64": "0.28.2",
+      "@esbuild/win32-ia32": "0.28.2",
+      "@esbuild/win32-x64": "0.28.2",
+      "@eslint-community/eslint-utils": "4.10.1",
+      "@eslint-community/regexpp": "4.12.2",
+      "@eslint/config-array": "0.23.5",
+      "@eslint/config-helpers": "0.7.0",
+      "@eslint/core": "1.2.1",
+      "@eslint/js": "10.0.1",
+      "@eslint/object-schema": "3.0.5",
+      "@eslint/plugin-kit": "0.7.3",
+      "@humanfs/core": "0.19.2",
+      "@humanfs/node": "0.16.8",
+      "@humanfs/types": "0.15.0",
+      "@humanwhocodes/module-importer": "1.0.1",
+      "@humanwhocodes/retry": "0.4.3",
+      "@jridgewell/resolve-uri": "3.1.2",
+      "@jridgewell/sourcemap-codec": "1.6.0",
+      "@jridgewell/trace-mapping": "0.3.31",
+      "@jsdevtools/ono": "7.1.3",
+      "@keyv/bigmap": "1.3.1",
+      "@keyv/serialize": "1.1.1",
+      "@modelcontextprotocol/client": "2.3.1",
+      "@modelcontextprotocol/core": "2.3.1",
+      "@modelcontextprotocol/server": "2.3.1",
+      "@noble/hashes": "2.4.0",
+      "@oxc-project/types": "0.153.0",
+      "@playwright/test": "1.64.0",
+      "@rolldown/binding-android-arm-eabi": "1.2.13",
+      "@rolldown/binding-android-arm64": "1.2.13",
+      "@rolldown/binding-darwin-arm64": "1.2.13",
+      "@rolldown/binding-darwin-x64": "1.2.13",
+      "@rolldown/binding-freebsd-x64": "1.2.13",
+      "@rolldown/binding-linux-arm-gnueabihf": "1.2.13",
+      "@rolldown/binding-linux-arm64-gnu": "1.2.13",
+      "@rolldown/binding-linux-arm64-musl": "1.2.13",
+      "@rolldown/binding-linux-ppc64-gnu": "1.2.13",
+      "@rolldown/binding-linux-s390x-gnu": "1.2.13",
+      "@rolldown/binding-linux-x64-gnu": "1.2.13",
+      "@rolldown/binding-linux-x64-musl": "1.2.13",
+      "@rolldown/binding-openharmony-arm64": "1.2.13",
+      "@rolldown/binding-win32-arm64-msvc": "1.2.13",
+      "@rolldown/binding-win32-x64-msvc": "1.2.13",
+      "@rolldown/pluginutils": "1.0.1",
+      "@types/chai": "5.2.3",
+      "@types/deep-eql": "4.0.2",
+      "@types/esrecurse": "4.3.1",
+      "@types/estree": "1.0.9",
+      "@types/json-schema": "7.0.15",
+      "@types/lodash": "4.17.26",
+      "@types/node": "24.19.2",
+      "@types/react": "19.3.0",
+      "@types/react-dom": "19.3.0",
+      "@typescript-eslint/eslint-plugin": "8.71.1",
+      "@typescript-eslint/parser": "8.71.1",
+      "@typescript-eslint/project-service": "8.71.1",
+      "@typescript-eslint/scope-manager": "8.71.1",
+      "@typescript-eslint/tsconfig-utils": "8.71.1",
+      "@typescript-eslint/type-utils": "8.71.1",
+      "@typescript-eslint/types": "8.71.1",
+      "@typescript-eslint/typescript-estree": "8.71.1",
+      "@typescript-eslint/utils": "8.71.1",
+      "@typescript-eslint/visitor-keys": "8.71.1",
+      "@vitest/mocker": "5.0.3",
+      "@vitest/spy": "5.0.3",
+      "acorn": "8.19.0",
+      "acorn-jsx": "5.3.2",
+      "ajv": "8.20.0",
+      "argparse": "2.0.1",
+      "assertion-error": "2.0.1",
+      "axe-core": "4.13.0",
+      "balanced-match": "4.0.4",
+      "brace-expansion": "5.0.12",
+      "cacheable": "2.5.0",
+      "chai": "6.3.0",
+      "cross-spawn": "7.0.6",
+      "csstype": "3.2.3",
+      "debug": "4.4.3",
+      "deep-is": "0.1.4",
+      "detect-libc": "2.1.2",
+      "es-module-lexer": "2.3.2",
+      "esbuild": "0.28.2",
+      "escape-string-regexp": "4.0.0",
+      "eslint": "10.12.0",
+      "eslint-scope": "9.1.2",
+      "eslint-visitor-keys": "5.0.1",
+      "espree": "11.2.0",
+      "esquery": "1.7.0",
+      "esrecurse": "4.3.0",
+      "estraverse": "5.3.0",
+      "estree-walker": "3.0.3",
+      "esutils": "2.0.3",
+      "eventsource": "3.0.7",
+      "eventsource-parser": "3.1.1",
+      "expect-type": "1.4.0",
+      "fast-check": "4.10.2",
+      "fast-deep-equal": "3.1.3",
+      "fast-json-stable-stringify": "2.1.0",
+      "fast-levenshtein": "2.0.6",
+      "fast-uri": "3.1.8",
+      "fdir": "6.5.0",
+      "file-entry-cache": "11.1.5",
+      "find-up": "5.0.0",
+      "flat-cache": "6.1.23",
+      "flatted": "3.4.4",
+      "fsevents": "2.3.3",
+      "glob-parent": "6.0.2",
+      "hashery": "1.5.1",
+      "hookified": "1.15.1",
+      "ignore": "5.3.2",
+      "imurmurhash": "0.1.4",
+      "is-extglob": "2.1.1",
+      "is-glob": "4.0.3",
+      "isexe": "2.0.0",
+      "jose": "6.2.12",
+      "js-yaml": "5.4.3",
+      "json-schema-to-typescript": "16.0.0",
+      "json-schema-traverse": "1.0.0",
+      "json-stable-stringify-without-jsonify": "1.0.1",
+      "keyv": "5.6.0",
+      "levn": "0.4.1",
+      "lightningcss": "1.33.0",
+      "lightningcss-android-arm64": "1.33.0",
+      "lightningcss-darwin-arm64": "1.33.0",
+      "lightningcss-darwin-x64": "1.33.0",
+      "lightningcss-freebsd-x64": "1.33.0",
+      "lightningcss-linux-arm-gnueabihf": "1.33.0",
+      "lightningcss-linux-arm64-gnu": "1.33.0",
+      "lightningcss-linux-arm64-musl": "1.33.0",
+      "lightningcss-linux-x64-gnu": "1.33.0",
+      "lightningcss-linux-x64-musl": "1.33.0",
+      "lightningcss-win32-arm64-msvc": "1.33.0",
+      "lightningcss-win32-x64-msvc": "1.33.0",
+      "locate-path": "6.0.0",
+      "lodash": "4.18.1",
+      "magic-string": "1.4.3",
+      "minimatch": "10.2.6",
+      "minimist": "1.2.8",
+      "ms": "2.1.3",
+      "nanoid": "3.3.20",
+      "natural-compare": "1.4.0",
+      "obug": "2.2.1",
+      "optionator": "0.9.4",
+      "p-limit": "3.1.0",
+      "p-locate": "5.0.0",
+      "path-exists": "4.0.0",
+      "path-key": "3.1.1",
+      "picocolors": "1.1.1",
+      "picomatch": "4.0.7",
+      "pkce-challenge": "5.0.1",
+      "playwright": "1.64.0",
+      "playwright-core": "1.64.0",
+      "postcss": "8.5.29",
+      "prelude-ls": "1.2.1",
+      "prettier": "3.9.10",
+      "punycode": "2.3.1",
+      "pure-rand": "8.4.2",
+      "qified": "0.10.1",
+      "react": "19.3.0",
+      "react-dom": "19.3.0",
+      "require-from-string": "2.0.2",
+      "rolldown": "1.2.13",
+      "scheduler": "0.28.0",
+      "semver": "7.8.5",
+      "shebang-command": "2.0.0",
+      "shebang-regex": "3.0.0",
+      "source-map-js": "1.2.2",
+      "std-env": "4.3.0",
+      "tinybench": "6.2.2",
+      "tinyexec": "1.3.1",
+      "tinyglobby": "0.2.17",
+      "ts-api-utils": "2.5.0",
+      "tsx": "4.23.15",
+      "type-check": "0.4.0",
+      "typescript": "6.0.3",
+      "typescript-eslint": "8.71.1",
+      "undici-types": "7.24.6",
+      "uri-js": "4.4.1",
+      "vite": "8.3.4",
+      "vitest": "5.0.3",
+      "which": "2.0.2",
+      "why-is-node-running": "3.2.1",
+      "word-wrap": "1.2.5",
+      "yocto-queue": "0.1.0",
+      "zod": "4.6.6"
+    },
+    "reference": {
+      "manifest_sha256": "2a1e32b4cf42b1c94c802f9a1822d4878959f652a5afedb4b3cd52123184597f",
+      "profile": {
+        "profile": "public-1",
+        "manifest_file": "PUBLIC_REFERENCE_MANIFEST.json",
+        "upstream_manifest_sha256": "2a1e32b4cf42b1c94c802f9a1822d4878959f652a5afedb4b3cd52123184597f",
+        "packaging_sha256": "b30d96406f0b7344e135bd4f09b70a29543ef3d4e2d6e23ed72d421e33e18901",
+        "files": [
+          {
+            "path": "contracts/board.schema.json",
+            "sha256": "5f270def75497199887d1b8c40cfe76a41053e8ed054b4bfc49a8f71bfe5167f"
+          },
+          {
+            "path": "contracts/evaluation.schema.json",
+            "sha256": "10b30b0b9c0df970da0be7c9f9c9ce58aba2f13a7366c00d888601d423b50311"
+          },
+          {
+            "path": "docs/02_ENGINE_AND_CONTRACTS.md",
+            "sha256": "afa63ef8639fed58e23b31a7edf36344c3cd6312225b5a76c94f9956b66d5954"
+          },
+          {
+            "path": "docs/06_RESEARCH_PROTOCOL.md",
+            "sha256": "5327c740e874889648e985f1602eb22ce2ccbff0c8e2a996a7d6b0ab4e3dde6d"
+          },
+          {
+            "path": "fixtures/continuation-policy.json",
+            "sha256": "a688d61d9c10531bb442a4f752236c67a749b8cfc411f7dbccda89c5623ce140"
+          },
+          {
+            "path": "fixtures/continuations.json",
+            "sha256": "f9a38529aa14d814cada8b478b1046659259fb6671ce69c339a5fc9ab871f2cd"
+          },
+          {
+            "path": "fixtures/golden.json",
+            "sha256": "aa9b562e4c3ddc99dad1b9b1b94c16d3f2464f09b18b0e8d8884c2862833f5de"
+          },
+          {
+            "path": "oracle/__init__.py",
+            "sha256": "7c5b44ce1aaac87e07e55fb06d5d5d1ba6ca7c83fa71472743688d31bf8b405a"
+          },
+          {
+            "path": "oracle/reference.py",
+            "sha256": "4b9613e85564a94b80d3e54b10f8a3d2f99d157416158165305e1cc62a3ac433"
+          },
+          {
+            "path": "research/analysis.py",
+            "sha256": "fd3df48227303e6d33dc091122102a936024e4488528ac68bcd9da2f3c6be8a4"
+          },
+          {
+            "path": "research/example_outcomes.json",
+            "sha256": "c4f6c9c7c176c3e98d0715cb7803279d7b0468428a616f1f68680c45e221aebe"
+          },
+          {
+            "path": "research/power_budget.py",
+            "sha256": "52e01277473244fec1b48472195486af78ea47daf54ed90ff46470cf5dbea482"
+          },
+          {
+            "path": "scripts/verify_pack.py",
+            "sha256": "5499fdaf7f6c4ce6a138769da42861eaa7dbd878af871be13ce14aa7973b724b"
+          },
+          {
+            "path": "scripts/verify_reference.py",
+            "sha256": "99ccc733659204f1771d505846ce1ca0515ae2ad62ae2f170bccdedb6b25195d"
+          },
+          {
+            "path": "tests/test_pack_guards.py",
+            "sha256": "58f7c7a7e0ab07b8499b6c60eb594deac7de9b32af4012f4413831e79b1bd13b"
+          },
+          {
+            "path": "tests/test_reference.py",
+            "sha256": "38e603ba13efb1d34ac89e8ea4cac07a98c92efb9830af6b1372a0d5dcce644c"
+          },
+          {
+            "path": "tests/test_reference_extra.py",
+            "sha256": "732a04bb28898906e7108b3bc598f583cf20252fed22f1b9b47dac5346fb07ad"
+          },
+          {
+            "path": "tests/test_research.py",
+            "sha256": "dfd556bb3cf4eccbe1d537a4e6b34b9a23cb00a93811c577ca1ebfb15e27c4d5"
+          },
+          {
+            "path": "tests/test_suite_binding.py",
+            "sha256": "c8331d40f9e96c7b9abb48e652dd7d7dc7c448b3df8dda3ea03592a6c9750855"
+          }
+        ],
+        "identical_upstream_files": 18,
+        "protocol_derivative": true
+      }
+    },
+    "product_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+    "dirty_at_start": "",
+    "m0_only": false
+  },
+  "genuine_model_recording": {
+    "status": "passed",
+    "reason": "Actual assessed-model board calls retained unchanged, replayed and qualified. One selected demonstration, not a model success-rate estimate.",
+    "evidence": "evidence/recording-status.json",
+    "selection": {
+      "id": "codex-2026-10-26-001",
+      "category": "live_model",
+      "recording": {
+        "path": "recordings/curated/codex-2026-10-26-001.json",
+        "sha256": "9af8adac33ce0bfbd0a1ee30225825debfabe5a981f897ad10ebd000f0e5a292"
+      },
+      "qualification": {
+        "path": "recordings/curated/codex-2026-10-26-001-qualification.json",
+        "sha256": "bf5058428b1366988f18958987b322ff1dcaebaab76ad2ef33daeaeaf457b62e"
+      }
+    },
+    "captured_application_commit": "ad569447495af9bacbd28874042add32f3b9ba6a",
+    "requested_model": "gpt-6.1-sol",
+    "returned_model": null,
+    "harness_version": "ata-codex-cli-v1/0.160.1",
+    "model_requests": null,
+    "tool_calls": 5,
+    "token_usage": {
+      "input": 25203,
+      "output": 261
+    },
+    "cost_usd": null,
+    "unavailable_reason": "Codex exposes the resolved requested model, but not provider-returned model identity or individual provider request counts."
+  },
+  "human_usability_observation": {
+    "status": "not_run",
+    "reason": "No unfamiliar human usability observation occurred. Browser automation is software evidence."
+  },
+  "research": {
+    "status": "not_launched",
+    "software_checks": "passed",
+    "readiness": "software_only",
+    "research_enabled": false,
+    "collector": "interface_only",
+    "launch_status": "blocked",
+    "reason": "Only local matched rehearsal and synthetic analysis are checked. This public package excludes operational study preparation and does not establish research-launch readiness."
+  },
+  "hosted_release": {
+    "status": "not_run"
+  },
+  "published_files": [
+    {
+      "path": "verification/commands/gate-external-reference.log",
+      "bytes": 125,
+      "sha256": "d8d7c6c7f0137289351f0e551dea1354c40df49594849c3fb267b4a73fa4b7ca"
+    },
+    {
+      "path": "verification/commands/gate-candidate-reference.log",
+      "bytes": 125,
+      "sha256": "d8d7c6c7f0137289351f0e551dea1354c40df49594849c3fb267b4a73fa4b7ca"
+    },
+    {
+      "path": "verification/commands/gate-clean-install.log",
+      "bytes": 228,
+      "sha256": "9a007833bd2867facdcd23331a43bcff527c798d2aeca86c58dd11c38da87dfb"
+    },
+    {
+      "path": "verification/commands/gate-generate-contracts.log",
+      "bytes": 107,
+      "sha256": "d8a81b2b31bdd224a77a166630780e594fe09c29badd0a24d7f8aefe9596bfb0"
+    },
+    {
+      "path": "verification/commands/gate-typecheck.log",
+      "bytes": 75,
+      "sha256": "96e493f0a920e01d173c68f0f49f24a51f8653cbcd2ef42e3ad398fd4a487c06"
+    },
+    {
+      "path": "verification/commands/gate-lint.log",
+      "bytes": 66,
+      "sha256": "2325bacadad4b166ab86473754adc966adbfb16fcab6667ad860d0bfcaa03743"
+    },
+    {
+      "path": "verification/commands/gate-contract.log",
+      "bytes": 220,
+      "sha256": "5bf0674e2294f67e0af3419c05a6fe8e1d5df8ff756cde75f707dbeaf430310b"
+    },
+    {
+      "path": "verification/commands/gate-engine.log",
+      "bytes": 212,
+      "sha256": "9e57db21e9200944565be9c857e9e07e0bd2bfac0d89c59b172e27b6c6654a65"
+    },
+    {
+      "path": "verification/commands/gate-oracle.log",
+      "bytes": 3046,
+      "sha256": "594a52a44a8f83030e8ff65e00634f012f08479413e78f0f2f71e43eb1824505"
+    },
+    {
+      "path": "verification/commands/gate-replay.log",
+      "bytes": 212,
+      "sha256": "39d9d438194975abdfd8098c298f22cb0e062e2adcd6842b9a336529c94185d3"
+    },
+    {
+      "path": "verification/commands/gate-mcp.log",
+      "bytes": 792,
+      "sha256": "db1fa38b05962f0b93a8e8e2e246b2f1a2872ec462ca20bfa52e82edb68c8f12"
+    },
+    {
+      "path": "verification/commands/gate-mutants.log",
+      "bytes": 216,
+      "sha256": "489d513476dc3e100a6a6ca9aab2381a73c7bd6b3f182ebac4e214c046bf4406"
+    },
+    {
+      "path": "verification/commands/gate-python-reference.log",
+      "bytes": 10912,
+      "sha256": "097dfece434510c7eea35fbc6210bc81f66a6ec1bef67a41b741170644cdc712"
+    },
+    {
+      "path": "verification/commands/gate-power-planning.log",
+      "bytes": 1378,
+      "sha256": "1b241ab641fcb3b5e2533da1341530307c635a0b92584736e08e39ae0a08db0e"
+    },
+    {
+      "path": "verification/commands/gate-synthetic-analysis.log",
+      "bytes": 2556,
+      "sha256": "fcd03b5c1395506eb20f62d8a80bb4225552d2f1eb531d4226437f5215740d12"
+    },
+    {
+      "path": "verification/commands/gate-build.log",
+      "bytes": 4811,
+      "sha256": "4bfab57d64410f2ef500c1d7ea02fd03fda16c26e4b0dd05f0f8e199e155c410"
+    },
+    {
+      "path": "verification/commands/gate-ui.log",
+      "bytes": 21416,
+      "sha256": "37b881665fc0b0e8234b8d58852291249ddc342be3e6ad202208191fc487a92d"
+    },
+    {
+      "path": "verification/commands/gate-cross-browser.log",
+      "bytes": 10716,
+      "sha256": "7a2136893103f1e9d963ba9a19a2d4f60c775eabad6a278c9b1d3ace5ce96400"
+    },
+    {
+      "path": "verification/commands/gate-complete-packet.log",
+      "bytes": 2975,
+      "sha256": "f603b3ad9a3880168fde403ccb6cd6a0d4a22ca0552b4a2f59e1cafa4865cf07"
+    },
+    {
+      "path": "verification/commands/gate-reproducible-builds.log",
+      "bytes": 238,
+      "sha256": "a2e3fe2d0256a8e22d94b409fb630a058b57014c5d03306ca02bacf3914c7e6b"
+    },
+    {
+      "path": "verification/commands/gate-benchmark.log",
+      "bytes": 350,
+      "sha256": "82912afb969ff2b9c2351158e0613bcce44435ba20a3213ddde6973eaa25f0b2"
+    },
+    {
+      "path": "verification/commands/gate-secret-scan.log",
+      "bytes": 62,
+      "sha256": "03db7f9eaee678c8acbd22b5b8a95d0d8fc36fe7f708abf1d824eee27bafc7c9"
+    },
+    {
+      "path": "verification/mutants.json",
+      "bytes": 381624,
+      "sha256": "19f1c927c4b67b9ffea23e6e9b30c879891ff7bb5b256c27967e3dc2ad442cd5"
+    },
+    {
+      "path": "verification/benchmark.json",
+      "bytes": 29875,
+      "sha256": "4996ec3056860d45f0dd4568b898cd63c8feffe0177b0194bbb4d1d4acff1114"
+    },
+    {
+      "path": "verification/instrument-upgrade.json",
+      "bytes": 3632,
+      "sha256": "6e41108ed31cb50c17328858c174c3a1a0efdb42fc509ebd17d08de0422f6d64"
+    },
+    {
+      "path": "verification/full-roadmap.json",
+      "bytes": 8245,
+      "sha256": "e10a4ac19c036f986c43a9155ad2b956201276577157735bcf4b3e7bf9f1b2cd"
+    },
+    {
+      "path": "verification/twelve-additions.json",
+      "bytes": 6326,
+      "sha256": "c64110ad43bc83bcc5454d4da24a27c5daf2c2f1fd8ccd8625c7710893d14912"
+    },
+    {
+      "path": "verification/portability.json",
+      "bytes": 3406,
+      "sha256": "13f88595b3c9d42cc9b17227d987658f677202ac384a00a239d7894d8fb7b3da"
+    },
+    {
+      "path": "verification/v1.json",
+      "bytes": 11579,
+      "sha256": "77a6d7af3b4d52b1c88bddd01408465dfe6dd9ce6e063f60b01e0544f25119d7"
+    },
+    {
+      "path": "verification/clarity/construction-oracle.json",
+      "bytes": 181194,
+      "sha256": "6ab0d5ef2788ef61dd29c72e49d437eca330a0a25ff2f914957c4b145e6cb2f6"
+    },
+    {
+      "path": "verification/clarity/chromium/journey-1440.json",
+      "bytes": 252,
+      "sha256": "43acf051b980eec92f943c52c041fb6fc6c227078c70798dec31d6cffe6b4209"
+    },
+    {
+      "path": "verification/clarity/chromium/result-1440.png",
+      "bytes": 154752,
+      "sha256": "3a93e20059b1aebcc8a08070512c97df2408fd8c058afce87782b3d050590310"
+    },
+    {
+      "path": "verification/clarity/chromium/journey-390.json",
+      "bytes": 251,
+      "sha256": "edfbb10be8836f9e6095328a80eafa3f4c3cea130e27ecc686bbd5b80f88848b"
+    },
+    {
+      "path": "verification/clarity/chromium/result-390.png",
+      "bytes": 71013,
+      "sha256": "f1b1c6ed81211acf8ae59a0165b70d36098938963504c7c54e307d65c4227213"
+    },
+    {
+      "path": "verification/clarity/firefox/journey-1440.json",
+      "bytes": 251,
+      "sha256": "82f54c3bba7ae781f9d8e5a98272d0e690ddc75373c9b4ff7ee3b1fcdb2c997a"
+    },
+    {
+      "path": "verification/clarity/firefox/result-1440.png",
+      "bytes": 182979,
+      "sha256": "b55cb951eeec6aa8f4fd6ea4e12533eaf5d7b92f574e63718cb00953267c644c"
+    },
+    {
+      "path": "verification/clarity/firefox/journey-390.json",
+      "bytes": 250,
+      "sha256": "3d76de62ed59a36734bedbd484af9c6286acf75a463ab526ad96d19e016e6706"
+    },
+    {
+      "path": "verification/clarity/firefox/result-390.png",
+      "bytes": 82997,
+      "sha256": "55216a6040335869dede760007d19e5e6f5c4f98b73d8c23b0e7463b4a082c0d"
+    },
+    {
+      "path": "verification/clarity/webkit/journey-1440.json",
+      "bytes": 250,
+      "sha256": "8d6958a03bcc4276ec88ff19c235fef33025bbc2723e6a75fcfb6a57e4d64fa5"
+    },
+    {
+      "path": "verification/clarity/webkit/result-1440.png",
+      "bytes": 194928,
+      "sha256": "815574d6acbacd0c0c59f9a796847c3dbeabdbbf7fc00a3767055b209782f2fe"
+    },
+    {
+      "path": "verification/clarity/webkit/journey-390.json",
+      "bytes": 249,
+      "sha256": "c5d7a7fd086ddc45d3e31dc3841cf1894660a024fbd3586dca5647129d999e37"
+    },
+    {
+      "path": "verification/clarity/webkit/result-390.png",
+      "bytes": 78393,
+      "sha256": "f2ddb21b4a694f833b7c7bd8b633b99dbbec208a30cf7914ebab3d242aad7bcf"
+    },
+    {
+      "path": "verification/v1/chromium/320-zoom-keyboard.png",
+      "bytes": 36775,
+      "sha256": "487a5a2d1e7bf4d210004bc283ee1c192af8843351e6edc263cb85a15cf8d08d"
+    },
+    {
+      "path": "verification/v1/chromium/cached-gate-1440-board.png",
+      "bytes": 139176,
+      "sha256": "741c4cf623788145b8ee285d8636ab8a6cbd72f23831e5a711d3b399bbbb62d9"
+    },
+    {
+      "path": "verification/v1/chromium/cached-gate-1440-result.png",
+      "bytes": 151447,
+      "sha256": "6531dcf29a3432caa36e0b4fb05aacd31743a424749a2e104bb4ed00a06a4bc7"
+    },
+    {
+      "path": "verification/v1/chromium/cached-gate-320-board.png",
+      "bytes": 63122,
+      "sha256": "3ef202e76c313fb012e024a8ef9fa8bedd9c4d864216766c58b52747320fff79"
+    },
+    {
+      "path": "verification/v1/chromium/cached-gate-320-result.png",
+      "bytes": 69367,
+      "sha256": "3e0de79939259a134538e203fd9919d23e2240545ee7db64bd6542c49f271ee5"
+    },
+    {
+      "path": "verification/v1/chromium/cached-gate-390-board.png",
+      "bytes": 76975,
+      "sha256": "18aecad1d719bca0acb8667ffcbbe1b4c2492602de0731f76c4154c5a9d21c59"
+    },
+    {
+      "path": "verification/v1/chromium/cached-gate-390-result.png",
+      "bytes": 71110,
+      "sha256": "f7145dc320cfe163bd3ab125676ed10cfc355eb21a0b700efcb43f0cd4c1c924"
+    },
+    {
+      "path": "verification/v1/chromium/duplicate-clock-1440-board.png",
+      "bytes": 138028,
+      "sha256": "dd43993081686ddd5b51f1291a4053c46fb2bd78a3053e531ca956c8da3829da"
+    },
+    {
+      "path": "verification/v1/chromium/duplicate-clock-1440-result.png",
+      "bytes": 150988,
+      "sha256": "5285709f7b10e7b914f4fd0dd7cb65305b783ff2ea0381761d3cef9df8a215f9"
+    },
+    {
+      "path": "verification/v1/chromium/duplicate-clock-320-board.png",
+      "bytes": 62914,
+      "sha256": "b2c2cffc62fd6a32c9b15064e3bb0b07482df21ee54fd00bc07296c8041ec85d"
+    },
+    {
+      "path": "verification/v1/chromium/duplicate-clock-320-result.png",
+      "bytes": 69174,
+      "sha256": "3cc7cea6b39bfd6ac8d241825490969ff30f01f28a82e27f3805a4b90cf8f5fa"
+    },
+    {
+      "path": "verification/v1/chromium/duplicate-clock-390-board.png",
+      "bytes": 76763,
+      "sha256": "02d0e6423b7c52ee3ab56165e34dcd49bfd0c8db54bb920b90b1208d4fc766c0"
+    },
+    {
+      "path": "verification/v1/chromium/duplicate-clock-390-result.png",
+      "bytes": 70894,
+      "sha256": "b5b3b4c5f8b9530182a954891f1a7adc36087723845ac23f1309608b5da009e1"
+    },
+    {
+      "path": "verification/v1/chromium/journeys-1440.json",
+      "bytes": 1080,
+      "sha256": "b930d9c31280cde37f9b107e26fec7074ded51eff76f6919a07c95a191e4942d"
+    },
+    {
+      "path": "verification/v1/chromium/journeys-320.json",
+      "bytes": 1077,
+      "sha256": "fdc2007f1a731dd19f579469c5c5f6f99be5209c0c93f4a987a59b06723d39a4"
+    },
+    {
+      "path": "verification/v1/chromium/journeys-390.json",
+      "bytes": 1077,
+      "sha256": "545ff12259492c5d01d7f4c5c6c708a5625d9741b5924d797a8f4dc07bad417c"
+    },
+    {
+      "path": "verification/v1/chromium/offline-repair.json",
+      "bytes": 163,
+      "sha256": "45d25a1456dec8e8f1953ebcb1e1b69876e699260095b860182c12847a458e0a"
+    },
+    {
+      "path": "verification/v1/chromium/offline-repair.png",
+      "bytes": 513191,
+      "sha256": "f33c4dff3fe072af92adfe474973d16ff9f6ca5ff27ee352b076b4730d3e33c2"
+    },
+    {
+      "path": "verification/v1/chromium/stale-queue-1440-board.png",
+      "bytes": 141092,
+      "sha256": "f089bad735ccef230ff3fa207fcf2ddfe8df507d6c75f7d016546a2045af5dfa"
+    },
+    {
+      "path": "verification/v1/chromium/stale-queue-1440-failure.png",
+      "bytes": 105099,
+      "sha256": "331f3e87e2d9a899fafa9519277810c6d41d93ed71e1d3ca0656996a7769a491"
+    },
+    {
+      "path": "verification/v1/chromium/stale-queue-1440-result.png",
+      "bytes": 154751,
+      "sha256": "5fd8b5c3ffa0d00092ddc793ba0fa56b7c90cdeb368bdd68479010d339d32b09"
+    },
+    {
+      "path": "verification/v1/chromium/stale-queue-320-board.png",
+      "bytes": 62806,
+      "sha256": "abf483e9f767caff28aca012ec12fa45848272951dc348eec7655f076ea9ac1d"
+    },
+    {
+      "path": "verification/v1/chromium/stale-queue-320-result.png",
+      "bytes": 69267,
+      "sha256": "e47f925e63be619a9d949c769243d569b8c1a4fc3ce1f6ca9ed497823d7630f9"
+    },
+    {
+      "path": "verification/v1/chromium/stale-queue-390-board.png",
+      "bytes": 73127,
+      "sha256": "576d0d68283659fbbbe7b1e658a4d384d98b650cd0558e83d554a9cf7cdc126f"
+    },
+    {
+      "path": "verification/v1/chromium/stale-queue-390-result.png",
+      "bytes": 70989,
+      "sha256": "8423ac207e60101f2c405bf874746f249d75961e714530696ec952eea64678af"
+    },
+    {
+      "path": "verification/v1/firefox/320-zoom-keyboard.png",
+      "bytes": 42282,
+      "sha256": "99bc9dfd6b15b8553fe7827dfc3853c8ffef5691ca168ac4f2af5d88462effe8"
+    },
+    {
+      "path": "verification/v1/firefox/cached-gate-1440-board.png",
+      "bytes": 166280,
+      "sha256": "f4bf5357abbd5169a36a200d2f7acf6c1d3b40e044356c1fafccdcc20c471e48"
+    },
+    {
+      "path": "verification/v1/firefox/cached-gate-1440-result.png",
+      "bytes": 178957,
+      "sha256": "1d2b48d62ffe013b17e6ed3132eb068493c536961c6da31131ea240883cfea63"
+    },
+    {
+      "path": "verification/v1/firefox/cached-gate-320-board.png",
+      "bytes": 71138,
+      "sha256": "3d34a045eb8f784cbdceee52cbdf3a2801d899db4b34f4d27a7cc3667f28ec5f"
+    },
+    {
+      "path": "verification/v1/firefox/cached-gate-320-result.png",
+      "bytes": 79578,
+      "sha256": "263b5e483a6b0f92f5a3e086f2deb48eb1e553dca6f3e3a943a61f4ec1cc2510"
+    },
+    {
+      "path": "verification/v1/firefox/cached-gate-390-board.png",
+      "bytes": 89087,
+      "sha256": "a7392029aa7eb53c09f2fc76173e7bed569473526ef69491ded4bf2fb7b5e786"
+    },
+    {
+      "path": "verification/v1/firefox/cached-gate-390-result.png",
+      "bytes": 83076,
+      "sha256": "8431c8350a9948b0d67d058742fe21f5f2135ad00708573b5418ca08ab99874f"
+    },
+    {
+      "path": "verification/v1/firefox/duplicate-clock-1440-board.png",
+      "bytes": 166002,
+      "sha256": "6b851911e1303e97748c5b942298f751588d9e9b28fbaa654011b8e588fb4383"
+    },
+    {
+      "path": "verification/v1/firefox/duplicate-clock-1440-result.png",
+      "bytes": 178713,
+      "sha256": "7d6cd1cf1e06be612f25e4ad903086baa4f63150c12b37f581169b43afd8ff53"
+    },
+    {
+      "path": "verification/v1/firefox/duplicate-clock-320-board.png",
+      "bytes": 71223,
+      "sha256": "fb2f0d777cff1cffa4a04b5690d6decc39f6825b08b83bee4dc1350aa2e1a04d"
+    },
+    {
+      "path": "verification/v1/firefox/duplicate-clock-320-result.png",
+      "bytes": 79422,
+      "sha256": "aa49c4029980e114f466c8e54ea3d3ad7447f4686309593dd02eab548dbcf258"
+    },
+    {
+      "path": "verification/v1/firefox/duplicate-clock-390-board.png",
+      "bytes": 89188,
+      "sha256": "9cfe524cbcc5e141f2ef81c35417345283236286be5e2af951508c3a3a8e0d1e"
+    },
+    {
+      "path": "verification/v1/firefox/duplicate-clock-390-result.png",
+      "bytes": 82905,
+      "sha256": "a06d1095ca457bc52b2f204b81c14b2c3c33cdc04d4a627fe59c3398d2ad328c"
+    },
+    {
+      "path": "verification/v1/firefox/journeys-1440.json",
+      "bytes": 1072,
+      "sha256": "4c19e7f67753d9174af432a16a80df3b632b8f28dffdd1cbe622789a33dd36d5"
+    },
+    {
+      "path": "verification/v1/firefox/journeys-320.json",
+      "bytes": 1069,
+      "sha256": "3e4cd8f460e308a222738e85d3096d0e3f0c2543e5489e2ba55f8e9f4016f0cf"
+    },
+    {
+      "path": "verification/v1/firefox/journeys-390.json",
+      "bytes": 1069,
+      "sha256": "662f77a140172c903f15c4c2f8ac68d6e8b1ae2547157c3becf17cced804676c"
+    },
+    {
+      "path": "verification/v1/firefox/offline-repair.json",
+      "bytes": 162,
+      "sha256": "e04568ba55e2079272a8e35ef92712b362cc8973805c9d097c6e6653836bbdd3"
+    },
+    {
+      "path": "verification/v1/firefox/offline-repair.png",
+      "bytes": 596199,
+      "sha256": "0d54eace41e338e2d911d5202304c633b6dfa096abce83c039a1fcca646611e9"
+    },
+    {
+      "path": "verification/v1/firefox/stale-queue-1440-board.png",
+      "bytes": 167697,
+      "sha256": "4c9f166c5767b37599489650e136bff3fbb4f6b4c290a7c4fc022342a65559f5"
+    },
+    {
+      "path": "verification/v1/firefox/stale-queue-1440-failure.png",
+      "bytes": 120357,
+      "sha256": "d74b436fe35f306a49f472ade92dc8c72eefd7d4ab62abe0e2d5cf0f481e5dd4"
+    },
+    {
+      "path": "verification/v1/firefox/stale-queue-1440-result.png",
+      "bytes": 182979,
+      "sha256": "b55cb951eeec6aa8f4fd6ea4e12533eaf5d7b92f574e63718cb00953267c644c"
+    },
+    {
+      "path": "verification/v1/firefox/stale-queue-320-board.png",
+      "bytes": 72265,
+      "sha256": "cc3bf5f683ae759b55cc04ca5b4737309e4208b5972d12745f1a1322630a06b7"
+    },
+    {
+      "path": "verification/v1/firefox/stale-queue-320-result.png",
+      "bytes": 79506,
+      "sha256": "7b69802529ad8164b18b03e8004f051eb6ab9c30fc1f11fbec49011d80081f68"
+    },
+    {
+      "path": "verification/v1/firefox/stale-queue-390-board.png",
+      "bytes": 85607,
+      "sha256": "6a405ee20fbdd4becf947ca9630ba30d95d4d6070391fc476f79d275afdaaf60"
+    },
+    {
+      "path": "verification/v1/firefox/stale-queue-390-result.png",
+      "bytes": 82997,
+      "sha256": "55216a6040335869dede760007d19e5e6f5c4f98b73d8c23b0e7463b4a082c0d"
+    },
+    {
+      "path": "verification/v1/webkit/320-zoom-keyboard.png",
+      "bytes": 45789,
+      "sha256": "3b78ea216a1400ee113c53b220de2dd159dc6ceb83539754931df36f8221e337"
+    },
+    {
+      "path": "verification/v1/webkit/cached-gate-1440-board.png",
+      "bytes": 176513,
+      "sha256": "8c30de9b25ce575cd1acaa3a6d2fd75a3aae782f682e6f4652d5abefc265e437"
+    },
+    {
+      "path": "verification/v1/webkit/cached-gate-1440-result.png",
+      "bytes": 190810,
+      "sha256": "399c65f0a8715251d30b51d33f13c9e7eaad16d18df6693bc86cf390cffeeb31"
+    },
+    {
+      "path": "verification/v1/webkit/cached-gate-320-board.png",
+      "bytes": 74759,
+      "sha256": "930f4dc8ce808f4e51c0c2866954488289d2903dfbcd960fbadf44deca93bbab"
+    },
+    {
+      "path": "verification/v1/webkit/cached-gate-320-result.png",
+      "bytes": 83033,
+      "sha256": "01786daf3c943a6d8cb51a029f89f9540a2e959c4a440ad19fadc65c783cab2c"
+    },
+    {
+      "path": "verification/v1/webkit/cached-gate-390-board.png",
+      "bytes": 92328,
+      "sha256": "a076f5692a1ff995b33a82de460bc46fc4995f9b67e62356c4c51c0df67835ec"
+    },
+    {
+      "path": "verification/v1/webkit/cached-gate-390-result.png",
+      "bytes": 87943,
+      "sha256": "b4f1d4e72ff4aaff8aa7164e8a87b6108fdb966a47186909b84d6ac1bcdbd1d0"
+    },
+    {
+      "path": "verification/v1/webkit/duplicate-clock-1440-board.png",
+      "bytes": 175436,
+      "sha256": "5a359ec4ea52fb15e8674533cbc7b22d4f588f98fab2a299a9a7e7abe71ce451"
+    },
+    {
+      "path": "verification/v1/webkit/duplicate-clock-1440-result.png",
+      "bytes": 190341,
+      "sha256": "8cf095c6888f1d5a5fd8f6083a95f0428c1dca087a727c0e476234ec1c58754d"
+    },
+    {
+      "path": "verification/v1/webkit/duplicate-clock-320-board.png",
+      "bytes": 74465,
+      "sha256": "29c03937bcc40ae8bb0ea129a5af95e8032a05fb8ea9433ee8d85dcdf26d1f49"
+    },
+    {
+      "path": "verification/v1/webkit/duplicate-clock-320-result.png",
+      "bytes": 82896,
+      "sha256": "45ac7effc04093340d5efcf4dd2bd957058dcdf69b8ffe1145d863d40e902522"
+    },
+    {
+      "path": "verification/v1/webkit/duplicate-clock-390-board.png",
+      "bytes": 92013,
+      "sha256": "6044185fe91fc5dda7bebb1d70b84abb877d8a80fe6e6dc2cdd633c2396021a0"
+    },
+    {
+      "path": "verification/v1/webkit/duplicate-clock-390-result.png",
+      "bytes": 87793,
+      "sha256": "9f425da46b3a34c246fc88a8917d6aa643640709f3776648968dacbe595bdce0"
+    },
+    {
+      "path": "verification/v1/webkit/journeys-1440.json",
+      "bytes": 1070,
+      "sha256": "4ca89e51c6150302aaa5d141814e62b8c30171ef587b36151a289be9fe46a6c5"
+    },
+    {
+      "path": "verification/v1/webkit/journeys-320.json",
+      "bytes": 1067,
+      "sha256": "b460179e95a6eb336762e1ca696565fb73e5dbd7043e19b23f4f78d1c436d15e"
+    },
+    {
+      "path": "verification/v1/webkit/journeys-390.json",
+      "bytes": 1067,
+      "sha256": "e646e32420e40c8c4373874825f66503d1c4757e10e184dd7ad8c63e1585af87"
+    },
+    {
+      "path": "verification/v1/webkit/offline-repair.json",
+      "bytes": 161,
+      "sha256": "8ca8224668894e64be0aa8db6b0b84ccf5a86ecf2352caa0b058640c98fddf28"
+    },
+    {
+      "path": "verification/v1/webkit/offline-repair.png",
+      "bytes": 636177,
+      "sha256": "f425e7cb167706cc677c285f5a876b5910000a85080bdfb86350d1c8327fba24"
+    },
+    {
+      "path": "verification/v1/webkit/stale-queue-1440-board.png",
+      "bytes": 179478,
+      "sha256": "7665ff81cd14048761a0d82ae53ab1bc8ea1aebe0a9371aafef9565bd5d94de7"
+    },
+    {
+      "path": "verification/v1/webkit/stale-queue-1440-failure.png",
+      "bytes": 128295,
+      "sha256": "3ea877fd40d688c655e4512469c1e63c9d9504a5d20d1a7f869c17b7df2f1e57"
+    },
+    {
+      "path": "verification/v1/webkit/stale-queue-1440-result.png",
+      "bytes": 193843,
+      "sha256": "042924b58decff06a2098949b26f7e01c21bf88af3692c86762df47a937c8b32"
+    },
+    {
+      "path": "verification/v1/webkit/stale-queue-320-board.png",
+      "bytes": 76301,
+      "sha256": "eb132b3d75397423ba24015478373025d38abb5c403a4b79513e5a22971dcdf5"
+    },
+    {
+      "path": "verification/v1/webkit/stale-queue-320-result.png",
+      "bytes": 82982,
+      "sha256": "99ca4dd5b65f4c9a43446000b3762de558cddd438cb80d029c8e93a42b558c28"
+    },
+    {
+      "path": "verification/v1/webkit/stale-queue-390-board.png",
+      "bytes": 87954,
+      "sha256": "429324749825b96a764e87cd25729c42478da93e48bcf93c7e2a591ebf1bf7f4"
+    },
+    {
+      "path": "verification/v1/webkit/stale-queue-390-result.png",
+      "bytes": 87907,
+      "sha256": "fa060b22d06416309c4e363fe91c6a5715aa2984f39d6d6577e8823de79d2dda"
+    },
+    {
+      "path": "verification/portability-packet-roundtrip.json",
+      "bytes": 302,
+      "sha256": "97e4b67d0684dc13f853a79260f558f1c8ece2803e7041552c92b0103f15ad9d"
+    },
+    {
+      "path": "verification/portability-notebook-roundtrip.json",
+      "bytes": 145,
+      "sha256": "60a6da9fb071e4ea8d2ef46d696197b29066e54448af5d5f52b54bab35c28bc4"
+    },
+    {
+      "path": "verification/portability-autosave-rescue.json",
+      "bytes": 160,
+      "sha256": "221e821656cae838df86c7631e7e31d5ca806d6e065b28b1ff93357dab19b690"
+    },
+    {
+      "path": "verification/portability-offline-audit.json",
+      "bytes": 231,
+      "sha256": "391cb0b401949930d8e9f1f1b28ef961613adb4ffb2dfe1d4295325b27a715ba"
+    },
+    {
+      "path": "verification/reproducible-builds.json",
+      "bytes": 45048,
+      "sha256": "448384444a138c2bff9e8857a7ddb60479f8275fb67279b346f7e4babdfa6ad1"
+    },
+    {
+      "path": "verification/full-packet.json",
+      "bytes": 2916,
+      "sha256": "9689635bab4f94750a401b0e05f7d5b591c730f9664c17b56532f9df4dd75575"
+    },
+    {
+      "path": "verification/packet-tamper-rejection.json",
+      "bytes": 2944,
+      "sha256": "dc7667e820dcd08086c610d840ec9d143e7c4b3e2511d49ec29f09b5ebc8525d"
+    },
+    {
+      "path": "verification/genuine-browser.json",
+      "bytes": 782,
+      "sha256": "c4f1748e71d9ce51e77cd60b10fe7c60a55f00f31b1b43cf186b37f03e8f4260"
+    },
+    {
+      "path": "verification/recording-status.json",
+      "bytes": 2125,
+      "sha256": "36a3c1ca7d1aedef6e6f744d0d7679a7b895a28e553e4d6e64d774f5fdf8f66d"
+    },
+    {
+      "path": "verification/offline.json",
+      "bytes": 308,
+      "sha256": "96bec2944483bab29ff12be63af354d9d49074256298c80a7be8bd3c5c242880"
+    },
+    {
+      "path": "verification/stateful-negative-control.json",
+      "bytes": 422,
+      "sha256": "6d950e0cf68f5ebe6dcca741bc519958e001ec87fbff076a8d2bfc6a2c4e0431"
+    },
+    {
+      "path": "verification/browser-diagnostic.json",
+      "bytes": 5465,
+      "sha256": "cb0d9a31e30af2e8f2ef81b1ea197778df16248d29ab4d669ddb07ae88eddcd5"
+    },
+    {
+      "path": "verification/screenshots/concept-lessons.png",
+      "bytes": 441343,
+      "sha256": "62994fd8e488a73cc493cb681494bb93eded4681c03584c362f5ec5cd3ef06df"
+    },
+    {
+      "path": "verification/screenshots/continuation-inspection.png",
+      "bytes": 742471,
+      "sha256": "a52c9c1558dbb08bb4d48a1ff8dd6dcdf2de8da6c3a6dd36c62c2593f1b1eda6"
+    },
+    {
+      "path": "verification/screenshots/mobile-edit.png",
+      "bytes": 61405,
+      "sha256": "ba5e34aa650916ee8419af8f23d1c163cb356092adb79631627f8544c4597318"
+    },
+    {
+      "path": "verification/screenshots/mobile-edit-zoom-200.png",
+      "bytes": 50547,
+      "sha256": "bee72a9eb03f23d8d3b776fe9af8c5724d9b6462d734882199dfc825db8c9702"
+    },
+    {
+      "path": "verification/screenshots/replay-mobile.png",
+      "bytes": 654014,
+      "sha256": "eacb88a8922da503d05ba026200cc57c9edbfa4d9f2c8e1e5197369da2713114"
+    },
+    {
+      "path": "verification/screenshots/notebook.png",
+      "bytes": 100165,
+      "sha256": "5e89e027e4ff8b8dfbafe3cad02f0add38bf2d20693da6b3a949e177a9017016"
+    },
+    {
+      "path": "verification/screenshots/gallery.png",
+      "bytes": 78795,
+      "sha256": "fbe349f3c579d52608c5123055d5e8d40f2a523861e71991b3a65d741dd4f64a"
+    },
+    {
+      "path": "verification/screenshots/history.png",
+      "bytes": 43010,
+      "sha256": "4c6b3f6a6c4eb2ff6bcc450856bd2d09159a8dc4865dc7ae8e572abe20896f86"
+    },
+    {
+      "path": "verification/screenshots/html-report.png",
+      "bytes": 86038,
+      "sha256": "3386a8e187d95c7f3ff18e2dd65c526d5df72695159acd3dea229c85a48f8cde"
+    },
+    {
+      "path": "verification/screenshots/capture-inspector-390-200.png",
+      "bytes": 775195,
+      "sha256": "43014e6f7970bbb2c2d64c5dc0354cac8fa797a9641136be79401399fe44fff4"
+    },
+    {
+      "path": "verification/screenshots/offline-reopened.png",
+      "bytes": 69218,
+      "sha256": "cf3bc3bac484e93e7faebc1f20ba9183fc2e14519adc61b5030b0a216a9f7ae2"
+    },
+    {
+      "path": "verification/screenshots/workbench-narrow.png",
+      "bytes": 523877,
+      "sha256": "a76651244cdf5c4eba8fae9b08c8e23a9316328daa73f1cb61c9f57ea3eb302e"
+    },
+    {
+      "path": "verification/screenshots/workbench-zoom.png",
+      "bytes": 1407222,
+      "sha256": "43b2e7a69d04b258978a498a037d8f1d7fdc14c4da2d39d07481b05028ed7779"
+    },
+    {
+      "path": "verification/screenshots/repair-lab-mobile.png",
+      "bytes": 742724,
+      "sha256": "91403b0b60e51d4c418b2f91524b859eecc4e69d4f5ddfbe5090889ae4a50006"
+    },
+    {
+      "path": "verification/screenshots/commands.png",
+      "bytes": 5642,
+      "sha256": "aad26ea0abd81582d4b226da7b3885ab50682e7f3d6b6784d5fece49e7b25d6e"
+    },
+    {
+      "path": "verification/screenshots/readiness.png",
+      "bytes": 64992,
+      "sha256": "15515644aee26d84b13380303b65ab198f7f3a699ec41bb417e9d378945a2132"
+    },
+    {
+      "path": "verification/screenshots/genuine-desktop.png",
+      "bytes": 748953,
+      "sha256": "e95a72fba9b6c2baa795fd7bbd3e6eb91e5edc7a81d50c24b7ca701905a64d32"
+    },
+    {
+      "path": "verification/screenshots/genuine-mobile.png",
+      "bytes": 708001,
+      "sha256": "0d277bb3984224656e4d3f861c375fcc164e43da07cc9aa32f60eb605bffe3b6"
+    },
+    {
+      "path": "verification/screenshots/genuine-gallery.png",
+      "bytes": 226692,
+      "sha256": "0a2016b33416f3953801a59d153f5418cfdc7a95182dfec7d5c1aaf180fcbb03"
+    },
+    {
+      "path": "verification/screenshots/portability-packet.png",
+      "bytes": 383340,
+      "sha256": "afffe359257d729915348511d2b3d9d26fc7c7a0b042a771e603dd911377b6a1"
+    },
+    {
+      "path": "verification/screenshots/portability-notebook.png",
+      "bytes": 158988,
+      "sha256": "82803292826f227ae96d08457a0bc2efd5ad2b041640450674ddac5dfeced740"
+    },
+    {
+      "path": "verification/screenshots/portability-autosave.png",
+      "bytes": 39369,
+      "sha256": "3253470930c7762efd6a849716c115e837dde8396d17c9bebc0a26d3a7215eb5"
+    },
+    {
+      "path": "verification/screenshots/portability-offline-audit.png",
+      "bytes": 76841,
+      "sha256": "67f40ad9b763174609c4944db1858e90e38f8946bc8dbeee9a7011edfffa2061"
+    },
+    {
+      "path": "verification/screenshots/portability-notebook-phone-zoom.png",
+      "bytes": 469907,
+      "sha256": "f87d4a1dafd23f1f62faf75dc32e25a533ec53ed8b177b34ef2d1b14f6511c12"
+    }
+  ],
+  "log_transformation": "Known local source/runtime<local> prefixes and remaining machine paths replaced with <local>. Original and published log hashes remain distinct. Full raw artifacts stay local.",
+  "claim_ceiling": "Local reproducible software evidence and one observed assessed-model recording. Local custody is not independent provider authentication. Human outcomes, research validity, hosted CI and deployment are not established."
+}

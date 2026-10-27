@@ -1,0 +1,967 @@
+{
+  "schema_version": "1.0",
+  "status": "passed",
+  "historical_baseline": false,
+  "started_at": "2026-10-27T13:17:44.857Z",
+  "finished_at": "2026-10-27T13:17:59.297Z",
+  "source_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M4 Max",
+    "logical_cpus": 16,
+    "browser": "156.0.8078.4",
+    "playwright": "1.64.0",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "cpu_throttling": "none",
+    "concurrency": 1
+  },
+  "method": "Browser performance.now. Toggle event to two rendering frames. Check event to matching new worker ID/candidate/twelve cases and rendered verdict, including cold worker in each round. Three rounds, five samples per named scenario per round. Local preview with external requests blocked.",
+  "checks": [
+    {
+      "round": 1,
+      "scenario": "stale-queue",
+      "recipe": "guard enabled, inherited stale job retained",
+      "meaningful_ready_ms": 199.7,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 26.4,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 28.6,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.6,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 28.9,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 28.8,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 57.2,
+          "request_id": "ef4c5bcb-9cf4-4c76-a7e0-d3b10fcad8e4",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.9,
+          "request_id": "7206ec14-b0b4-4d62-aaa1-42cad0e1852e",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.7,
+          "request_id": "4df07b9e-826a-463f-a67e-6372b82fd19e",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.4,
+          "request_id": "9679bdf1-bf6a-4f37-86fc-513166a8cc9c",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.1,
+          "request_id": "711643e1-4ad7-4a73-8652-f70c767089e4",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 28.799999952316284,
+        "p95_ms": 29.600000023841858,
+        "max_ms": 29.600000023841858
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 29.899999976158142,
+        "p95_ms": 57.199999928474426,
+        "max_ms": 57.199999928474426
+      }
+    },
+    {
+      "round": 1,
+      "scenario": "duplicate-clock",
+      "recipe": "standby disabled, its inherited duplicate selected and dropped",
+      "meaningful_ready_ms": 167.1,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 29.4,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.6,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.1,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.6,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 30,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 29.4,
+          "request_id": "acebbd91-456a-4d94-86b3-f13157cba34b",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.8,
+          "request_id": "9124fefa-c4f5-473b-b031-51022ce80e0d",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.2,
+          "request_id": "17b516c8-6368-4e32-b5bc-561446c60097",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.1,
+          "request_id": "b9c3a4d1-3944-41ea-adfa-40ac37356c54",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.3,
+          "request_id": "2def3c79-2df4-468b-a0c9-a97e6a5ade2c",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 29.59999990463257,
+        "p95_ms": 30,
+        "max_ms": 30
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 29.799999952316284,
+        "p95_ms": 30.199999928474426,
+        "max_ms": 30.199999928474426
+      }
+    },
+    {
+      "round": 1,
+      "scenario": "cached-gate",
+      "recipe": "gate switched to live; inherited state retained",
+      "meaningful_ready_ms": 166.9,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 29.2,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 28.8,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.7,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.6,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.6,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 29.7,
+          "request_id": "6ab2c3fd-93cd-4cd8-8f61-065323b2a69b",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.6,
+          "request_id": "aa086023-e4e3-44c2-a365-b38470a7ca6b",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.3,
+          "request_id": "333300c6-7c36-43ac-9565-b18f5d35fd69",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.1,
+          "request_id": "6c4a5685-59de-4d0d-8c10-a9b07d3321b5",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.2,
+          "request_id": "9b09cbe9-b03f-4c7f-b0c5-bab5cdf74daf",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 29.600000023841858,
+        "p95_ms": 29.700000047683716,
+        "max_ms": 29.700000047683716
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 30.100000023841858,
+        "p95_ms": 30.299999952316284,
+        "max_ms": 30.299999952316284
+      }
+    },
+    {
+      "round": 2,
+      "scenario": "stale-queue",
+      "recipe": "guard enabled, inherited stale job retained",
+      "meaningful_ready_ms": 166.8,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 27.4,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.1,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.7,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.3,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.4,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 54.6,
+          "request_id": "ce6530f9-634f-4d41-a8af-a864926725e7",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.1,
+          "request_id": "270a2b00-1c21-4f6b-97f2-8557b2f34680",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.2,
+          "request_id": "668bb43b-2495-4da0-9fb8-75f81bb2c6ad",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.5,
+          "request_id": "99223c4a-a5bb-46e5-98e4-ac42111ad42e",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.2,
+          "request_id": "bba32b91-9140-4ab5-bbb0-b0615d092f96",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 29.299999952316284,
+        "p95_ms": 29.699999928474426,
+        "max_ms": 29.699999928474426
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 30.200000047683716,
+        "p95_ms": 54.59999990463257,
+        "max_ms": 54.59999990463257
+      }
+    },
+    {
+      "round": 2,
+      "scenario": "duplicate-clock",
+      "recipe": "standby disabled, its inherited duplicate selected and dropped",
+      "meaningful_ready_ms": 180.8,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 29.1,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.5,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.8,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 30,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.8,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 29.5,
+          "request_id": "f9b42d65-007a-4798-8c1f-20f2e5c198d4",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 31,
+          "request_id": "a2593963-17e1-4745-871a-ec1bb96c9484",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.3,
+          "request_id": "8bd88f1e-f8b2-4e52-916a-8e3eb2414b9b",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 28.7,
+          "request_id": "b8da61bd-2577-4bb0-a4e1-ed4f6f0b5106",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.9,
+          "request_id": "2357a76b-b9cf-4092-9c76-f77212937f95",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 29.799999952316284,
+        "p95_ms": 30,
+        "max_ms": 30
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 29.899999976158142,
+        "p95_ms": 31,
+        "max_ms": 31
+      }
+    },
+    {
+      "round": 2,
+      "scenario": "cached-gate",
+      "recipe": "gate switched to live; inherited state retained",
+      "meaningful_ready_ms": 165.2,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 28.8,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.1,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.4,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.6,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.8,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 29.8,
+          "request_id": "43e3b971-ea20-4c6e-8dd6-19e43f9446e6",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.3,
+          "request_id": "ff8b6a06-c93d-4fd5-bb2d-8c6a8619049e",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.5,
+          "request_id": "08416cb7-1368-4f9c-85a1-4bbf9d73b194",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.9,
+          "request_id": "8115da89-5cdd-4c5c-8742-6edbdee30a78",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.3,
+          "request_id": "95ed16ac-a6bf-44c1-af9d-787c243c73be",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 29.399999976158142,
+        "p95_ms": 29.799999952316284,
+        "max_ms": 29.799999952316284
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 29.5,
+        "p95_ms": 29.899999976158142,
+        "max_ms": 29.899999976158142
+      }
+    },
+    {
+      "round": 3,
+      "scenario": "stale-queue",
+      "recipe": "guard enabled, inherited stale job retained",
+      "meaningful_ready_ms": 186.7,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 27.1,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.3,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 28.2,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 28.4,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 24.9,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 59.3,
+          "request_id": "c443d3cb-1ab9-4ae6-bae3-a4af1071843f",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.7,
+          "request_id": "a0858b2e-babe-40d7-9f73-d7061317559b",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.3,
+          "request_id": "d9d07752-db7c-436f-aa36-76db9e1a880b",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.3,
+          "request_id": "b55595b8-1010-45df-a06b-996dbb001334",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30,
+          "request_id": "9bbf4abe-a0dd-4609-844b-6d90838d7112",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 28.199999928474426,
+        "p95_ms": 29.300000071525574,
+        "max_ms": 29.300000071525574
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 30,
+        "p95_ms": 59.300000071525574,
+        "max_ms": 59.300000071525574
+      }
+    },
+    {
+      "round": 3,
+      "scenario": "duplicate-clock",
+      "recipe": "standby disabled, its inherited duplicate selected and dropped",
+      "meaningful_ready_ms": 172.4,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 28.9,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.7,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 30.9,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.3,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 30,
+          "request_id": "e1c3f7be-e3a0-462a-8e91-93d0c531c801",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 28.9,
+          "request_id": "baef8159-92f7-4e7d-986e-0c47676ee183",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.7,
+          "request_id": "2be49953-a134-4a15-90df-fdc65791b851",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.4,
+          "request_id": "34fbb12a-9f5e-4eb3-9c89-5e408d87e066",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30,
+          "request_id": "e8751d81-3c2b-4bc9-8ce2-c66948377e5a",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 29.300000071525574,
+        "p95_ms": 30.90000009536743,
+        "max_ms": 30.90000009536743
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 29.700000047683716,
+        "p95_ms": 30,
+        "max_ms": 30
+      }
+    },
+    {
+      "round": 3,
+      "scenario": "cached-gate",
+      "recipe": "gate switched to live; inherited state retained",
+      "meaningful_ready_ms": 183,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 26.9,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.1,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.8,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 28.4,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 28.3,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 28.2,
+          "request_id": "9b2f1516-a2d8-4b71-b770-ea362e35398f",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.6,
+          "request_id": "534516cd-3659-4cf0-a29f-96249de45b08",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 28.7,
+          "request_id": "4d9e96f2-0ac1-43a8-843d-2e502929c07c",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 28.5,
+          "request_id": "fe9e96bd-0800-4fa9-a401-b054b1f58295",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 28.3,
+          "request_id": "3afd9b50-b9f5-4130-8651-26016ee006a1",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 28.399999976158142,
+        "p95_ms": 29.799999952316284,
+        "max_ms": 29.799999952316284
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 28.5,
+        "p95_ms": 29.59999990463257,
+        "max_ms": 29.59999990463257
+      }
+    }
+  ],
+  "summary": {
+    "interaction": {
+      "samples": 45,
+      "median_ms": 29.3,
+      "p95_ms": 30,
+      "max_ms": 30.9
+    },
+    "scoring": {
+      "samples": 45,
+      "median_ms": 29.8,
+      "p95_ms": 54.6,
+      "max_ms": 59.3
+    }
+  },
+  "thresholds": {
+    "schema_version": "1.0",
+    "interaction_p95_ms": 100,
+    "twelve_case_scoring_p95_ms": 150,
+    "rounds": 3,
+    "samples_per_scenario_per_round": 5,
+    "scenarios": [
+      "stale-queue",
+      "duplicate-clock",
+      "cached-gate"
+    ],
+    "basis": "Fixed local regression ceilings. Not universal device performance or human completion time."
+  },
+  "assets": [
+    {
+      "name": "AttemptNotebook-Bwov1zAT.js",
+      "bytes": 14428,
+      "sha256": "f9767c4f95458ffc6c2ff6a2ca55de08734064de3c3296b95d48f992387f3f51"
+    },
+    {
+      "name": "CaptureRunInspector-4ocmwg46.js",
+      "bytes": 6458,
+      "sha256": "fb67a88c94728f230d20d9bf3ac8db48af5b7c5b4d1e75b21889ae76399b5644"
+    },
+    {
+      "name": "EvidencePanel-64dSrcQg.js",
+      "bytes": 3870,
+      "sha256": "4b9b80f133ab5fa2bd9e0f4f1016ce0d2fa00c2736ac6c494d7051a9cb89272e"
+    },
+    {
+      "name": "InspectionPanel-BJrTwKC_.js",
+      "bytes": 14983,
+      "sha256": "ac06ebc4e2f0dc69604bf021931cc45126cb7ce01b853284ddb9d06864aa9511"
+    },
+    {
+      "name": "LearningLab-DDfJ2Dby.js",
+      "bytes": 6162,
+      "sha256": "cea4330e49de79e3cdaf5d619c4b62032533eaba0e3bbdd213296f99628fac89"
+    },
+    {
+      "name": "RecordingGallery-EnUvep3f.js",
+      "bytes": 2400,
+      "sha256": "adaed157f324b3bab0b3efbc46ac2d99886aa724f3e112ba8bf3b68777607355"
+    },
+    {
+      "name": "RepairLab-BlcIYjrp.js",
+      "bytes": 7266,
+      "sha256": "83f17e961a26a7b03b85fdfa244d780e8d3af20c8bd6a3d0d57f8e6dc63607e3"
+    },
+    {
+      "name": "ReplayViewer-vk0eEuVR.js",
+      "bytes": 16901,
+      "sha256": "9c835d8a9b1188d0d0ed1b9fcd763ddbb974f5196e127d8e5152c094dbc8c7ab"
+    },
+    {
+      "name": "Study-DxJLWmAR.js",
+      "bytes": 7228,
+      "sha256": "565110d8fb683d51eb2a7d987926034646c7f71577016d113d4ec600d9515b3e"
+    },
+    {
+      "name": "annotations.worker-Z2NoEQGw.js",
+      "bytes": 271907,
+      "sha256": "5e268941679dda75c4559f1ba3a05495e24a407dceb201a53fbdd1206842ebfc"
+    },
+    {
+      "name": "backup.worker-D20aNzLY.js",
+      "bytes": 254851,
+      "sha256": "2fd11bc4216c5eab14336307a1bf2aad29133ee7278cc9342d64a5cff2cc9f8a"
+    },
+    {
+      "name": "client-DOG8DaSc.js",
+      "bytes": 7878,
+      "sha256": "c40d3a42ea111ea16f54f58681daf731f32662065824b18a4099d97fffd39f43"
+    },
+    {
+      "name": "continuation.worker-CNAXfoXr.js",
+      "bytes": 254110,
+      "sha256": "4d28db5b0689d2e50b04e6d33bdd3f68b066fba979c5d9158f52ef05b15b7b7e"
+    },
+    {
+      "name": "curated-CbJnn9xc.js",
+      "bytes": 3739,
+      "sha256": "07ea4b47741f9692238bdaef971c3381beebaf9af85bd22a0890fa20077a0f69"
+    },
+    {
+      "name": "diagnostic-C83RqSuz.js",
+      "bytes": 2012,
+      "sha256": "1d8f0bc7e6a1dac12b96c1b6c86afeb785c8975156285df94443b01372067975"
+    },
+    {
+      "name": "engine-C-9hByQb.js",
+      "bytes": 8331,
+      "sha256": "df18a43b448aba1825710fd39921679b044d3230f0c3bd5c5dff0a43aa06a048"
+    },
+    {
+      "name": "evaluate-browser-q5G4bjCj.js",
+      "bytes": 4171,
+      "sha256": "7fec4e768f4fb029e1b9c42a144f3f63660fb26822cc1111566338b236cbf004"
+    },
+    {
+      "name": "evaluation.worker-BZylw9U3.js",
+      "bytes": 166902,
+      "sha256": "7e9243d877f2868cc3d3972ee21736101b073572cc3d5a02abc4741ae4025295"
+    },
+    {
+      "name": "evidence-report-pqM57--g.js",
+      "bytes": 4628,
+      "sha256": "6d37f8ed0e3861324de4444ef8c6c9f896df2505baaf29e0d473038050890f2b"
+    },
+    {
+      "name": "gallery-Bfl2Okfu.js",
+      "bytes": 2028,
+      "sha256": "0b9a91e1f58b0df7dc5799071825934133c04fb2cc64b3a7132c04cb884a7ccb"
+    },
+    {
+      "name": "index-DQR3NFym.js",
+      "bytes": 441743,
+      "sha256": "e7915f9e4c83d185247b6f7239a1c3fea37a7ea347a0b8c540e73a875d922cb7"
+    },
+    {
+      "name": "inspection.worker-C9v9GgSU.js",
+      "bytes": 256206,
+      "sha256": "2d15696124397e108c2a136fbea2b05b1718e7fe262d9e09ae4fb65d09faef3f"
+    },
+    {
+      "name": "inspector-BCuOFdqj.js",
+      "bytes": 1520,
+      "sha256": "abfc5b45f67c33fd558e581a68dba39fcac8584cb19c29b9b6dd83aa2b4d7a53"
+    },
+    {
+      "name": "jsx-runtime-DOKszBjJ.js",
+      "bytes": 8230,
+      "sha256": "12cf0146f84ca6d36e4a31f4251e33c6a53ba64aa56101b8d94d63963ff1d865"
+    },
+    {
+      "name": "manifest-BLitDbU2.js",
+      "bytes": 1747,
+      "sha256": "891de962b6fdcd556cbec341652d19cab82ad6e322c80bab0991bd8a4201d199"
+    },
+    {
+      "name": "protocol-bTVLN5m9.js",
+      "bytes": 1300,
+      "sha256": "d2c6ef5f44133201a8d55882694f6660ce146e459cbbe10c537fd77af9581a91"
+    },
+    {
+      "name": "receipt-BsevPNb9.js",
+      "bytes": 1870,
+      "sha256": "f1f7a1fc87866bc355db79f2798d1a35f5efd760c68c5077c5683ce182a458e6"
+    },
+    {
+      "name": "recording-schema-CH7yEgDC.js",
+      "bytes": 5240,
+      "sha256": "eced302d6d74ef7ab4a7393bd343a17e0137e2a3515589ecc3dbea40862dc6e1"
+    },
+    {
+      "name": "reference-port-hobI1bfN.js",
+      "bytes": 3186,
+      "sha256": "9a5c21d6e12cb63d3683312ee309cf1ae6753ab39370249d8ac8fe62e146aabf"
+    },
+    {
+      "name": "repair.worker-aTRZKCmx.js",
+      "bytes": 262584,
+      "sha256": "ebc9c18c2958f3673f76d28d7acb32cb801246c10499f39eae2ab3461aaee7b7"
+    },
+    {
+      "name": "replay.worker-Av3bxlyC.js",
+      "bytes": 287619,
+      "sha256": "c64c6bf087250130a768a0929cca217b96faacd6b87866568800783b7466a42d"
+    },
+    {
+      "name": "src-D8qxA5nX.js",
+      "bytes": 147250,
+      "sha256": "93c92a5bdbda3acd107ce035617102ffbfedf1416f9a6e54b0708dfbf0bb3abe"
+    }
+  ],
+  "measurement_scripts": [
+    {
+      "path": "scripts/benchmark-product.mjs",
+      "sha256": "4b2fea6207259caeae7899a25fd27a5c1ec71fe95f88bdcb2c3b5cb9e4e97bb2"
+    },
+    {
+      "path": "scripts/browser-measurement.mjs",
+      "sha256": "e1555ead4f73174c6764abced2ebacde60b52196622e92b02ed2e820da4998c6"
+    }
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "artifact_sha256": "8d8d49709477464e4ee60ec01f10a11ad4ed53c826a1a0adaed40e41bd3cbc65",
+  "claim_ceiling": "Local browser timing on the recorded machine, not user completion time or universal device performance."
+}

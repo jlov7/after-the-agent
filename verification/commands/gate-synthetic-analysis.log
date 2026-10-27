@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "origin": "synthetic",
+  "label": "SYNTHETIC ARITHMETIC DEMONSTRATION — not human evidence",
+  "origin_is_declaration_not_proof": true,
+  "unit": "assigned_participant_first_recovery_episode",
+  "comparison": "precommitment_minus_observation",
+  "interval_method": "Newcombe independent-proportion interval from Wilson score limits, 95%",
+  "counts": {
+    "observation": {
+      "assigned": 5,
+      "known_outcomes": 4,
+      "successes": 1,
+      "observed_failures": 3,
+      "technical_unknowns": 1,
+      "reasons": {
+        "recovered": 1,
+        "failed": 1,
+        "timeout": 1,
+        "voluntary_stop": 1,
+        "technical_unknown": 1
+      }
+    },
+    "precommitment": {
+      "assigned": 5,
+      "known_outcomes": 4,
+      "successes": 1,
+      "observed_failures": 3,
+      "technical_unknowns": 1,
+      "reasons": {
+        "recovered": 1,
+        "failed": 1,
+        "timeout": 1,
+        "voluntary_stop": 1,
+        "technical_unknown": 1
+      }
+    }
+  },
+  "primary": {
+    "status": "technically_incomplete",
+    "risk_difference": null,
+    "ci95": null,
+    "score_test": null
+  },
+  "observed_case_descriptive": {
+    "label": "Observed-case descriptive comparison; not an ITT point estimate",
+    "risk_difference": 0.0,
+    "ci95": [
+      -0.4936672174461458,
+      0.4936672174461458
+    ]
+  },
+  "missingness_sensitivity": {
+    "method": "all-unknown outcome imputation corners; approximate 95% interval envelope",
+    "risk_difference_identified": [
+      -0.2,
+      0.2
+    ],
+    "ci95_envelope": [
+      -0.6039642298921517,
+      0.6039642298921517
+    ],
+    "imputation_corners": [
+      {
+        "treatment_unknown_as": 0,
+        "control_unknown_as": 0,
+        "risk_difference": 0.0,
+        "ci95": [
+          -0.4549652658435349,
+          0.4549652658435349
+        ]
+      },
+      {
+        "treatment_unknown_as": 0,
+        "control_unknown_as": 1,
+        "risk_difference": -0.2,
+        "ci95": [
+          -0.6039642298921517,
+          0.30981259073879835
+        ]
+      },
+      {
+        "treatment_unknown_as": 1,
+        "control_unknown_as": 0,
+        "risk_difference": 0.2,
+        "ci95": [
+          -0.30981259073879835,
+          0.6039642298921517
+        ]
+      },
+      {
+        "treatment_unknown_as": 1,
+        "control_unknown_as": 1,
+        "risk_difference": 0.0,
+        "ci95": [
+          -0.4648683508092224,
+          0.4648683508092224
+        ]
+      }
+    ]
+  }
+}
+WARN `--no-project` was provided, but no project was found

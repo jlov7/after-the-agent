@@ -1,0 +1,12 @@
+{
+  "evidence_class": "persistent_headless_offline_software",
+  "reopened": true,
+  "faults": [
+    "stale-queue",
+    "duplicate-clock",
+    "cached-gate"
+  ],
+  "original_deadline_preserved": true,
+  "release_id": "dc677c0b05c296644c4de4de32218c396d222242ac3ff301ac2725e52055c322",
+  "cached_assets": 75
+}

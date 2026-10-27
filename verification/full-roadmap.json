@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0",
+  "implementation_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "evidence_class": "automated_software_verification",
+  "features": [
+    {
+      "number": 1,
+      "name": "Mobile workbench",
+      "software": "passed"
+    },
+    {
+      "number": 2,
+      "name": "Concept lessons",
+      "software": "passed"
+    },
+    {
+      "number": 3,
+      "name": "Frozen continuations",
+      "software": "passed"
+    },
+    {
+      "number": 4,
+      "name": "Job lineage",
+      "software": "passed"
+    },
+    {
+      "number": 5,
+      "name": "Repair comparison",
+      "software": "passed"
+    },
+    {
+      "number": 6,
+      "name": "Command replay viewer",
+      "software": "passed"
+    },
+    {
+      "number": 7,
+      "name": "Complete event history",
+      "software": "passed"
+    },
+    {
+      "number": 8,
+      "name": "Printable HTML evidence",
+      "software": "passed"
+    },
+    {
+      "number": 9,
+      "name": "One-case reproducer",
+      "software": "passed"
+    },
+    {
+      "number": 10,
+      "name": "Local attempt notebook",
+      "software": "passed"
+    },
+    {
+      "number": 11,
+      "name": "First replay divergence",
+      "software": "passed"
+    },
+    {
+      "number": 12,
+      "name": "Capture-run inspection",
+      "software": "passed"
+    },
+    {
+      "number": 13,
+      "name": "Owner recording gallery",
+      "software": "passed",
+      "genuine_content": "recorded_and_qualified",
+      "bundled_content": [
+        "live_model",
+        "fixture"
+      ]
+    },
+    {
+      "number": 14,
+      "name": "Installable offline edition",
+      "software": "passed"
+    },
+    {
+      "number": 15,
+      "name": "Real MCP playground",
+      "software": "passed"
+    },
+    {
+      "number": 16,
+      "name": "Stateful sequence checks",
+      "software": "passed"
+    }
+  ],
+  "browser_tests": [
+    {
+      "file": "capture-inspector.spec.ts",
+      "title": "capture inspection keeps selected artifact claims local, rejects unknown files and reflows at390px/200%",
+      "status": "passed"
+    },
+    {
+      "file": "full-roadmap.spec.ts",
+      "title": "a selected gallery source resumes from its owner asset with the original deadline after a reload",
+      "status": "passed"
+    },
+    {
+      "file": "full-roadmap.spec.ts",
+      "title": "a browser-exported selected counterexample reproduces through the actual CLI and independent Python",
+      "status": "passed"
+    },
+    {
+      "file": "full-roadmap.spec.ts",
+      "title": "notebook inspection replays the retained bytes without mutating the live attempt",
+      "status": "passed"
+    },
+    {
+      "file": "full-roadmap.spec.ts",
+      "title": "a failed optional tool chunk preserves board actions and saving",
+      "status": "passed"
+    },
+    {
+      "file": "full-roadmap.spec.ts",
+      "title": "new public tools are absent throughout both matched rehearsal phases",
+      "status": "passed"
+    },
+    {
+      "file": "full-roadmap.spec.ts",
+      "title": "a delayed recording-source restore cannot overwrite a newer attempt or its edits",
+      "status": "passed"
+    },
+    {
+      "file": "full-roadmap.spec.ts",
+      "title": "a delayed file read cannot acquire a fresh restore token and overwrite newer work",
+      "status": "passed"
+    },
+    {
+      "file": "history-report.spec.ts",
+      "title": "complete history pages each match once and combines accessible filters without losing older events",
+      "status": "passed"
+    },
+    {
+      "file": "history-report.spec.ts",
+      "title": "downloaded HTML renders locally with no executable markup or network and prints its claim boundaries",
+      "status": "passed"
+    },
+    {
+      "file": "notebook-gallery.spec.ts",
+      "title": "opt-in notebook preserves immutable bytes across reload, export and delete",
+      "status": "passed"
+    },
+    {
+      "file": "notebook-gallery.spec.ts",
+      "title": "restoring an expired notebook bookmark retains the original deadline and terminal timeout",
+      "status": "passed"
+    },
+    {
+      "file": "notebook-gallery.spec.ts",
+      "title": "notebook reports its 20 bookmark quota without adding a record",
+      "status": "passed"
+    },
+    {
+      "file": "notebook-gallery.spec.ts",
+      "title": "notebook reports its 32 MiB quota without adding a record",
+      "status": "passed"
+    },
+    {
+      "file": "notebook-gallery.spec.ts",
+      "title": "corrupt notebook record disables inspection export and restoration while permitting deletion",
+      "status": "passed"
+    },
+    {
+      "file": "notebook-gallery.spec.ts",
+      "title": "unavailable IndexedDB has explicit feedback after opt-in",
+      "status": "passed"
+    },
+    {
+      "file": "notebook-gallery.spec.ts",
+      "title": "an out-of-range bookmark timestamp remains a deletable corrupt record",
+      "status": "passed"
+    },
+    {
+      "file": "notebook-gallery.spec.ts",
+      "title": "gallery identifies the fixture and keeps source selection disabled during recovery",
+      "status": "passed"
+    },
+    {
+      "file": "notebook-gallery.spec.ts",
+      "title": "notebook and gallery use readable text contrast in the actual application theme",
+      "status": "passed"
+    },
+    {
+      "file": "offline.spec.ts",
+      "title": "offline edition exposes an installable manifest and an explicit cache control",
+      "status": "passed"
+    },
+    {
+      "file": "offline.spec.ts",
+      "title": "a corrupt offline update retains the complete edition and another active tab blocks activation",
+      "status": "passed"
+    },
+    {
+      "file": "offline.spec.ts",
+      "title": "a closed browser reopens offline with all three faults, workers and the original resume deadline",
+      "status": "passed"
+    },
+    {
+      "file": "replay-viewer.spec.ts",
+      "title": "actual recording command navigation reconstructs board, queue, settings and original download",
+      "status": "passed"
+    },
+    {
+      "file": "replay-viewer.spec.ts",
+      "title": "recording divergences show exact fields and uploads cannot self-assert live provenance",
+      "status": "passed"
+    },
+    {
+      "file": "replay-viewer.spec.ts",
+      "title": "replay worker stays keyboard accessible and reflows at390px and200percent zoom",
+      "status": "passed"
+    },
+    {
+      "file": "replay-viewer.spec.ts",
+      "title": "opening replay cannot reset the running recovery deadline or replace its board",
+      "status": "passed"
+    },
+    {
+      "file": "replay-viewer.spec.ts",
+      "title": "compact downloads above2MB and resumable envelopes retain the imported deadline",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/ui-browser/screenshots/replay-mobile.png",
+      "sha256": "eacb88a8922da503d05ba026200cc57c9edbfa4d9f2c8e1e5197369da2713114"
+    },
+    {
+      "path": "evidence/ui-browser/screenshots/notebook.png",
+      "sha256": "5e89e027e4ff8b8dfbafe3cad02f0add38bf2d20693da6b3a949e177a9017016"
+    },
+    {
+      "path": "evidence/ui-browser/screenshots/gallery.png",
+      "sha256": "fbe349f3c579d52608c5123055d5e8d40f2a523861e71991b3a65d741dd4f64a"
+    },
+    {
+      "path": "evidence/ui-browser/screenshots/history.png",
+      "sha256": "4c6b3f6a6c4eb2ff6bcc450856bd2d09159a8dc4865dc7ae8e572abe20896f86"
+    },
+    {
+      "path": "evidence/ui-browser/screenshots/html-report.png",
+      "sha256": "3386a8e187d95c7f3ff18e2dd65c526d5df72695159acd3dea229c85a48f8cde"
+    },
+    {
+      "path": "evidence/ui-browser/screenshots/capture-inspector-390-200.png",
+      "sha256": "43014e6f7970bbb2c2d64c5dc0354cac8fa797a9641136be79401399fe44fff4"
+    },
+    {
+      "path": "evidence/ui-browser/screenshots/offline-reopened.png",
+      "sha256": "cf3bc3bac484e93e7faebc1f20ba9183fc2e14519adc61b5030b0a216a9f7ae2"
+    }
+  ],
+  "offline_release_id": "dc677c0b05c296644c4de4de32218c396d222242ac3ff301ac2725e52055c322",
+  "replay_worker_forbidden_dependencies": [],
+  "claim_ceiling": "All sixteen software additions exercised. Feature13 includes one genuine qualified model demonstration and a separately labelled fixture. Automated browser use is not a human usability observation. Research remains disabled."
+}

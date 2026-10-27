@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "implementation_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "evidence_class": "automated_local_software",
+  "features": [
+    "Packet browser inspection",
+    "Atomic notebook backup and import",
+    "Retained autosave download",
+    "Read-only offline integrity audit"
+  ],
+  "browser_tests": [
+    {
+      "file": "portability.spec.ts",
+      "title": "complete packet reopens in browser without changing its bytes, board or original deadline",
+      "status": "passed"
+    },
+    {
+      "file": "portability.spec.ts",
+      "title": "notebook backup preserves names dates and exact bytes across browser contexts with idempotent merge",
+      "status": "passed"
+    },
+    {
+      "file": "portability.spec.ts",
+      "title": "abandoned retained autosave remains downloadable byte for byte without becoming resumable",
+      "status": "passed"
+    },
+    {
+      "file": "portability.spec.ts",
+      "title": "offline audit detects lost and altered cache bytes without network or attempt mutations",
+      "status": "passed"
+    },
+    {
+      "file": "portability.spec.ts",
+      "title": "packet inventory corruption is rejected and a subsequent valid file still opens",
+      "status": "passed"
+    },
+    {
+      "file": "portability.spec.ts",
+      "title": "recomputed packet inventory cannot label scripted substitutions as the genuine playback source",
+      "status": "passed"
+    },
+    {
+      "file": "portability.spec.ts",
+      "title": "one invalid or conflicting notebook entry and a cancelled preview leave every retained byte unchanged",
+      "status": "passed"
+    },
+    {
+      "file": "portability.spec.ts",
+      "title": "notebook quota changed by another writer after preview rejects the complete merge atomically",
+      "status": "passed"
+    },
+    {
+      "file": "portability.spec.ts",
+      "title": "damaged autosave can be rescued without reading a valid session or deleting unrelated storage",
+      "status": "passed"
+    },
+    {
+      "file": "portability.spec.ts",
+      "title": "notebook import preview works with keyboard at phone width and zoom without treating names as HTML",
+      "status": "passed"
+    },
+    {
+      "file": "portability.spec.ts",
+      "title": "audit of an evicted entire cache does not recreate it or claim an unchanged update repaired it",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/portability/browser/packet.png",
+      "sha256": "afffe359257d729915348511d2b3d9d26fc7c7a0b042a771e603dd911377b6a1"
+    },
+    {
+      "path": "evidence/portability/browser/notebook.png",
+      "sha256": "82803292826f227ae96d08457a0bc2efd5ad2b041640450674ddac5dfeced740"
+    },
+    {
+      "path": "evidence/portability/browser/autosave.png",
+      "sha256": "3253470930c7762efd6a849716c115e837dde8396d17c9bebc0a26d3a7215eb5"
+    },
+    {
+      "path": "evidence/portability/browser/offline-audit.png",
+      "sha256": "67f40ad9b763174609c4944db1858e90e38f8946bc8dbeee9a7011edfffa2061"
+    },
+    {
+      "path": "evidence/portability/browser/notebook-phone-zoom.png",
+      "sha256": "f87d4a1dafd23f1f62faf75dc32e25a533ec53ed8b177b34ef2d1b14f6511c12"
+    }
+  ],
+  "worker_forbidden_dependencies": [],
+  "claim_ceiling": "Software and data-portability checks only. Imported provenance remains unverified. No new model calls, human observation or research launch."
+}

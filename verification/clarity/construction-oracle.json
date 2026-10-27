@@ -1,0 +1,6983 @@
+{
+  "category": "fixture",
+  "actual_model_calls": 0,
+  "receipts": [
+    {
+      "variant": "complete-primary",
+      "initial_config": {
+        "clocks": {
+          "primary": false,
+          "shadow": false
+        },
+        "gate_mode": "cached",
+        "epoch_guard": false
+      },
+      "actions": [
+        {
+          "type": "set_clock",
+          "clock": "primary",
+          "enabled": true
+        },
+        {
+          "type": "set_gate_mode",
+          "mode": "live"
+        },
+        {
+          "type": "set_epoch_guard",
+          "enabled": true
+        },
+        {
+          "type": "advance",
+          "ticks": 5
+        }
+      ],
+      "candidate": {
+        "schema_version": "1.0",
+        "plant": {
+          "schema_version": "1.0",
+          "tick": 5,
+          "revision": 4,
+          "world": {
+            "scene_id": "amber",
+            "active": true,
+            "epoch": 2
+          },
+          "config": {
+            "clocks": {
+              "primary": true,
+              "shadow": false
+            },
+            "gate_mode": "live",
+            "epoch_guard": true
+          },
+          "gate_cache": {
+            "active": true,
+            "epoch": 1
+          },
+          "queue": [
+            {
+              "id": "primary.4.left",
+              "clock": "primary",
+              "enqueue_tick": 4,
+              "due_tick": 6,
+              "lamp": "left",
+              "enqueue_epoch": 1
+            }
+          ],
+          "event_seq": 11
+        },
+        "world_prefix": {
+          "initial_world": {
+            "scene_id": "blue",
+            "active": true
+          },
+          "transitions": [
+            {
+              "tick": 5,
+              "scene_id": "amber",
+              "active": true
+            }
+          ]
+        },
+        "task": {
+          "schema_version": "1.0",
+          "task_id": "alternating-lights-v1",
+          "scenario": "stale-queue",
+          "period": 4,
+          "delay": 2,
+          "max_tick": 4096,
+          "enqueue_until_tick": 4094,
+          "max_queue": 128,
+          "max_pulses": 16384,
+          "max_audit_records": 10000,
+          "recovery_seconds": 300
+        },
+        "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+        "attempt_id": "complete-primary",
+        "capture_tick": 5,
+        "original_handover_tick": 5,
+        "terminal_reason": "submitted",
+        "reset_during_attempt": false
+      },
+      "result": {
+        "status": "pass",
+        "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+        "observations": [
+          {
+            "schema_version": "1.0",
+            "case_id": "quiet-prefix",
+            "case_sha256": "7c6c27336588ca0cb4042f092877145c3faabf2a6d395f7381ae064a699d626a",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "change-immediately",
+            "case_sha256": "4a39ba50b377ba6c812b2cc31641acce0a425fe7594e1b7ae407a9c9bd4dbc62",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "active-cycle",
+            "case_sha256": "f13c7eff6297c079a42af454749718cc43ab65acda3c770273de1bf6988ff31e",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "at-first-delivery",
+            "case_sha256": "7fadcd9214c3a06a1ccd9200e9c9ea8a0d6561c692b50680e90e08be9e5d1f81",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "before-later-delivery",
+            "case_sha256": "b6e4173f1542c5d615aa1477b8c80eecc6ca70f7247a5c50cd68556e3af39ec0",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "on-later-enqueue",
+            "case_sha256": "d4fb284c78ee410e1b974e6e4a03fb7b2819928577ca01e2497b387ad694947f",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "short-off",
+            "case_sha256": "78167633fdbfa4741cc13202bc6f67a2c0372f312d54b8abef50563456b508a9",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "long-off",
+            "case_sha256": "099340fc22bb627af808b16c30a9360beedc1cafc2239740678d337f628da6bc",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "repeated-scene-switches",
+            "case_sha256": "b73a71470301f12b8dc75fa6a99915c660a1158aa64b56eac3ee3adaa4821e9e",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "end-boundary",
+            "case_sha256": "62a9f24e1b8a0ce8d1f03e57dee9acbed0580ec0104b11e8f6b1c7a8fee5be82",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "off-on-same-named-scene",
+            "case_sha256": "5a563320569de503cfcb9273457e8e251020e27b2087de4d31f799f05cd4c5ba",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "late-active",
+            "case_sha256": "d757a721ef0b9c2e801e54ee6aa5ef430abef0b6cddcd3b89a9e1b15101648c4",
+            "candidate_sha256": "94ec4a8c073f72f5c2b7e6f120f7bebb4a978d1a85a1b21e01efc3a185849d96",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "quiet-prefix",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "change-immediately",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "active-cycle",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "at-first-delivery",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "before-later-delivery",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "on-later-enqueue",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "short-off",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "long-off",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "repeated-scene-switches",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "end-boundary",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "off-on-same-named-scene",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "late-active",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          }
+        ]
+      }
+    },
+    {
+      "variant": "complete-shadow",
+      "initial_config": {
+        "clocks": {
+          "primary": false,
+          "shadow": false
+        },
+        "gate_mode": "cached",
+        "epoch_guard": false
+      },
+      "actions": [
+        {
+          "type": "set_clock",
+          "clock": "shadow",
+          "enabled": true
+        },
+        {
+          "type": "set_gate_mode",
+          "mode": "live"
+        },
+        {
+          "type": "set_epoch_guard",
+          "enabled": true
+        },
+        {
+          "type": "advance",
+          "ticks": 5
+        }
+      ],
+      "candidate": {
+        "schema_version": "1.0",
+        "plant": {
+          "schema_version": "1.0",
+          "tick": 5,
+          "revision": 4,
+          "world": {
+            "scene_id": "amber",
+            "active": true,
+            "epoch": 2
+          },
+          "config": {
+            "clocks": {
+              "primary": false,
+              "shadow": true
+            },
+            "gate_mode": "live",
+            "epoch_guard": true
+          },
+          "gate_cache": {
+            "active": true,
+            "epoch": 1
+          },
+          "queue": [
+            {
+              "id": "shadow.4.left",
+              "clock": "shadow",
+              "enqueue_tick": 4,
+              "due_tick": 6,
+              "lamp": "left",
+              "enqueue_epoch": 1
+            }
+          ],
+          "event_seq": 11
+        },
+        "world_prefix": {
+          "initial_world": {
+            "scene_id": "blue",
+            "active": true
+          },
+          "transitions": [
+            {
+              "tick": 5,
+              "scene_id": "amber",
+              "active": true
+            }
+          ]
+        },
+        "task": {
+          "schema_version": "1.0",
+          "task_id": "alternating-lights-v1",
+          "scenario": "stale-queue",
+          "period": 4,
+          "delay": 2,
+          "max_tick": 4096,
+          "enqueue_until_tick": 4094,
+          "max_queue": 128,
+          "max_pulses": 16384,
+          "max_audit_records": 10000,
+          "recovery_seconds": 300
+        },
+        "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+        "attempt_id": "complete-shadow",
+        "capture_tick": 5,
+        "original_handover_tick": 5,
+        "terminal_reason": "submitted",
+        "reset_during_attempt": false
+      },
+      "result": {
+        "status": "pass",
+        "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+        "observations": [
+          {
+            "schema_version": "1.0",
+            "case_id": "quiet-prefix",
+            "case_sha256": "7c6c27336588ca0cb4042f092877145c3faabf2a6d395f7381ae064a699d626a",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "change-immediately",
+            "case_sha256": "4a39ba50b377ba6c812b2cc31641acce0a425fe7594e1b7ae407a9c9bd4dbc62",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "active-cycle",
+            "case_sha256": "f13c7eff6297c079a42af454749718cc43ab65acda3c770273de1bf6988ff31e",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "at-first-delivery",
+            "case_sha256": "7fadcd9214c3a06a1ccd9200e9c9ea8a0d6561c692b50680e90e08be9e5d1f81",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "before-later-delivery",
+            "case_sha256": "b6e4173f1542c5d615aa1477b8c80eecc6ca70f7247a5c50cd68556e3af39ec0",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "on-later-enqueue",
+            "case_sha256": "d4fb284c78ee410e1b974e6e4a03fb7b2819928577ca01e2497b387ad694947f",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "short-off",
+            "case_sha256": "78167633fdbfa4741cc13202bc6f67a2c0372f312d54b8abef50563456b508a9",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "long-off",
+            "case_sha256": "099340fc22bb627af808b16c30a9360beedc1cafc2239740678d337f628da6bc",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "repeated-scene-switches",
+            "case_sha256": "b73a71470301f12b8dc75fa6a99915c660a1158aa64b56eac3ee3adaa4821e9e",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "end-boundary",
+            "case_sha256": "62a9f24e1b8a0ce8d1f03e57dee9acbed0580ec0104b11e8f6b1c7a8fee5be82",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "off-on-same-named-scene",
+            "case_sha256": "5a563320569de503cfcb9273457e8e251020e27b2087de4d31f799f05cd4c5ba",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "late-active",
+            "case_sha256": "d757a721ef0b9c2e801e54ee6aa5ef430abef0b6cddcd3b89a9e1b15101648c4",
+            "candidate_sha256": "e0d3a3bcff46ff6c65fee37cda849778175bd4e124ebc10b6caeabf3da726bd2",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "quiet-prefix",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "change-immediately",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "active-cycle",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "at-first-delivery",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "before-later-delivery",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "on-later-enqueue",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "short-off",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "long-off",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "repeated-scene-switches",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "end-boundary",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "off-on-same-named-scene",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "late-active",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          }
+        ]
+      }
+    },
+    {
+      "variant": "unchanged",
+      "initial_config": {
+        "clocks": {
+          "primary": false,
+          "shadow": false
+        },
+        "gate_mode": "cached",
+        "epoch_guard": false
+      },
+      "actions": [
+        {
+          "type": "advance",
+          "ticks": 5
+        }
+      ],
+      "candidate": {
+        "schema_version": "1.0",
+        "plant": {
+          "schema_version": "1.0",
+          "tick": 5,
+          "revision": 1,
+          "world": {
+            "scene_id": "amber",
+            "active": true,
+            "epoch": 2
+          },
+          "config": {
+            "clocks": {
+              "primary": false,
+              "shadow": false
+            },
+            "gate_mode": "cached",
+            "epoch_guard": false
+          },
+          "gate_cache": {
+            "active": true,
+            "epoch": 1
+          },
+          "queue": [],
+          "event_seq": 6
+        },
+        "world_prefix": {
+          "initial_world": {
+            "scene_id": "blue",
+            "active": true
+          },
+          "transitions": [
+            {
+              "tick": 5,
+              "scene_id": "amber",
+              "active": true
+            }
+          ]
+        },
+        "task": {
+          "schema_version": "1.0",
+          "task_id": "alternating-lights-v1",
+          "scenario": "stale-queue",
+          "period": 4,
+          "delay": 2,
+          "max_tick": 4096,
+          "enqueue_until_tick": 4094,
+          "max_queue": 128,
+          "max_pulses": 16384,
+          "max_audit_records": 10000,
+          "recovery_seconds": 300
+        },
+        "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+        "attempt_id": "unchanged",
+        "capture_tick": 5,
+        "original_handover_tick": 5,
+        "terminal_reason": "submitted",
+        "reset_during_attempt": false
+      },
+      "result": {
+        "status": "mismatch",
+        "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+        "observations": [
+          {
+            "schema_version": "1.0",
+            "case_id": "quiet-prefix",
+            "case_sha256": "7c6c27336588ca0cb4042f092877145c3faabf2a6d395f7381ae064a699d626a",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "change-immediately",
+            "case_sha256": "4a39ba50b377ba6c812b2cc31641acce0a425fe7594e1b7ae407a9c9bd4dbc62",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "active-cycle",
+            "case_sha256": "f13c7eff6297c079a42af454749718cc43ab65acda3c770273de1bf6988ff31e",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "at-first-delivery",
+            "case_sha256": "7fadcd9214c3a06a1ccd9200e9c9ea8a0d6561c692b50680e90e08be9e5d1f81",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "before-later-delivery",
+            "case_sha256": "b6e4173f1542c5d615aa1477b8c80eecc6ca70f7247a5c50cd68556e3af39ec0",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "on-later-enqueue",
+            "case_sha256": "d4fb284c78ee410e1b974e6e4a03fb7b2819928577ca01e2497b387ad694947f",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "short-off",
+            "case_sha256": "78167633fdbfa4741cc13202bc6f67a2c0372f312d54b8abef50563456b508a9",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "long-off",
+            "case_sha256": "099340fc22bb627af808b16c30a9360beedc1cafc2239740678d337f628da6bc",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "repeated-scene-switches",
+            "case_sha256": "b73a71470301f12b8dc75fa6a99915c660a1158aa64b56eac3ee3adaa4821e9e",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "end-boundary",
+            "case_sha256": "62a9f24e1b8a0ce8d1f03e57dee9acbed0580ec0104b11e8f6b1c7a8fee5be82",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "off-on-same-named-scene",
+            "case_sha256": "5a563320569de503cfcb9273457e8e251020e27b2087de4d31f799f05cd4c5ba",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "late-active",
+            "case_sha256": "d757a721ef0b9c2e801e54ee6aa5ef430abef0b6cddcd3b89a9e1b15101648c4",
+            "candidate_sha256": "edc8b90f4e5a4e2011ae6c13963613b1771af03150e2ecfce6619d5779992897",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "quiet-prefix",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "change-immediately",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "active-cycle",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "at-first-delivery",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "before-later-delivery",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "on-later-enqueue",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "short-off",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "long-off",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "repeated-scene-switches",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "end-boundary",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "off-on-same-named-scene",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "late-active",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          }
+        ]
+      }
+    },
+    {
+      "variant": "no-clock",
+      "initial_config": {
+        "clocks": {
+          "primary": false,
+          "shadow": false
+        },
+        "gate_mode": "cached",
+        "epoch_guard": false
+      },
+      "actions": [
+        {
+          "type": "set_gate_mode",
+          "mode": "live"
+        },
+        {
+          "type": "set_epoch_guard",
+          "enabled": true
+        },
+        {
+          "type": "advance",
+          "ticks": 5
+        }
+      ],
+      "candidate": {
+        "schema_version": "1.0",
+        "plant": {
+          "schema_version": "1.0",
+          "tick": 5,
+          "revision": 3,
+          "world": {
+            "scene_id": "amber",
+            "active": true,
+            "epoch": 2
+          },
+          "config": {
+            "clocks": {
+              "primary": false,
+              "shadow": false
+            },
+            "gate_mode": "live",
+            "epoch_guard": true
+          },
+          "gate_cache": {
+            "active": true,
+            "epoch": 1
+          },
+          "queue": [],
+          "event_seq": 8
+        },
+        "world_prefix": {
+          "initial_world": {
+            "scene_id": "blue",
+            "active": true
+          },
+          "transitions": [
+            {
+              "tick": 5,
+              "scene_id": "amber",
+              "active": true
+            }
+          ]
+        },
+        "task": {
+          "schema_version": "1.0",
+          "task_id": "alternating-lights-v1",
+          "scenario": "stale-queue",
+          "period": 4,
+          "delay": 2,
+          "max_tick": 4096,
+          "enqueue_until_tick": 4094,
+          "max_queue": 128,
+          "max_pulses": 16384,
+          "max_audit_records": 10000,
+          "recovery_seconds": 300
+        },
+        "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+        "attempt_id": "no-clock",
+        "capture_tick": 5,
+        "original_handover_tick": 5,
+        "terminal_reason": "submitted",
+        "reset_during_attempt": false
+      },
+      "result": {
+        "status": "mismatch",
+        "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+        "observations": [
+          {
+            "schema_version": "1.0",
+            "case_id": "quiet-prefix",
+            "case_sha256": "7c6c27336588ca0cb4042f092877145c3faabf2a6d395f7381ae064a699d626a",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "change-immediately",
+            "case_sha256": "4a39ba50b377ba6c812b2cc31641acce0a425fe7594e1b7ae407a9c9bd4dbc62",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "active-cycle",
+            "case_sha256": "f13c7eff6297c079a42af454749718cc43ab65acda3c770273de1bf6988ff31e",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "at-first-delivery",
+            "case_sha256": "7fadcd9214c3a06a1ccd9200e9c9ea8a0d6561c692b50680e90e08be9e5d1f81",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "before-later-delivery",
+            "case_sha256": "b6e4173f1542c5d615aa1477b8c80eecc6ca70f7247a5c50cd68556e3af39ec0",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "on-later-enqueue",
+            "case_sha256": "d4fb284c78ee410e1b974e6e4a03fb7b2819928577ca01e2497b387ad694947f",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "short-off",
+            "case_sha256": "78167633fdbfa4741cc13202bc6f67a2c0372f312d54b8abef50563456b508a9",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "long-off",
+            "case_sha256": "099340fc22bb627af808b16c30a9360beedc1cafc2239740678d337f628da6bc",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "repeated-scene-switches",
+            "case_sha256": "b73a71470301f12b8dc75fa6a99915c660a1158aa64b56eac3ee3adaa4821e9e",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "end-boundary",
+            "case_sha256": "62a9f24e1b8a0ce8d1f03e57dee9acbed0580ec0104b11e8f6b1c7a8fee5be82",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "off-on-same-named-scene",
+            "case_sha256": "5a563320569de503cfcb9273457e8e251020e27b2087de4d31f799f05cd4c5ba",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "late-active",
+            "case_sha256": "d757a721ef0b9c2e801e54ee6aa5ef430abef0b6cddcd3b89a9e1b15101648c4",
+            "candidate_sha256": "e41c893a6ff9aa24d93f3ce04be5dc768ad4df0f3d3bebc8b3b0ad7df9f156ca",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": []
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "quiet-prefix",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "change-immediately",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "active-cycle",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "at-first-delivery",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "before-later-delivery",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "on-later-enqueue",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "short-off",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "long-off",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "repeated-scene-switches",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "end-boundary",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "off-on-same-named-scene",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          },
+          {
+            "case_id": "late-active",
+            "status": "mismatch",
+            "missing": [
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ],
+            "extra": []
+          }
+        ]
+      }
+    },
+    {
+      "variant": "cached-gate",
+      "initial_config": {
+        "clocks": {
+          "primary": false,
+          "shadow": false
+        },
+        "gate_mode": "cached",
+        "epoch_guard": false
+      },
+      "actions": [
+        {
+          "type": "set_clock",
+          "clock": "primary",
+          "enabled": true
+        },
+        {
+          "type": "set_epoch_guard",
+          "enabled": true
+        },
+        {
+          "type": "advance",
+          "ticks": 5
+        }
+      ],
+      "candidate": {
+        "schema_version": "1.0",
+        "plant": {
+          "schema_version": "1.0",
+          "tick": 5,
+          "revision": 3,
+          "world": {
+            "scene_id": "amber",
+            "active": true,
+            "epoch": 2
+          },
+          "config": {
+            "clocks": {
+              "primary": true,
+              "shadow": false
+            },
+            "gate_mode": "cached",
+            "epoch_guard": true
+          },
+          "gate_cache": {
+            "active": true,
+            "epoch": 1
+          },
+          "queue": [
+            {
+              "id": "primary.4.left",
+              "clock": "primary",
+              "enqueue_tick": 4,
+              "due_tick": 6,
+              "lamp": "left",
+              "enqueue_epoch": 1
+            }
+          ],
+          "event_seq": 10
+        },
+        "world_prefix": {
+          "initial_world": {
+            "scene_id": "blue",
+            "active": true
+          },
+          "transitions": [
+            {
+              "tick": 5,
+              "scene_id": "amber",
+              "active": true
+            }
+          ]
+        },
+        "task": {
+          "schema_version": "1.0",
+          "task_id": "alternating-lights-v1",
+          "scenario": "stale-queue",
+          "period": 4,
+          "delay": 2,
+          "max_tick": 4096,
+          "enqueue_until_tick": 4094,
+          "max_queue": 128,
+          "max_pulses": 16384,
+          "max_audit_records": 10000,
+          "recovery_seconds": 300
+        },
+        "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+        "attempt_id": "cached-gate",
+        "capture_tick": 5,
+        "original_handover_tick": 5,
+        "terminal_reason": "submitted",
+        "reset_during_attempt": false
+      },
+      "result": {
+        "status": "mismatch",
+        "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+        "observations": [
+          {
+            "schema_version": "1.0",
+            "case_id": "quiet-prefix",
+            "case_sha256": "7c6c27336588ca0cb4042f092877145c3faabf2a6d395f7381ae064a699d626a",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "change-immediately",
+            "case_sha256": "4a39ba50b377ba6c812b2cc31641acce0a425fe7594e1b7ae407a9c9bd4dbc62",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "active-cycle",
+            "case_sha256": "f13c7eff6297c079a42af454749718cc43ab65acda3c770273de1bf6988ff31e",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "at-first-delivery",
+            "case_sha256": "7fadcd9214c3a06a1ccd9200e9c9ea8a0d6561c692b50680e90e08be9e5d1f81",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "before-later-delivery",
+            "case_sha256": "b6e4173f1542c5d615aa1477b8c80eecc6ca70f7247a5c50cd68556e3af39ec0",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "on-later-enqueue",
+            "case_sha256": "d4fb284c78ee410e1b974e6e4a03fb7b2819928577ca01e2497b387ad694947f",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "short-off",
+            "case_sha256": "78167633fdbfa4741cc13202bc6f67a2c0372f312d54b8abef50563456b508a9",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "long-off",
+            "case_sha256": "099340fc22bb627af808b16c30a9360beedc1cafc2239740678d337f628da6bc",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "repeated-scene-switches",
+            "case_sha256": "b73a71470301f12b8dc75fa6a99915c660a1158aa64b56eac3ee3adaa4821e9e",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "end-boundary",
+            "case_sha256": "62a9f24e1b8a0ce8d1f03e57dee9acbed0580ec0104b11e8f6b1c7a8fee5be82",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "off-on-same-named-scene",
+            "case_sha256": "5a563320569de503cfcb9273457e8e251020e27b2087de4d31f799f05cd4c5ba",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "late-active",
+            "case_sha256": "d757a721ef0b9c2e801e54ee6aa5ef430abef0b6cddcd3b89a9e1b15101648c4",
+            "candidate_sha256": "749cc277eb7707ddd23cf9d56ebe518f1efe0ce45a442757670a933774bcbe30",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "quiet-prefix",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "change-immediately",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "active-cycle",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              }
+            ]
+          },
+          {
+            "case_id": "at-first-delivery",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "before-later-delivery",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "on-later-enqueue",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              }
+            ]
+          },
+          {
+            "case_id": "short-off",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "long-off",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "case_id": "repeated-scene-switches",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "end-boundary",
+            "status": "pass",
+            "missing": [],
+            "extra": []
+          },
+          {
+            "case_id": "off-on-same-named-scene",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "case_id": "late-active",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "no-guard",
+      "initial_config": {
+        "clocks": {
+          "primary": false,
+          "shadow": false
+        },
+        "gate_mode": "cached",
+        "epoch_guard": false
+      },
+      "actions": [
+        {
+          "type": "set_clock",
+          "clock": "primary",
+          "enabled": true
+        },
+        {
+          "type": "set_gate_mode",
+          "mode": "live"
+        },
+        {
+          "type": "advance",
+          "ticks": 5
+        }
+      ],
+      "candidate": {
+        "schema_version": "1.0",
+        "plant": {
+          "schema_version": "1.0",
+          "tick": 5,
+          "revision": 3,
+          "world": {
+            "scene_id": "amber",
+            "active": true,
+            "epoch": 2
+          },
+          "config": {
+            "clocks": {
+              "primary": true,
+              "shadow": false
+            },
+            "gate_mode": "live",
+            "epoch_guard": false
+          },
+          "gate_cache": {
+            "active": true,
+            "epoch": 1
+          },
+          "queue": [
+            {
+              "id": "primary.4.left",
+              "clock": "primary",
+              "enqueue_tick": 4,
+              "due_tick": 6,
+              "lamp": "left",
+              "enqueue_epoch": 1
+            }
+          ],
+          "event_seq": 10
+        },
+        "world_prefix": {
+          "initial_world": {
+            "scene_id": "blue",
+            "active": true
+          },
+          "transitions": [
+            {
+              "tick": 5,
+              "scene_id": "amber",
+              "active": true
+            }
+          ]
+        },
+        "task": {
+          "schema_version": "1.0",
+          "task_id": "alternating-lights-v1",
+          "scenario": "stale-queue",
+          "period": 4,
+          "delay": 2,
+          "max_tick": 4096,
+          "enqueue_until_tick": 4094,
+          "max_queue": 128,
+          "max_pulses": 16384,
+          "max_audit_records": 10000,
+          "recovery_seconds": 300
+        },
+        "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+        "attempt_id": "no-guard",
+        "capture_tick": 5,
+        "original_handover_tick": 5,
+        "terminal_reason": "submitted",
+        "reset_during_attempt": false
+      },
+      "result": {
+        "status": "mismatch",
+        "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+        "observations": [
+          {
+            "schema_version": "1.0",
+            "case_id": "quiet-prefix",
+            "case_sha256": "7c6c27336588ca0cb4042f092877145c3faabf2a6d395f7381ae064a699d626a",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "change-immediately",
+            "case_sha256": "4a39ba50b377ba6c812b2cc31641acce0a425fe7594e1b7ae407a9c9bd4dbc62",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "active-cycle",
+            "case_sha256": "f13c7eff6297c079a42af454749718cc43ab65acda3c770273de1bf6988ff31e",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "at-first-delivery",
+            "case_sha256": "7fadcd9214c3a06a1ccd9200e9c9ea8a0d6561c692b50680e90e08be9e5d1f81",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "before-later-delivery",
+            "case_sha256": "b6e4173f1542c5d615aa1477b8c80eecc6ca70f7247a5c50cd68556e3af39ec0",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "on-later-enqueue",
+            "case_sha256": "d4fb284c78ee410e1b974e6e4a03fb7b2819928577ca01e2497b387ad694947f",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "short-off",
+            "case_sha256": "78167633fdbfa4741cc13202bc6f67a2c0372f312d54b8abef50563456b508a9",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "long-off",
+            "case_sha256": "099340fc22bb627af808b16c30a9360beedc1cafc2239740678d337f628da6bc",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "repeated-scene-switches",
+            "case_sha256": "b73a71470301f12b8dc75fa6a99915c660a1158aa64b56eac3ee3adaa4821e9e",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "end-boundary",
+            "case_sha256": "62a9f24e1b8a0ce8d1f03e57dee9acbed0580ec0104b11e8f6b1c7a8fee5be82",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 46,
+                "lamp": "left"
+              },
+              {
+                "tick": 50,
+                "lamp": "center"
+              },
+              {
+                "tick": 50,
+                "lamp": "right"
+              },
+              {
+                "tick": 54,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "off-on-same-named-scene",
+            "case_sha256": "5a563320569de503cfcb9273457e8e251020e27b2087de4d31f799f05cd4c5ba",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              },
+              {
+                "tick": 42,
+                "lamp": "right"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "schema_version": "1.0",
+            "case_id": "late-active",
+            "case_sha256": "d757a721ef0b9c2e801e54ee6aa5ef430abef0b6cddcd3b89a9e1b15101648c4",
+            "candidate_sha256": "3485da6fca6827b8d7172c2ad06bed7484377fc383f963cdd6bfc5f37f211933",
+            "status": "complete",
+            "terminal_reason": "submitted",
+            "handover_tick": 5,
+            "observed_through_tick": 71,
+            "budget_exhausted": false,
+            "reset_during_attempt": false,
+            "pulses": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 58,
+                "lamp": "right"
+              },
+              {
+                "tick": 62,
+                "lamp": "left"
+              },
+              {
+                "tick": 66,
+                "lamp": "center"
+              },
+              {
+                "tick": 66,
+                "lamp": "right"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "quiet-prefix",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "case_id": "change-immediately",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "case_id": "active-cycle",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 34,
+                "lamp": "center"
+              },
+              {
+                "tick": 34,
+                "lamp": "right"
+              }
+            ]
+          },
+          {
+            "case_id": "at-first-delivery",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 22,
+                "lamp": "left"
+              },
+              {
+                "tick": 38,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "case_id": "before-later-delivery",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              },
+              {
+                "tick": 18,
+                "lamp": "center"
+              },
+              {
+                "tick": 18,
+                "lamp": "right"
+              },
+              {
+                "tick": 26,
+                "lamp": "right"
+              }
+            ]
+          },
+          {
+            "case_id": "on-later-enqueue",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "case_id": "short-off",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 14,
+                "lamp": "left"
+              },
+              {
+                "tick": 30,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "case_id": "long-off",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "case_id": "repeated-scene-switches",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 10,
+                "lamp": "right"
+              }
+            ]
+          },
+          {
+            "case_id": "end-boundary",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              },
+              {
+                "tick": 70,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "case_id": "off-on-same-named-scene",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              }
+            ]
+          },
+          {
+            "case_id": "late-active",
+            "status": "mismatch",
+            "missing": [],
+            "extra": [
+              {
+                "tick": 6,
+                "lamp": "left"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
