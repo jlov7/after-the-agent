@@ -1,0 +1,5 @@
+.public-tools { margin-block: 2rem; }
+.public-tools p { max-width: 70ch; }
+.public-tool-buttons { display: flex; flex-wrap: wrap; gap: .6rem; }
+.public-tool-content { margin-top: 1.5rem; min-width: 0; }
+.public-tool-content:focus { outline: 2px solid var(--accent, #e1ab65); outline-offset: .3rem; }

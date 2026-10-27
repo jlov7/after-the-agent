@@ -1,0 +1,98 @@
+import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+import { mkdirSync } from 'node:fs';
+
+test.beforeAll(() => { mkdirSync('evidence/ui-browser/screenshots', { recursive: true }); });
+
+test('isolated engine lessons require a prediction and reveal actual queue, guard and cache outcomes', async ({ page }) => {
+  await page.goto('./');
+  await page.getByRole('button', { name: 'Explore the concepts' }).click();
+  const lab = page.getByRole('region', { name: 'Interactive concept lessons' });
+  await expect(lab.getByRole('button', { name: 'Advance example' })).toBeDisabled();
+  await lab.getByRole('radio', { name: '0 pulses', exact: true }).check();
+  await lab.getByRole('button', { name: 'Advance example' }).click();
+  await expect(lab.getByRole('status')).toContainText('Try again: observed 1 pulse');
+  await expect(lab.getByTestId('lesson-observed')).toHaveText('1');
+  await expect(lab.getByTestId('lesson-queue')).toHaveText('0');
+  await lab.getByRole('button', { name: 'Reset example' }).click();
+  await expect(lab.getByTestId('lesson-queue')).toHaveText('1');
+  await expect(lab.getByRole('radio', { name: '0 pulses', exact: true })).not.toBeChecked();
+  await lab.getByRole('button', { name: 'Scene version', exact: true }).click();
+  await lab.getByRole('radio', { name: '0 pulses', exact: true }).check();
+  await lab.getByRole('button', { name: 'Advance example' }).click();
+  await expect(lab.getByRole('status')).toContainText('Correct: observed 0 pulses');
+  await expect(lab.getByTestId('lesson-discarded')).toHaveText('1');
+  await lab.getByLabel('Example delivery guard').uncheck();
+  await lab.getByRole('radio', { name: '1 pulse', exact: true }).check();
+  await lab.getByRole('button', { name: 'Advance example' }).click();
+  await expect(lab.getByRole('status')).toContainText('Correct: observed 1 pulse');
+  await lab.getByRole('button', { name: 'Cached activity', exact: true }).click();
+  await lab.getByRole('radio', { name: '1 pulse', exact: true }).check();
+  await lab.getByRole('button', { name: 'Advance example' }).click();
+  await expect(lab.getByRole('status')).toContainText('Correct: observed 1 pulse');
+  await expect(lab.getByTestId('lesson-live-observed')).toHaveText('0');
+  await expect(lab.getByText('Refresh at tick 4: active, version 1.')).toBeVisible();
+  await lab.getByText('Actual example commands and events').click();
+  await expect(lab.locator('pre')).toContainText('refresh_gate');
+  await expect(lab.locator('pre')).toContainText('job_enqueued');
+  await lab.locator('pre').focus();
+  await expect(lab.locator('pre')).toBeFocused();
+  expect((await new AxeBuilder({ page }).include('.learning-lab').analyze()).violations).toEqual([]);
+  await lab.getByText('Actual example commands and events').click();
+  await lab.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: 'evidence/ui-browser/screenshots/concept-lessons.png', fullPage: true });
+  await page.getByRole('button', { name: 'Close concept lessons' }).click();
+  await page.getByRole('button', { name: 'Take over the lights' }).click();
+  await page.getByRole('button', { name: 'Begin takeover' }).click();
+  await expect(page.getByText('Tick 5 / Paused', { exact: true })).toBeVisible();
+  await expect(page.getByText('primary.4.left', { exact: true })).toBeVisible();
+  await expect(page.getByLabel('Left pulse count')).toHaveText('0');
+  await expect(page.getByRole('region', { name: 'Interactive concept lessons' })).toHaveCount(0);
+});
+
+test('public narrow repair dock stays visible while editing and checking, including 200 percent reflow', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('./');
+  await page.getByRole('button', { name: 'Take over the lights' }).click();
+  await page.getByRole('button', { name: 'Begin takeover' }).click();
+  const toolbar = page.getByTestId('recovery-toolbar');
+  const guard = page.getByLabel('Delivery guard');
+  await guard.focus();
+  await page.keyboard.press('Space');
+  const visible = async () => {
+    const dock = await toolbar.boundingBox();
+    expect(dock).not.toBeNull();
+    expect(dock!.y).toBeGreaterThanOrEqual(0);
+    expect(dock!.y + dock!.height).toBeLessThanOrEqual(844);
+    await expect(toolbar.getByRole('button', { name: 'Check repair', exact: true })).toBeInViewport();
+    await expect(toolbar.getByTestId('recovery-countdown')).toBeInViewport();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  };
+  await visible();
+  const focused = await guard.boundingBox();
+  const dock = await toolbar.boundingBox();
+  expect(focused!.y).toBeGreaterThanOrEqual(0);
+  expect(focused!.y + focused!.height).toBeLessThan(dock!.y);
+  await page.screenshot({ path: test.info().outputPath('390px-edit.png') });
+  await page.screenshot({ path: 'evidence/ui-browser/screenshots/mobile-edit.png' });
+  await page.evaluate(() => { document.documentElement.style.zoom = '2'; });
+  await toolbar.getByRole('button', { name: 'Check repair', exact: true }).focus();
+  await guard.focus();
+  await visible();
+  const zoomFocus = await guard.boundingBox();
+  const zoomDock = await toolbar.boundingBox();
+  expect(zoomFocus!.y).toBeGreaterThanOrEqual(0);
+  expect(zoomFocus!.y + zoomFocus!.height).toBeLessThan(zoomDock!.y);
+  await page.screenshot({ path: test.info().outputPath('200-percent-edit.png') });
+  await page.screenshot({ path: 'evidence/ui-browser/screenshots/mobile-edit-zoom-200.png' });
+  await toolbar.getByRole('button', { name: 'Check repair', exact: true }).click();
+  await expect(page.getByRole('heading', { name: 'Repair held' })).toBeVisible();
+});
+
+test('desktop repair controls remain in normal board layout', async ({ page }) => {
+  await page.goto('./');
+  await page.getByRole('button', { name: 'Take over the lights' }).click();
+  await page.getByRole('button', { name: 'Begin takeover' }).click();
+  await expect(page.getByTestId('recovery-toolbar')).toHaveCSS('position', 'static');
+  await expect(page.getByTestId('recovery-countdown')).toBeHidden();
+});

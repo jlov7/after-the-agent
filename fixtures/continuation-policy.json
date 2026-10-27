@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0",
+  "policy_version": "1.0.0",
+  "continuation_ticks": 64,
+  "drain_ticks": 2,
+  "semantics": "Offsets are relative to the submitted candidate cut. Preserve initial_world and all transitions through that cut identically across cases. Each transition uses scene_id case_id.stepIndex except same_scene entries, which retain the scene before the cut. No transitions at or before the cut may be replaced. Reject candidate cuts over 4030. Same future corpus for every treatment condition; record exact case hashes.",
+  "patterns": [
+    {
+      "case_id": "quiet-prefix",
+      "same_scene": false,
+      "transitions": []
+    },
+    {
+      "case_id": "change-immediately",
+      "same_scene": false,
+      "transitions": [
+        {
+          "offset": 1,
+          "active": true
+        },
+        {
+          "offset": 9,
+          "active": true
+        },
+        {
+          "offset": 25,
+          "active": true
+        }
+      ]
+    },
+    {
+      "case_id": "active-cycle",
+      "same_scene": false,
+      "transitions": [
+        {
+          "offset": 4,
+          "active": false
+        },
+        {
+          "offset": 12,
+          "active": true
+        },
+        {
+          "offset": 28,
+          "active": false
+        },
+        {
+          "offset": 40,
+          "active": true
+        }
+      ]
+    },
+    {
+      "case_id": "at-first-delivery",
+      "same_scene": false,
+      "transitions": [
+        {
+          "offset": 1,
+          "active": true
+        },
+        {
+          "offset": 17,
+          "active": true
+        },
+        {
+          "offset": 33,
+          "active": true
+        }
+      ]
+    },
+    {
+      "case_id": "before-later-delivery",
+      "same_scene": false,
+      "transitions": [
+        {
+          "offset": 4,
+          "active": true
+        },
+        {
+          "offset": 12,
+          "active": true
+        },
+        {
+          "offset": 20,
+          "active": true
+        }
+      ]
+    },
+    {
+      "case_id": "on-later-enqueue",
+      "same_scene": false,
+      "transitions": [
+        {
+          "offset": 3,
+          "active": true
+        },
+        {
+          "offset": 15,
+          "active": false
+        },
+        {
+          "offset": 23,
+          "active": true
+        }
+      ]
+    },
+    {
+      "case_id": "short-off",
+      "same_scene": false,
+      "transitions": [
+        {
+          "offset": 8,
+          "active": false
+        },
+        {
+          "offset": 9,
+          "active": true
+        },
+        {
+          "offset": 24,
+          "active": false
+        },
+        {
+          "offset": 25,
+          "active": true
+        }
+      ]
+    },
+    {
+      "case_id": "long-off",
+      "same_scene": false,
+      "transitions": [
+        {
+          "offset": 2,
+          "active": false
+        },
+        {
+          "offset": 35,
+          "active": true
+        }
+      ]
+    },
+    {
+      "case_id": "repeated-scene-switches",
+      "same_scene": false,
+      "transitions": [
+        {
+          "offset": 5,
+          "active": true
+        },
+        {
+          "offset": 6,
+          "active": true
+        },
+        {
+          "offset": 7,
+          "active": true
+        },
+        {
+          "offset": 18,
+          "active": true
+        },
+        {
+          "offset": 34,
+          "active": true
+        }
+      ]
+    },
+    {
+      "case_id": "end-boundary",
+      "same_scene": false,
+      "transitions": [
+        {
+          "offset": 63,
+          "active": true
+        },
+        {
+          "offset": 64,
+          "active": false
+        },
+        {
+          "offset": 65,
+          "active": true
+        }
+      ]
+    },
+    {
+      "case_id": "off-on-same-named-scene",
+      "same_scene": true,
+      "transitions": [
+        {
+          "offset": 7,
+          "active": false
+        },
+        {
+          "offset": 19,
+          "active": true
+        },
+        {
+          "offset": 39,
+          "active": false
+        },
+        {
+          "offset": 51,
+          "active": true
+        }
+      ]
+    },
+    {
+      "case_id": "late-active",
+      "same_scene": false,
+      "transitions": [
+        {
+          "offset": 1,
+          "active": false
+        },
+        {
+          "offset": 48,
+          "active": true
+        }
+      ]
+    }
+  ]
+}

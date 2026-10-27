@@ -1,0 +1,6 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Dependency and scratch directories are outside the publication candidate. Product sources, history, recordings, evidence and built web assets are scanned."
+paths = ['''(^|/)(node_modules|\.git|\.worktrees|work|test-results|playwright-report)/''']

@@ -1,0 +1,3 @@
+import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
+export default tseslint.config({ ignores: ['**/generated/**','dist/**','node_modules/**','.worktrees/**','.agent/**','work/**','releases/**','test-results/**','playwright-report/**','apps/web/dist/**','evidence/**'] },js.configs.recommended,...tseslint.configs.recommended,{ files: ['**/*.{js,mjs,ts,tsx}'],languageOptions: { globals: { console:'readonly',process:'readonly',URL:'readonly',Buffer:'readonly',fetch:'readonly',AbortSignal:'readonly' } } },{ files: ['apps/web/service-worker.js'], languageOptions: { globals: { self:'readonly',caches:'readonly',crypto:'readonly',Response:'readonly',TextEncoder:'readonly' } } });

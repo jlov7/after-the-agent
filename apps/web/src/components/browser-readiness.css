@@ -1,0 +1,7 @@
+.browser-readiness { margin-block: 1rem; padding: 1rem; border: 1px solid var(--line, #567068); border-radius: .75rem; }
+.browser-readiness dl { display: grid; gap: .75rem; }
+.browser-readiness dl div { display: grid; grid-template-columns: minmax(7rem, 1fr) minmax(0, 3fr); gap: 1rem; }
+.browser-readiness dt { font-weight: 650; }
+.browser-readiness dd { margin: 0; overflow-wrap: anywhere; }
+.browser-readiness button { margin: .25rem .5rem .25rem 0; }
+@media (max-width: 36rem) { .browser-readiness dl div { grid-template-columns: 1fr; gap: .2rem; } }

@@ -1,0 +1,13 @@
+# Local demonstration
+
+Open the production preview and read Recorded agent run. The selected Codex run made five actual calls: inspect the board, enable the delivery guard, select the live gate, enable the primary clock and advance five ticks. Its three configuration edits were necessary from the recorded starting state. A separate controller then turns the guard off to create the recovery fault. That fault is not a model call or model error. Other faults and the fixture retain their own authored labels. The four-beat illustration shows left, right, left, then right plus center. Show next beat changes that illustration without changing an attempt. Select Take over the lights. Replay the actual setup actions beside the board, or Begin takeover to execute the remaining actions and inherit paused tick5. Recovery starts only then, with work from tick4 still queued.
+
+Inspect the queued job beside the scene: its source, lamp, due tick and queued/current versions. Check the original faulty state to see the first actual counterexample: quiet-prefix, tick6 left, expected0 and observed1. Enable Delivery guard, then observe Board changed since this check. The old immutable receipt remains an old result. Check repair again to evaluate the edited board under all twelve continuations, including inherited obligations and the final drain. A held repair checks future output from the submitted boundary; earlier diagnostic output remains in History.
+
+Select Duplicate clock under Try another fault, then New attempt. Selection alone does not abandon the board. Begin takeover and Step to see two left pulses at tick6. A complete tick5 repair disables one source and removes only its duplicate pending job. Either clock can be retained. Cached gate illustrates why refreshing once differs from using live state.
+
+Use the Board/Settings/Check result/History links with Tab/Enter, and native settings with Space. Download attempt evidence keeps complete evidence for the current attempt. Save progress to a file produces a separate validated restore file; restoring preserves the original deadline and re-executes commands/checks. Download before New attempt if the full prior trace is needed; the new attempt retains the old identity/disposition, not an automatic archive of its complete trace.
+
+Local rehearsal is a separate visibly synthetic mode. Both arms retain the same facts, actions, reveal schedule and handover. Its readable evidence includes the actual synthetic exposure receipt. It sends no participant enrollment or collection request.
+
+Software verification, real provider capture, unfamiliar human observation and research launch have separate statuses in BUILD_REPORT.md.

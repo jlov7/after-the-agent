@@ -1,0 +1,102 @@
+# After the Agent — product specification v1.0
+
+## The outcome
+
+A visitor watches a small light installation get configured, inherits its actual state when assistance ends, and repairs a fault. The result is judged by what the installation does on new inputs. They can inspect why their repair held or failed, then inspect the source and methodology.
+
+The research line is integrity and measurement validity for agent tooling. This instrument asks whether a successful assisted setup leaves a person able to recover the system. It does not prove long-term learning, enterprise resilience, security, or the originality of human takeover research. See `00_DECISION_AND_PRIOR_ART.md` for the narrower contribution and prior work.
+
+The first release is a restricted stateful board with three fault families. Its depth comes from correct state, comparison and interaction; a general node editor would add scope without strengthening the first question.
+
+## Who it is for
+
+The public experience serves an interested visitor with no coding or music background. The technical artifact serves an engineer who wants to reproduce a fault, run the same actions through MCP, challenge the scorer, or implement a different assistance policy. The research preparation serves an investigator who may later collect consented observations under the separate protocol.
+
+No account, API key, download, audio permission or hardware is needed to play the public version. It works with keyboard and touch. Sound is optional decoration; every relevant event is visible.
+
+## The first public journey
+
+1. The landing page shows the actual three-light board immediately. With a genuine recording, the headline is **“The agent handed it over. Can you keep it working?”** With an authored trace, use **“A working system. An unfamiliar fault. Your move.”** The source badge says either “Recorded agent run” with model/date or “Scripted preview.”
+2. A single primary button says **“Take over the lights.”** A secondary link says **“How it works.”** The visitor chooses no provider and completes no form.
+3. A brief guided demonstration explains the target: alternating side lights, with a center flash on every fourth beat. The board shows a clock, an active-scene gate, a queue and three lights. A quiet source label distinguishes a real recording from an authored demonstration throughout playback.
+4. The setup sequence changes actual engine state. A compact action ribbon says what happened in plain language. The visitor can inspect the board while watching. Public mode may fast-forward this sequence; research mode follows its frozen exposure schedule.
+5. Handover preserves the plant and pauses at a settled logical tick, normally tick 5. A pending job remains visible. The message is **“Assistant unavailable. Restore the pattern.”** The wall timer starts. Nothing is silently reset.
+6. The visitor inspects queued work, the scene state and the clocks. They can change permitted settings, drop selected jobs, step once, run or pause. Pausing the simulation does not pause the wall deadline. All actions produce understandable feedback and a visible history.
+7. **“Check repair”** captures an immutable candidate. The evaluator tests its current configuration and state, then continues it under fixed new input schedules. It either reports a working repair or a specific observed mismatch. In public mode, another attempt is allowed; it is a new candidate, not a rewrite of earlier evidence.
+8. The debrief shows a short causal account, the relevant queue/clock/scene events, and the actual observed result. It offers **“Try another fault”**, **“Inspect this run”**, and **“View the code.”** It does not assign the visitor a psychological score.
+
+Aim for a comprehensible first experience in two to three minutes, with public fast playback. This is a design target, not a measured completion time. The formal study has separate timing.
+
+## Board and controls
+
+The board contains two identically timed clock sources, a gate that can read live or cached scene state, a queue with a delivery-time epoch guard, and left/right/center outputs. The second clock appears as a standby source, not as a hidden malicious component. Every component has an accessible label, state text, and a compact inspection panel.
+
+At minimum the visitor can:
+
+- Inspect board, pending jobs, gate state and event history.
+- Enable or disable each clock.
+- Choose live versus cached gate state and refresh the cached value.
+- Enable or disable the delivery-time epoch guard.
+- Remove explicitly selected queued jobs.
+- Step one logical tick, run, pause, submit a repair, or restart as a new attempt.
+
+Use explicit settings and job selection instead of drag-only wiring. A visual connection is a faithful rendering of the fixed topology. V1 does not advertise arbitrary circuit generation.
+
+The interface explains epoch as **“scene version”** first, with the technical term in the inspector. A queued job displays the scene version it was created under and the tick when it is due. A cached gate shows both its stored value/version and the current authoritative value/version. If two identical pulses occur at the same tick, the output count and event list reveal both; one animation must not conceal duplication.
+
+The action surface is intentionally small. It must not include `fix`, `set_score`, `reset_to_good_state`, arbitrary JavaScript execution, network access or task/world editing. The owner/controller manages phase, scenario and exogenous events separately.
+
+## Three fault families
+
+| Family | What goes wrong | Why the repair is consequential |
+|---|---|---|
+| Stale queue | The scene changes after a job is enqueued; the delivery guard is disabled, so old work can fire | Removing one old job may fail again at the next scene boundary |
+| Duplicate clock | Both identically timed clocks run, leaving duplicate pending jobs and future pulses | Disabling a clock does not remove its existing jobs; a complete repair handles both state and future behavior |
+| Cached gate | The gate reads a stored active flag after the authoritative scene becomes inactive | Refreshing once can appear to fix it but fail on a later transition |
+
+The normal target does not privilege the primary clock. A participant can keep only the standby clock if the behavior is correct. The scorer rejects incorrect output, not an unexpected valid configuration.
+
+Calibrate difficulty with actual usability observations. Do not make the controls artificially opaque to force an effect. If one obvious universal click sequence solves every task immediately, revise the task selection before research, not after observing condition results.
+
+## Visual direction
+
+Use the visual language of a small stage-control instrument: a dark charcoal canvas, warm off-white text, restrained cyan for live signals, amber for pending work, and a separate error color supplemented by symbols and text. Keep the three lights large enough to understand at a glance. Typography should prioritize a short headline, readable controls and aligned numeric ticks; use locally available/system fonts to avoid network or licensing dependencies.
+
+Desktop layout: board as the main central surface, a compact target card above it, and an inspector/history column alongside it. Narrow screens stack target, board, active controls and history. No important action should depend on hover. The scene should feel like a working object, with restrained motion that follows actual events. Avoid decorative agent avatars, fake thinking streams and invented activity logs.
+
+Animation must not drive the engine. A worker or controller advances discrete logical ticks; the renderer presents resulting events. Reduced-motion mode replaces moving particles/flashes with stable labels and counters. Do not use intense flashing. Sound is off initially and enabled only by an explicit user action.
+
+## Accessibility and user-facing robustness
+
+Use native buttons, inputs and labeled regions. Provide a keyboard path through every repair action and visible focus. Queue selection needs a list or table alternative to the visual diagram. Use `aria-live` sparingly for outcome and phase changes; do not announce every tick. Color is never the only signal. Use readable contrast and avoid clipping at 200% zoom.
+
+Test desktop at 1440×900 and a narrow viewport at 390×844, keyboard-only flow, reduced motion, and a layout with long-but-valid recording/model labels. These dimensions are regression cases, not a claim of every device being covered. Inspect screenshots and the rendered interface for overlap, scroll traps and hidden controls. DOM state attributes alone cannot establish a usable interface.
+
+Refresh in public mode offers to resume a locally saved attempt only if its version and replay history validate. Otherwise explain the incompatibility and offer a fresh attempt. Restart records abandonment of the old attempt. Imported run files are untrusted data, never executable code or HTML. Cap their size and reject unknown schema versions.
+
+## Four modes and truthful status
+
+| Mode | What runs | What may be claimed |
+|---|---|---|
+| Scripted preview | Clearly labeled authored actions in the real engine | Software behavior only |
+| Recorded-agent public play | Verified re-execution of genuinely captured agent actions, followed by real human controls | The recorded agent operated this system; no claim that the recording is live |
+| Local instrument rehearsal | Both conditions, synthetic participants and local exports | Engineering preparation/usability observations only |
+| Launched research | Reviewed protocol plus authoritative assignment/collection and actual consent | Only claims supported by the resulting study |
+
+The default build includes the first three modes and prepares the fourth. A deployment-grade research collector and research recruitment are separate gates specified in the research documents. A query parameter cannot turn the public site into a data-collecting study.
+
+## Submission behavior
+
+Public play may submit multiple candidate repairs. Each submission captures its own configuration/state hash and records the result. Evaluation happens on clones and cannot change the live attempt. Public hints and detailed failed traces are allowed after a check but mark the resulting experience as public practice.
+
+Formal research uses one primary submission, or the deadline without submission. At submit, lock the candidate and end interaction for that primary episode. Reveal the evaluator result only after that episode closes. This avoids treating repeated access to hidden test feedback as unaided recovery. A later exploratory episode is separate. The collector admits submissions by server receipt time and may finish scoring afterward.
+
+The default primary window is 300 wall-clock seconds. A valid repair received within that window can count even if evaluation finishes later. A timed-out or abandoned attempt cannot be relabeled successful by importing a new state. There is no research result before the launch gate and actual data collection.
+
+## Release acceptance
+
+A software release must contain one fully usable journey, all three implemented fault families, browser/headless/MCP action parity, deterministic replay, the independent-oracle adapter, and honest provenance labels. It must pass actual browser interaction and the frozen failure cases.
+
+A recording claim additionally needs a genuine trace with observed metadata and replay verification. A usability claim additionally needs actual observations. A research claim additionally needs the independent launch process and study results. These are separate statuses in `BUILD_REPORT.md`.
+
+This release remains limited to the restricted board and three fault families.

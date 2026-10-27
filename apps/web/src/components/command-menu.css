@@ -1,0 +1,7 @@
+.command-menu dialog { width: min(30rem, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); overflow: auto; border: 1px solid var(--line, #567068); border-radius: 1rem; background: var(--panel, #162620); color: var(--ink, #edf5ee); padding: 1.25rem; }
+.command-menu dialog::backdrop { background: #07100dc9; }
+.command-menu-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.command-menu-heading h2 { margin: 0; }
+.command-menu-list { display: grid; gap: .65rem; margin-top: 1rem; }
+.command-menu-list button { width: 100%; text-align: left; }
+.command-menu button:focus-visible { outline: 3px solid #a6e9c8; outline-offset: 3px; }

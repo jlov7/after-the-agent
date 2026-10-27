@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:after-the-agent:contracts:evaluation:1.0",
+  "title": "After the Agent independent evaluation record",
+  "description": "A reference Case or complete Observation. CLI inputs are bounded arrays of these records, not a mixed-record array.",
+  "$comment": "Necessary shape validation only. oracle/reference.py additionally enforces handover_tick < enqueue_until_tick; strictly increasing unique transition ticks <= enqueue_until_tick+2; observation task digest/case/cut equality; exact observed_through_tick=end+2; pulse window (cut,end+2]; complete one-to-one suite coverage; shared candidate, cut and authoritative prefix; and positive expected liveness somewhere in the suite. The CLI rejects duplicate JSON keys, float/nonfinite tokens and files over 8 MiB. JSON Schema's semantic integer type alone does not reject lexical 1.0. The digest encoding is ata-json-v1, not general RFC 8785.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/Case"
+    },
+    {
+      "$ref": "#/$defs/Observation"
+    }
+  ],
+  "$defs": {
+    "Identifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,63}$",
+      "not": {
+        "pattern": "[^A-Za-z0-9_.-]"
+      }
+    },
+    "Sha256": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "InitialWorld": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scene_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "active": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "scene_id",
+        "active"
+      ]
+    },
+    "Transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tick": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "scene_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "active": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "tick",
+        "scene_id",
+        "active"
+      ]
+    },
+    "Case": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "case_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "handover_tick": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4093
+        },
+        "enqueue_until_tick": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4094
+        },
+        "initial_world": {
+          "$ref": "#/$defs/InitialWorld"
+        },
+        "transitions": {
+          "type": "array",
+          "maxItems": 4096,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/Transition"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "case_id",
+        "handover_tick",
+        "enqueue_until_tick",
+        "initial_world",
+        "transitions"
+      ],
+      "$comment": "handover_tick is the frozen candidate's evaluation cut, not necessarily the original assistance-handover tick. Initial epoch at tick zero is 1. A changed scene or active bit increments epoch once; an identical world command does not. All world commands precede same-tick enqueue/delivery."
+    },
+    "Pulse": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tick": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "lamp": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right",
+            "center"
+          ]
+        }
+      },
+      "required": [
+        "tick",
+        "lamp"
+      ]
+    },
+    "Observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "case_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "case_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "candidate_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "status": {
+          "const": "complete"
+        },
+        "terminal_reason": {
+          "const": "submitted"
+        },
+        "handover_tick": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4096
+        },
+        "observed_through_tick": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4096
+        },
+        "budget_exhausted": {
+          "const": false
+        },
+        "reset_during_attempt": {
+          "const": false
+        },
+        "pulses": {
+          "type": "array",
+          "maxItems": 16384,
+          "items": {
+            "$ref": "#/$defs/Pulse"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "case_id",
+        "case_sha256",
+        "candidate_sha256",
+        "status",
+        "terminal_reason",
+        "handover_tick",
+        "observed_through_tick",
+        "budget_exhausted",
+        "reset_during_attempt",
+        "pulses"
+      ],
+      "$comment": "Pulse duplicates are deliberately allowed by the evidence schema: exact multiset scoring must detect them, not discard them during parsing. Metadata commitments require recorder/server validation; this shape alone does not authenticate evidence."
+    },
+    "Cases": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "items": {
+        "$ref": "#/$defs/Case"
+      }
+    },
+    "Observations": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "items": {
+        "$ref": "#/$defs/Observation"
+      }
+    }
+  }
+}

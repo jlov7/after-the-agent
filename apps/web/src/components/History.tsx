@@ -1,0 +1,20 @@
+import { useMemo, useState } from 'react';
+import type { CommandRecord, DomainEvent } from '../../../../packages/contracts/src/index.js';
+import { eventText } from '../session/labels.js';
+import { filterHistory, historyPage, historyRows, type HistoryFilters } from './history-model.js';
+import './history.css';
+const noCommands:readonly CommandRecord[]=[];
+export function History({ events, commands=noCommands, advanced=false }: { events: readonly DomainEvent[]; commands?:readonly CommandRecord[]; advanced?:boolean }) {
+  const meaningful = useMemo(() => events.filter(event => event.type !== 'settled_tick'), [events]);
+  const recent = meaningful.slice(-24);
+  if(advanced)return <FullHistory events={events} commands={commands}/>;
+  return <section id="history" className="history panel" aria-label="Recent event history"><h2 id="history-heading" tabIndex={-1}>History</h2><p className="hint">{meaningful.length > 24 ? `Latest 24 of ${meaningful.length} events. ` : ''}Settled ticks without events are omitted. Complete history is in the download.</p><div id="history-events" className="history-scroll" role="region" aria-label="Scrollable recent event history" tabIndex={0}><ol>{recent.map(event => <li key={event.seq}><span>Tick {event.tick}</span>{eventText(event)}</li>)}</ol></div>{!recent.length && <p>No actions or signals yet. Step the setup to watch a firing enter the queue.</p>}</section>;
+}
+function FullHistory({events,commands}:{events:readonly DomainEvent[];commands:readonly CommandRecord[]}){
+ const [filters,setFilters]=useState<HistoryFilters>({query:'',from:'',to:'',type:'all',job:'',request:''}),[page,setPage]=useState(0);
+ const rows=useMemo(()=>historyRows(events,commands),[events,commands]);
+ const matches=useMemo(()=>filterHistory(rows,filters),[rows,filters]),view=historyPage(matches,page);
+ const update=(key:keyof HistoryFilters,value:string)=>{setFilters(current=>({...current,[key]:value}));setPage(0);};
+ const types=useMemo(()=>[...new Set(rows.map(row=>row.type))].sort(),[rows]);
+ return <section id="history" className="history panel" aria-label="Complete event history"><h2 id="history-heading" tabIndex={-1}>History</h2><p className="hint">All events, including settled ticks and actual rejected commands. Up to 50 matching rows per page.</p><div className="history-filters"><label>Search history<input type="search" value={filters.query} maxLength={256} onChange={event=>update('query',event.target.value)}/></label><label>From tick<input inputMode="numeric" value={filters.from} maxLength={8} onChange={event=>update('from',event.target.value)}/></label><label>Through tick<input inputMode="numeric" value={filters.to} maxLength={8} onChange={event=>update('to',event.target.value)}/></label><label>Event type<select aria-label="Event type" value={filters.type} onChange={event=>update('type',event.target.value)}><option value="all">All types</option>{types.map(type=><option key={type} value={type}>{type.replaceAll('_',' ')}</option>)}</select></label><label>Job ID<input value={filters.job} maxLength={128} onChange={event=>update('job',event.target.value)}/></label><label>Request ID<input value={filters.request} maxLength={128} onChange={event=>update('request',event.target.value)}/></label></div><p role="status">{view.total} matches. Page {view.page+1} of {view.pages}.</p><div id="history-events" className="history-scroll" role="region" aria-label="Scrollable complete event history" tabIndex={0}><ol start={view.page*50+1}>{view.rows.map(row=><li key={row.key} data-history-key={row.key}><span>Tick {row.tick} · {row.type.replaceAll('_',' ')}</span>{row.text.slice(0,2000)}{row.text.length>2000?' [truncated; full text in JSON]':''}{row.request&&<small>Request: {row.request.slice(0,512)}{row.request.length>512?' [truncated]':''}</small>}</li>)}</ol></div>{!view.total&&<p>No matching history.</p>}<nav className="history-paging" aria-label="History pages"><button disabled={view.page===0} onClick={()=>setPage(view.page-1)}>Previous history page</button><button disabled={view.page+1===view.pages} onClick={()=>setPage(view.page+1)}>Next history page</button></nav></section>;
+}

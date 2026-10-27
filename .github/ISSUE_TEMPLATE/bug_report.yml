@@ -1,0 +1,20 @@
+name: Bug report
+description: Report a reproducible problem in the local instrument.
+body:
+  - type: markdown
+    attributes:
+      value: Do not include secrets, personal information or private attempt data. Use the security policy for vulnerabilities.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Source revision and environment
+      description: Browser and version, operating system, source commit, and Node version if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Fault, actions, expected behavior and actual behavior.
+    validations:
+      required: true

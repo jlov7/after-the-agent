@@ -1,0 +1,427 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:after-the-agent:contracts:board:1.0",
+  "title": "After the Agent BoardRequest",
+  "description": "Canonical request contract for the browser, local MCP tool and headless adapter.",
+  "$comment": "Validate this schema and runtime authority/state semantics. Actor, phase, target, world and score cannot be supplied by a BoardRequest. No default injection or coercion is permitted. Cross-field plant identities, queue ordering, job reachability, phase legality, request idempotency and current revision are runtime checks.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "request_id": {
+      "$ref": "#/$defs/RequestId"
+    },
+    "expected_revision": {
+      "$ref": "#/$defs/Revision"
+    },
+    "action": {
+      "$ref": "#/$defs/Action"
+    }
+  },
+  "required": [
+    "schema_version",
+    "request_id",
+    "action"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "$ref": "#/$defs/MutationAction"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "then": {
+        "required": [
+          "expected_revision"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "Identifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,63}$",
+      "not": {
+        "pattern": "[^A-Za-z0-9_.-]"
+      }
+    },
+    "RequestId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9._-]{1,64}$",
+      "not": {
+        "pattern": "[^A-Za-z0-9._-]"
+      }
+    },
+    "Revision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000
+    },
+    "Tick": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096
+    },
+    "Epoch": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4097
+    },
+    "Clock": {
+      "type": "string",
+      "enum": [
+        "primary",
+        "shadow"
+      ]
+    },
+    "Lamp": {
+      "type": "string",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "GateMode": {
+      "type": "string",
+      "enum": [
+        "live",
+        "cached"
+      ]
+    },
+    "JobId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 19,
+      "pattern": "^(primary|shadow)\\.[1-9][0-9]{0,3}\\.(left|right|center)$",
+      "not": {
+        "pattern": "[^a-z0-9.]"
+      },
+      "$comment": "Canonical job ID is clock + '.' + decimal enqueue_tick + '.' + lamp. No leading zeros. Exact agreement with the other job fields is validated by the engine."
+    },
+    "InspectAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "inspect"
+        },
+        "target": {
+          "type": "string",
+          "enum": [
+            "board",
+            "queue",
+            "gate",
+            "events"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "target"
+      ]
+    },
+    "SetClockAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "set_clock"
+        },
+        "clock": {
+          "$ref": "#/$defs/Clock"
+        },
+        "enabled": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "clock",
+        "enabled"
+      ]
+    },
+    "SetEpochGuardAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "set_epoch_guard"
+        },
+        "enabled": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "enabled"
+      ]
+    },
+    "SetGateModeAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "set_gate_mode"
+        },
+        "mode": {
+          "$ref": "#/$defs/GateMode"
+        }
+      },
+      "required": [
+        "type",
+        "mode"
+      ]
+    },
+    "RefreshGateAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "refresh_gate"
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "DropJobsAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "drop_jobs"
+        },
+        "job_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/JobId"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "job_ids"
+      ]
+    },
+    "AdvanceAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "advance"
+        },
+        "ticks": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        }
+      },
+      "required": [
+        "type",
+        "ticks"
+      ]
+    },
+    "MutationAction": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/SetClockAction"
+        },
+        {
+          "$ref": "#/$defs/SetEpochGuardAction"
+        },
+        {
+          "$ref": "#/$defs/SetGateModeAction"
+        },
+        {
+          "$ref": "#/$defs/RefreshGateAction"
+        },
+        {
+          "$ref": "#/$defs/DropJobsAction"
+        },
+        {
+          "$ref": "#/$defs/AdvanceAction"
+        }
+      ]
+    },
+    "Action": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/InspectAction"
+        },
+        {
+          "$ref": "#/$defs/MutationAction"
+        }
+      ]
+    },
+    "World": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scene_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "epoch": {
+          "$ref": "#/$defs/Epoch"
+        }
+      },
+      "required": [
+        "scene_id",
+        "active",
+        "epoch"
+      ]
+    },
+    "Configuration": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "clocks": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "primary": {
+              "type": "boolean"
+            },
+            "shadow": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "primary",
+            "shadow"
+          ]
+        },
+        "gate_mode": {
+          "$ref": "#/$defs/GateMode"
+        },
+        "epoch_guard": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "clocks",
+        "gate_mode",
+        "epoch_guard"
+      ]
+    },
+    "GateCache": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "epoch": {
+          "$ref": "#/$defs/Epoch"
+        }
+      },
+      "required": [
+        "active",
+        "epoch"
+      ]
+    },
+    "Job": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/JobId"
+        },
+        "clock": {
+          "$ref": "#/$defs/Clock"
+        },
+        "enqueue_tick": {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 4094,
+          "multipleOf": 4
+        },
+        "due_tick": {
+          "type": "integer",
+          "minimum": 6,
+          "maximum": 4096
+        },
+        "lamp": {
+          "$ref": "#/$defs/Lamp"
+        },
+        "enqueue_epoch": {
+          "$ref": "#/$defs/Epoch"
+        }
+      },
+      "required": [
+        "id",
+        "clock",
+        "enqueue_tick",
+        "due_tick",
+        "lamp",
+        "enqueue_epoch"
+      ],
+      "$comment": "Engine verifies due_tick = enqueue_tick + 2, exact deterministic ID, epoch reachability and an undelivered due tick strictly after the settled plant tick. Queue jobs survive source disablement."
+    },
+    "CanonicalPlant": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "tick": {
+          "$ref": "#/$defs/Tick"
+        },
+        "revision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "world": {
+          "$ref": "#/$defs/World"
+        },
+        "config": {
+          "$ref": "#/$defs/Configuration"
+        },
+        "gate_cache": {
+          "$ref": "#/$defs/GateCache"
+        },
+        "queue": {
+          "type": "array",
+          "maxItems": 128,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/Job"
+          }
+        },
+        "event_seq": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "schema_version",
+        "tick",
+        "revision",
+        "world",
+        "config",
+        "gate_cache",
+        "queue",
+        "event_seq"
+      ],
+      "$comment": "Canonical queue order is due_tick then job ID. Runtime checks also require unique job IDs, due_tick > plant.tick, cache/job epochs no later than current world epoch, prefix reachability, and exact ID/field agreement. event_seq counts domain events only and uses the JavaScript safe-integer range; command receipts use a separate audit sequence. Session metadata and emitted-event logs are external to this hashable plant."
+    }
+  }
+}

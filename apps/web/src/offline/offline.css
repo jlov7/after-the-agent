@@ -1,0 +1,3 @@
+.offline-tools { margin-block: 1.5rem; padding: 1rem; border: 1px solid var(--border, #465151); border-radius: .5rem; }
+.offline-tools p { max-width: 65ch; }
+.offline-tools [role="status"]:empty { display: none; }

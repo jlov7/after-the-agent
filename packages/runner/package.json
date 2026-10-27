@@ -1,0 +1,16 @@
+{
+  "name": "@ata/runner",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./browser": "./src/evaluate-browser.ts",
+    "./node": "./src/evaluate.ts"
+  },
+  "dependencies": {
+    "@ata/contracts": "1.1.0",
+    "@ata/engine": "1.1.0"
+  },
+  "license": "MIT"
+}

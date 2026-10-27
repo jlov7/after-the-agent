@@ -1,0 +1,566 @@
+{
+  "schema_version": "1.0",
+  "manifest": {
+    "schema_version": "1.0",
+    "run_id": "e9bd2a59-5037-4705-a98f-3a6893121404",
+    "category": "fixture",
+    "provider": null,
+    "harness_version": "ata-responses-bridge-v1",
+    "requested_model": null,
+    "returned_model": null,
+    "unavailable_reason": "Authored fixture, no provider request.",
+    "started_at": "2026-10-11T18:22:55.649Z",
+    "ended_at": "2026-10-11T18:22:55.958Z",
+    "elapsed_ms": 309,
+    "completion": "complete",
+    "application_commit": "a5c781c6b1745b0094f27bd37c600d5b09e10d28",
+    "dirty": true,
+    "node_version": "v24.19.0",
+    "sdk_version": "2.3.1",
+    "protocol_version": "2026-07-28",
+    "prompt_sha256": "772d80be756c6cc089ce442894a48634cf52bc8c98ecc85c8686e3ea4ed9302a",
+    "tool_schema_sha256": "305f8ab31aa469e6292415b7779a253439378c6cc646b681a90cf8793d6a4224",
+    "reference_manifest_sha256": "2a1e32b4cf42b1c94c802f9a1822d4878959f652a5afedb4b3cd52123184597f",
+    "initial_plant_sha256": "b629594e5f708dea2ab3605d300b0527a3cdf1f195005c7b39c1755fa7469460",
+    "world_sha256": "36cefda700a21124444e4b4e0b77262a342ee269b305bee9ca24053075389a40",
+    "final_plant_sha256": "bc1c5d929438888d502a4b44eca2fd41620f436eaf8283a522acfe3c1e062166",
+    "pulses_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "model_requests": 0,
+    "tool_calls": 4,
+    "token_usage": null,
+    "cost_usd": null,
+    "replay_status": "verified",
+    "verification_commit": "a5c781c6b1745b0094f27bd37c600d5b09e10d28"
+  },
+  "setup": {
+    "task": {
+      "schema_version": "1.0",
+      "task_id": "alternating-lights-v1",
+      "scenario": "stale-queue",
+      "period": 4,
+      "delay": 2,
+      "max_tick": 4096,
+      "enqueue_until_tick": 4094,
+      "max_queue": 128,
+      "max_pulses": 16384,
+      "max_audit_records": 10000,
+      "recovery_seconds": 300
+    },
+    "world": {
+      "initial_world": {
+        "scene_id": "blue",
+        "active": true
+      },
+      "transitions": [
+        {
+          "tick": 5,
+          "scene_id": "amber",
+          "active": true
+        }
+      ]
+    },
+    "config": {
+      "clocks": {
+        "primary": true,
+        "shadow": false
+      },
+      "gate_mode": "live",
+      "epoch_guard": true
+    }
+  },
+  "initial_plant": {
+    "schema_version": "1.0",
+    "tick": 0,
+    "revision": 0,
+    "world": {
+      "scene_id": "blue",
+      "active": true,
+      "epoch": 1
+    },
+    "config": {
+      "clocks": {
+        "primary": true,
+        "shadow": false
+      },
+      "gate_mode": "live",
+      "epoch_guard": true
+    },
+    "gate_cache": {
+      "active": true,
+      "epoch": 1
+    },
+    "queue": [],
+    "event_seq": 0
+  },
+  "commands": [
+    {
+      "seq": 1,
+      "request": {
+        "schema_version": "1.0",
+        "request_id": "fixture.0",
+        "action": {
+          "type": "inspect",
+          "target": "board"
+        }
+      },
+      "actor": {
+        "actor_id": "assessed-model",
+        "role": "assessed_agent",
+        "phase": "setup"
+      },
+      "tick": 0,
+      "elapsed_ms": 299,
+      "result": {
+        "request_id": "fixture.0",
+        "outcome": "accepted",
+        "revision": 0,
+        "observation": {
+          "plant": {
+            "schema_version": "1.0",
+            "tick": 0,
+            "revision": 0,
+            "world": {
+              "scene_id": "blue",
+              "active": true,
+              "epoch": 1
+            },
+            "config": {
+              "clocks": {
+                "primary": true,
+                "shadow": false
+              },
+              "gate_mode": "live",
+              "epoch_guard": true
+            },
+            "gate_cache": {
+              "active": true,
+              "epoch": 1
+            },
+            "queue": [],
+            "event_seq": 0
+          },
+          "events": []
+        },
+        "events": []
+      }
+    },
+    {
+      "seq": 2,
+      "request": {
+        "schema_version": "1.0",
+        "request_id": "fixture.1",
+        "expected_revision": 0,
+        "action": {
+          "type": "set_clock",
+          "clock": "primary",
+          "enabled": true
+        }
+      },
+      "actor": {
+        "actor_id": "assessed-model",
+        "role": "assessed_agent",
+        "phase": "setup"
+      },
+      "tick": 0,
+      "elapsed_ms": 301,
+      "result": {
+        "request_id": "fixture.1",
+        "outcome": "accepted",
+        "revision": 1,
+        "observation": {
+          "plant": {
+            "schema_version": "1.0",
+            "tick": 0,
+            "revision": 1,
+            "world": {
+              "scene_id": "blue",
+              "active": true,
+              "epoch": 1
+            },
+            "config": {
+              "clocks": {
+                "primary": true,
+                "shadow": false
+              },
+              "gate_mode": "live",
+              "epoch_guard": true
+            },
+            "gate_cache": {
+              "active": true,
+              "epoch": 1
+            },
+            "queue": [],
+            "event_seq": 0
+          },
+          "events": []
+        },
+        "events": [],
+        "no_op": true
+      }
+    },
+    {
+      "seq": 3,
+      "request": {
+        "schema_version": "1.0",
+        "request_id": "fixture.2",
+        "expected_revision": 1,
+        "action": {
+          "type": "advance",
+          "ticks": 4
+        }
+      },
+      "actor": {
+        "actor_id": "assessed-model",
+        "role": "assessed_agent",
+        "phase": "setup"
+      },
+      "tick": 4,
+      "elapsed_ms": 302,
+      "result": {
+        "request_id": "fixture.2",
+        "outcome": "accepted",
+        "revision": 2,
+        "observation": {
+          "plant": {
+            "schema_version": "1.0",
+            "tick": 4,
+            "revision": 2,
+            "world": {
+              "scene_id": "blue",
+              "active": true,
+              "epoch": 1
+            },
+            "config": {
+              "clocks": {
+                "primary": true,
+                "shadow": false
+              },
+              "gate_mode": "live",
+              "epoch_guard": true
+            },
+            "gate_cache": {
+              "active": true,
+              "epoch": 1
+            },
+            "queue": [
+              {
+                "id": "primary.4.left",
+                "clock": "primary",
+                "enqueue_tick": 4,
+                "due_tick": 6,
+                "lamp": "left",
+                "enqueue_epoch": 1
+              }
+            ],
+            "event_seq": 6
+          },
+          "events": [
+            {
+              "type": "settled_tick",
+              "tick": 1,
+              "seq": 1
+            },
+            {
+              "type": "settled_tick",
+              "tick": 2,
+              "seq": 2
+            },
+            {
+              "type": "settled_tick",
+              "tick": 3,
+              "seq": 3
+            },
+            {
+              "type": "clock_fired",
+              "clock": "primary",
+              "tick": 4,
+              "seq": 4
+            },
+            {
+              "type": "job_enqueued",
+              "job": {
+                "id": "primary.4.left",
+                "clock": "primary",
+                "enqueue_tick": 4,
+                "due_tick": 6,
+                "lamp": "left",
+                "enqueue_epoch": 1
+              },
+              "tick": 4,
+              "seq": 5
+            },
+            {
+              "type": "settled_tick",
+              "tick": 4,
+              "seq": 6
+            }
+          ]
+        },
+        "events": [
+          {
+            "type": "settled_tick",
+            "tick": 1,
+            "seq": 1
+          },
+          {
+            "type": "settled_tick",
+            "tick": 2,
+            "seq": 2
+          },
+          {
+            "type": "settled_tick",
+            "tick": 3,
+            "seq": 3
+          },
+          {
+            "type": "clock_fired",
+            "clock": "primary",
+            "tick": 4,
+            "seq": 4
+          },
+          {
+            "type": "job_enqueued",
+            "job": {
+              "id": "primary.4.left",
+              "clock": "primary",
+              "enqueue_tick": 4,
+              "due_tick": 6,
+              "lamp": "left",
+              "enqueue_epoch": 1
+            },
+            "tick": 4,
+            "seq": 5
+          },
+          {
+            "type": "settled_tick",
+            "tick": 4,
+            "seq": 6
+          }
+        ],
+        "no_op": false
+      }
+    },
+    {
+      "seq": 4,
+      "request": {
+        "schema_version": "1.0",
+        "request_id": "fixture.3",
+        "expected_revision": 2,
+        "action": {
+          "type": "advance",
+          "ticks": 1
+        }
+      },
+      "actor": {
+        "actor_id": "assessed-model",
+        "role": "assessed_agent",
+        "phase": "setup"
+      },
+      "tick": 5,
+      "elapsed_ms": 303,
+      "result": {
+        "request_id": "fixture.3",
+        "outcome": "accepted",
+        "revision": 3,
+        "observation": {
+          "plant": {
+            "schema_version": "1.0",
+            "tick": 5,
+            "revision": 3,
+            "world": {
+              "scene_id": "amber",
+              "active": true,
+              "epoch": 2
+            },
+            "config": {
+              "clocks": {
+                "primary": true,
+                "shadow": false
+              },
+              "gate_mode": "live",
+              "epoch_guard": true
+            },
+            "gate_cache": {
+              "active": true,
+              "epoch": 1
+            },
+            "queue": [
+              {
+                "id": "primary.4.left",
+                "clock": "primary",
+                "enqueue_tick": 4,
+                "due_tick": 6,
+                "lamp": "left",
+                "enqueue_epoch": 1
+              }
+            ],
+            "event_seq": 8
+          },
+          "events": [
+            {
+              "type": "settled_tick",
+              "tick": 1,
+              "seq": 1
+            },
+            {
+              "type": "settled_tick",
+              "tick": 2,
+              "seq": 2
+            },
+            {
+              "type": "settled_tick",
+              "tick": 3,
+              "seq": 3
+            },
+            {
+              "type": "clock_fired",
+              "clock": "primary",
+              "tick": 4,
+              "seq": 4
+            },
+            {
+              "type": "job_enqueued",
+              "job": {
+                "id": "primary.4.left",
+                "clock": "primary",
+                "enqueue_tick": 4,
+                "due_tick": 6,
+                "lamp": "left",
+                "enqueue_epoch": 1
+              },
+              "tick": 4,
+              "seq": 5
+            },
+            {
+              "type": "settled_tick",
+              "tick": 4,
+              "seq": 6
+            },
+            {
+              "type": "world_changed",
+              "world": {
+                "scene_id": "amber",
+                "active": true,
+                "epoch": 2
+              },
+              "tick": 5,
+              "seq": 7
+            },
+            {
+              "type": "settled_tick",
+              "tick": 5,
+              "seq": 8
+            }
+          ]
+        },
+        "events": [
+          {
+            "type": "world_changed",
+            "world": {
+              "scene_id": "amber",
+              "active": true,
+              "epoch": 2
+            },
+            "tick": 5,
+            "seq": 7
+          },
+          {
+            "type": "settled_tick",
+            "tick": 5,
+            "seq": 8
+          }
+        ],
+        "no_op": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "type": "settled_tick",
+      "tick": 1,
+      "seq": 1
+    },
+    {
+      "type": "settled_tick",
+      "tick": 2,
+      "seq": 2
+    },
+    {
+      "type": "settled_tick",
+      "tick": 3,
+      "seq": 3
+    },
+    {
+      "type": "clock_fired",
+      "clock": "primary",
+      "tick": 4,
+      "seq": 4
+    },
+    {
+      "type": "job_enqueued",
+      "job": {
+        "id": "primary.4.left",
+        "clock": "primary",
+        "enqueue_tick": 4,
+        "due_tick": 6,
+        "lamp": "left",
+        "enqueue_epoch": 1
+      },
+      "tick": 4,
+      "seq": 5
+    },
+    {
+      "type": "settled_tick",
+      "tick": 4,
+      "seq": 6
+    },
+    {
+      "type": "world_changed",
+      "world": {
+        "scene_id": "amber",
+        "active": true,
+        "epoch": 2
+      },
+      "tick": 5,
+      "seq": 7
+    },
+    {
+      "type": "settled_tick",
+      "tick": 5,
+      "seq": 8
+    }
+  ],
+  "final_plant": {
+    "schema_version": "1.0",
+    "tick": 5,
+    "revision": 3,
+    "world": {
+      "scene_id": "amber",
+      "active": true,
+      "epoch": 2
+    },
+    "config": {
+      "clocks": {
+        "primary": true,
+        "shadow": false
+      },
+      "gate_mode": "live",
+      "epoch_guard": true
+    },
+    "gate_cache": {
+      "active": true,
+      "epoch": 1
+    },
+    "queue": [
+      {
+        "id": "primary.4.left",
+        "clock": "primary",
+        "enqueue_tick": 4,
+        "due_tick": 6,
+        "lamp": "left",
+        "enqueue_epoch": 1
+      }
+    ],
+    "event_seq": 8
+  }
+}

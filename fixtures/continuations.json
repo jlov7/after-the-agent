@@ -1,0 +1,325 @@
+[
+  {
+    "schema_version": "1.0",
+    "case_id": "quiet-prefix",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": []
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "change-immediately",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 6,
+        "scene_id": "change-immediately.0",
+        "active": true
+      },
+      {
+        "tick": 14,
+        "scene_id": "change-immediately.1",
+        "active": true
+      },
+      {
+        "tick": 30,
+        "scene_id": "change-immediately.2",
+        "active": true
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "active-cycle",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 9,
+        "scene_id": "active-cycle.0",
+        "active": false
+      },
+      {
+        "tick": 17,
+        "scene_id": "active-cycle.1",
+        "active": true
+      },
+      {
+        "tick": 33,
+        "scene_id": "active-cycle.2",
+        "active": false
+      },
+      {
+        "tick": 45,
+        "scene_id": "active-cycle.3",
+        "active": true
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "at-first-delivery",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 6,
+        "scene_id": "at-first-delivery.0",
+        "active": true
+      },
+      {
+        "tick": 22,
+        "scene_id": "at-first-delivery.1",
+        "active": true
+      },
+      {
+        "tick": 38,
+        "scene_id": "at-first-delivery.2",
+        "active": true
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "before-later-delivery",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 9,
+        "scene_id": "before-later-delivery.0",
+        "active": true
+      },
+      {
+        "tick": 17,
+        "scene_id": "before-later-delivery.1",
+        "active": true
+      },
+      {
+        "tick": 25,
+        "scene_id": "before-later-delivery.2",
+        "active": true
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "on-later-enqueue",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 8,
+        "scene_id": "on-later-enqueue.0",
+        "active": true
+      },
+      {
+        "tick": 20,
+        "scene_id": "on-later-enqueue.1",
+        "active": false
+      },
+      {
+        "tick": 28,
+        "scene_id": "on-later-enqueue.2",
+        "active": true
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "short-off",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 13,
+        "scene_id": "short-off.0",
+        "active": false
+      },
+      {
+        "tick": 14,
+        "scene_id": "short-off.1",
+        "active": true
+      },
+      {
+        "tick": 29,
+        "scene_id": "short-off.2",
+        "active": false
+      },
+      {
+        "tick": 30,
+        "scene_id": "short-off.3",
+        "active": true
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "long-off",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 7,
+        "scene_id": "long-off.0",
+        "active": false
+      },
+      {
+        "tick": 40,
+        "scene_id": "long-off.1",
+        "active": true
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "repeated-scene-switches",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 10,
+        "scene_id": "repeated-scene-switches.0",
+        "active": true
+      },
+      {
+        "tick": 11,
+        "scene_id": "repeated-scene-switches.1",
+        "active": true
+      },
+      {
+        "tick": 12,
+        "scene_id": "repeated-scene-switches.2",
+        "active": true
+      },
+      {
+        "tick": 23,
+        "scene_id": "repeated-scene-switches.3",
+        "active": true
+      },
+      {
+        "tick": 39,
+        "scene_id": "repeated-scene-switches.4",
+        "active": true
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "end-boundary",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 68,
+        "scene_id": "end-boundary.0",
+        "active": true
+      },
+      {
+        "tick": 69,
+        "scene_id": "end-boundary.1",
+        "active": false
+      },
+      {
+        "tick": 70,
+        "scene_id": "end-boundary.2",
+        "active": true
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "off-on-same-named-scene",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 12,
+        "scene_id": "blue",
+        "active": false
+      },
+      {
+        "tick": 24,
+        "scene_id": "blue",
+        "active": true
+      },
+      {
+        "tick": 44,
+        "scene_id": "blue",
+        "active": false
+      },
+      {
+        "tick": 56,
+        "scene_id": "blue",
+        "active": true
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "case_id": "late-active",
+    "handover_tick": 5,
+    "enqueue_until_tick": 69,
+    "initial_world": {
+      "scene_id": "blue",
+      "active": true
+    },
+    "transitions": [
+      {
+        "tick": 6,
+        "scene_id": "late-active.0",
+        "active": false
+      },
+      {
+        "tick": 53,
+        "scene_id": "late-active.1",
+        "active": true
+      }
+    ]
+  }
+]

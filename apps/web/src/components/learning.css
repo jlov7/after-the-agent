@@ -1,0 +1,16 @@
+.learning-lab { padding: 24px; margin: 24px 0; max-width: 880px; }
+.learning-lab > p { max-width: 70ch; }
+.lesson-choices, .lesson-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+.lesson-choices [aria-pressed=true] { border-color: var(--mint); background: #29413f; }
+.lesson-state { display: grid; grid-template-columns: minmax(100px, 1fr) minmax(0, 2fr); gap: 6px 16px; font-size: 14px; }
+.lesson-state dt { color: var(--muted); }
+.lesson-state dd { margin: 0; overflow-wrap: anywhere; }
+.lesson-jobs { padding-left: 20px; font-size: 13px; overflow-wrap: anywhere; }
+.lesson-prediction { margin: 20px 0; }
+.lesson-feedback { color: var(--mint); }
+.learning-lab pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 320px; overflow: auto; border: 1px solid var(--edge); padding: 12px; font-size: 12px; }
+@media (max-width: 600px) {
+  .learning-lab { padding: 17px; }
+  .lesson-state { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); }
+  .lesson-actions > button { flex: 1 1 140px; }
+}

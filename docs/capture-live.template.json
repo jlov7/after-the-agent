@@ -1,0 +1,25 @@
+{
+  "mode": "live",
+  "model": null,
+  "scenario": "stale-queue",
+  "prompt": "Configure the restricted alternating lights board using only board_action. Odd beats left, even beats right, every fourth beat also center. Period 4, delivery delay 2. Finish at settled tick 5 with the original pending tick-4 work retained. Each mutation needs the current revision. Assistance ends at tick 5.",
+  "limits": {
+    "max_turns": 8,
+    "max_tool_calls": 16,
+    "max_output_tokens": 1024,
+    "max_elapsed_ms": 120000,
+    "max_input_bytes": 131072
+  },
+  "budget": {
+    "account": null,
+    "authorization": null,
+    "approved_micro_usd": null,
+    "model": null,
+    "input_micro_usd_per_million": null,
+    "output_micro_usd_per_million": null,
+    "request_overhead_tokens": 4096,
+    "verified_at": null,
+    "source": null,
+    "receipt_sha256": null
+  }
+}

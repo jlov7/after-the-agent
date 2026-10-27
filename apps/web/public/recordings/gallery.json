@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "entries": [
+    {
+      "id": "stdio-fixture-v1",
+      "title": "Bundled stdio fixture",
+      "description": "A retained test fixture demonstrates the inherited stale queue. It is not a genuine model run or a human study result.",
+      "category": "fixture",
+      "recording": {
+        "path": "recordings/fixtures/recording-fixture.json",
+        "sha256": "6eeb0ae954189ae0b14b22730f4173e112d5b0e83a38c529b7fc44ebba6bd5e6"
+      },
+      "qualification": {
+        "path": "recordings/fixtures/behavior-fixture.json",
+        "sha256": "180822967bfd0b26408e6da4670b5a60482546fd347145e2525678a4d64b4fee"
+      }
+    },
+    {
+      "id": "codex-2026-10-20-001",
+      "title": "Recorded Codex handover",
+      "description": "A genuine Codex run inspected the existing correct settings and advanced the board to tick 5. Its two captured board calls replay unchanged. Independent qualification passed twelve continuations. The takeover fault and captions are authored separately; this single demonstration is not a model performance estimate.",
+      "category": "live_model",
+      "recording": {
+        "path": "recordings/curated/codex-2026-10-20-001.json",
+        "sha256": "918d85ee5ebf68c1af4fa3f2d1e9be49d11f5c08fd932cc35fb80d50f4690310"
+      },
+      "qualification": {
+        "path": "recordings/curated/codex-2026-10-20-001-qualification.json",
+        "sha256": "6b02826213607f4303a86a74597631bbaad8ceaf4f1592679322e06f5cabec72"
+      }
+    },
+    {
+      "id": "codex-2026-10-26-001",
+      "category": "live_model",
+      "recording": {
+        "path": "recordings/curated/codex-2026-10-26-001.json",
+        "sha256": "9af8adac33ce0bfbd0a1ee30225825debfabe5a981f897ad10ebd000f0e5a292"
+      },
+      "qualification": {
+        "path": "recordings/curated/codex-2026-10-26-001-qualification.json",
+        "sha256": "bf5058428b1366988f18958987b322ff1dcaebaab76ad2ef33daeaeaf457b62e"
+      },
+      "title": "Recorded Codex setup",
+      "description": "A genuine Codex run enabled the delivery guard, switched the gate to live and enabled the primary clock, then advanced to tick 5. All five captured calls replay unchanged and independent qualification passed twelve continuations. The takeover fault is authored separately. This selected demonstration is not a model success-rate estimate."
+    }
+  ]
+}

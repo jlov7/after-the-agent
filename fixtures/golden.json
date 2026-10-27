@@ -1,0 +1,281 @@
+{
+  "schema_version": "1.0",
+  "origin": "hand_worked",
+  "vectors": [
+    {
+      "name": "normal-pattern",
+      "case": {
+        "schema_version": "1.0",
+        "case_id": "normal-pattern",
+        "handover_tick": 0,
+        "enqueue_until_tick": 16,
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": []
+      },
+      "expected_pulses": [
+        {
+          "tick": 6,
+          "lamp": "left"
+        },
+        {
+          "tick": 10,
+          "lamp": "right"
+        },
+        {
+          "tick": 14,
+          "lamp": "left"
+        },
+        {
+          "tick": 18,
+          "lamp": "right"
+        },
+        {
+          "tick": 18,
+          "lamp": "center"
+        }
+      ]
+    },
+    {
+      "name": "valid-pending-at-cut",
+      "case": {
+        "schema_version": "1.0",
+        "case_id": "valid-pending-at-cut",
+        "handover_tick": 5,
+        "enqueue_until_tick": 8,
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": []
+      },
+      "expected_pulses": [
+        {
+          "tick": 6,
+          "lamp": "left"
+        },
+        {
+          "tick": 10,
+          "lamp": "right"
+        }
+      ]
+    },
+    {
+      "name": "stale-pending",
+      "case": {
+        "schema_version": "1.0",
+        "case_id": "stale-pending",
+        "handover_tick": 5,
+        "enqueue_until_tick": 8,
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": [
+          {
+            "tick": 5,
+            "scene_id": "amber",
+            "active": true
+          }
+        ]
+      },
+      "expected_pulses": [
+        {
+          "tick": 10,
+          "lamp": "right"
+        }
+      ]
+    },
+    {
+      "name": "transition-at-delivery",
+      "case": {
+        "schema_version": "1.0",
+        "case_id": "transition-at-delivery",
+        "handover_tick": 0,
+        "enqueue_until_tick": 8,
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": [
+          {
+            "tick": 6,
+            "scene_id": "amber",
+            "active": true
+          }
+        ]
+      },
+      "expected_pulses": [
+        {
+          "tick": 10,
+          "lamp": "right"
+        }
+      ]
+    },
+    {
+      "name": "inactive-at-enqueue",
+      "case": {
+        "schema_version": "1.0",
+        "case_id": "inactive-at-enqueue",
+        "handover_tick": 0,
+        "enqueue_until_tick": 8,
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": [
+          {
+            "tick": 4,
+            "scene_id": "blue",
+            "active": false
+          },
+          {
+            "tick": 5,
+            "scene_id": "blue",
+            "active": true
+          }
+        ]
+      },
+      "expected_pulses": [
+        {
+          "tick": 10,
+          "lamp": "right"
+        }
+      ]
+    },
+    {
+      "name": "long-inactive-interval",
+      "case": {
+        "schema_version": "1.0",
+        "case_id": "long-inactive-interval",
+        "handover_tick": 0,
+        "enqueue_until_tick": 24,
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": [
+          {
+            "tick": 9,
+            "scene_id": "blue",
+            "active": false
+          },
+          {
+            "tick": 17,
+            "scene_id": "blue",
+            "active": true
+          }
+        ]
+      },
+      "expected_pulses": [
+        {
+          "tick": 6,
+          "lamp": "left"
+        },
+        {
+          "tick": 22,
+          "lamp": "left"
+        },
+        {
+          "tick": 26,
+          "lamp": "right"
+        }
+      ]
+    },
+    {
+      "name": "redundant-world-command",
+      "case": {
+        "schema_version": "1.0",
+        "case_id": "redundant-world-command",
+        "handover_tick": 0,
+        "enqueue_until_tick": 8,
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": [
+          {
+            "tick": 5,
+            "scene_id": "blue",
+            "active": true
+          }
+        ]
+      },
+      "expected_pulses": [
+        {
+          "tick": 6,
+          "lamp": "left"
+        },
+        {
+          "tick": 10,
+          "lamp": "right"
+        }
+      ]
+    },
+    {
+      "name": "past-output-excluded",
+      "case": {
+        "schema_version": "1.0",
+        "case_id": "past-output-excluded",
+        "handover_tick": 6,
+        "enqueue_until_tick": 8,
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": []
+      },
+      "expected_pulses": [
+        {
+          "tick": 10,
+          "lamp": "right"
+        }
+      ]
+    },
+    {
+      "name": "no-tick-zero-fire",
+      "case": {
+        "schema_version": "1.0",
+        "case_id": "no-tick-zero-fire",
+        "handover_tick": 0,
+        "enqueue_until_tick": 2,
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": []
+      },
+      "expected_pulses": []
+    },
+    {
+      "name": "pending-center-and-side",
+      "case": {
+        "schema_version": "1.0",
+        "case_id": "pending-center-and-side",
+        "handover_tick": 17,
+        "enqueue_until_tick": 20,
+        "initial_world": {
+          "scene_id": "blue",
+          "active": true
+        },
+        "transitions": []
+      },
+      "expected_pulses": [
+        {
+          "tick": 18,
+          "lamp": "right"
+        },
+        {
+          "tick": 18,
+          "lamp": "center"
+        },
+        {
+          "tick": 22,
+          "lamp": "left"
+        }
+      ]
+    }
+  ]
+}

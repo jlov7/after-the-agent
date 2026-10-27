@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "selected": {
+    "id": "stdio-fixture-v1",
+    "category": "fixture",
+    "recording": {
+      "path": "recordings/fixtures/recording-fixture.json",
+      "sha256": "6eeb0ae954189ae0b14b22730f4173e112d5b0e83a38c529b7fc44ebba6bd5e6"
+    },
+    "qualification": {
+      "path": "recordings/fixtures/behavior-fixture.json",
+      "sha256": "180822967bfd0b26408e6da4670b5a60482546fd347145e2525678a4d64b4fee"
+    }
+  }
+}

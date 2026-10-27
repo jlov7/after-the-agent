@@ -1,0 +1,14 @@
+After the Agent local source map
+
+The source distribution contains the complete application and verification tools.
+
+apps/web/src/App.tsx: browser journey and accessible instrument
+apps/web/src/session/evaluation.worker.ts: local isolated continuation scoring
+packages/engine/src/engine.ts: deterministic simulation and action contract
+packages/engine/src/session.ts: attempt phases, timing and immutable submissions
+packages/runner/src/evaluation-core.ts: observed continuation output
+packages/runner/src/reference-port.ts: independent browser expectations
+packages/runner/src/evaluate.ts: independent Python comparison for verification
+oracle/reference.py: protected executable specification
+
+Research remains disabled. A local score is not a human-study observation.

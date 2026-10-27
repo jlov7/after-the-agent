@@ -1,0 +1,61 @@
+{
+  "name": "after-the-agent",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "scripts": {
+    "generate:contracts": "node scripts/generate-contracts.mjs",
+    "dev": "npm run dev --workspace @ata/web --",
+    "build": "npm run build:packages && npm run build --workspace @ata/web",
+    "build:packages": "tsc -p tsconfig.build.json",
+    "preview": "npm run preview --workspace @ata/web --",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test:contract": "vitest run tests/contract",
+    "test:engine": "vitest run tests/engine",
+    "test:oracle": "npm run build:packages && vitest run tests/oracle",
+    "test:replay": "vitest run tests/replay",
+    "test:mcp": "npm run build:packages && vitest run tests/mcp",
+    "test:mutants": "vitest run tests/mutants",
+    "test:ui": "playwright test",
+    "verify": "node scripts/verify-product.mjs",
+    "benchmark:product": "node scripts/benchmark-product.mjs",
+    "reference:prepare": "node scripts/prepare-reference.mjs",
+    "check:public": "node scripts/public-surface.mjs",
+    "report:portable": "node scripts/portable-report.mjs",
+    "check:reference": "node scripts/check-reference.mjs",
+    "mcp:playground": "npm run build:packages && node dist/packages/runner/src/mcp-playground.js",
+    "diagnostic:reproduce": "npm run build:packages && node dist/packages/runner/src/reproduce-cli.js",
+    "mcp:guide": "npm run build:packages && node dist/packages/runner/src/mcp-guide.js",
+    "evidence:verify": "npm run build:packages && node dist/packages/runner/src/evidence-packet-cli.js",
+    "verify:reproducible": "node scripts/reproducible-build.mjs",
+    "test:ui:cross": "playwright test --config scripts/playwright-cross.config.ts"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.0",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "10.12.0",
+    "fast-check": "4.10.2",
+    "json-schema-to-typescript": "16.0.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.1",
+    "vite": "8.3.4",
+    "vitest": "5.0.3",
+    "ajv": "8.20.0",
+    "@noble/hashes": "2.4.0"
+  },
+  "license": "MIT",
+  "packageManager": "npm@12.0.0"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "origin": "synthetic",
+  "records": [
+    {"participant_id": "synthetic_observation_01", "arm": "observation", "outcome": 1, "reason": "recovered"},
+    {"participant_id": "synthetic_observation_02", "arm": "observation", "outcome": 0, "reason": "failed"},
+    {"participant_id": "synthetic_observation_03", "arm": "observation", "outcome": 0, "reason": "timeout"},
+    {"participant_id": "synthetic_observation_04", "arm": "observation", "outcome": 0, "reason": "voluntary_stop"},
+    {"participant_id": "synthetic_observation_05", "arm": "observation", "outcome": null, "reason": "technical_unknown"},
+    {"participant_id": "synthetic_precommitment_01", "arm": "precommitment", "outcome": 1, "reason": "recovered"},
+    {"participant_id": "synthetic_precommitment_02", "arm": "precommitment", "outcome": 0, "reason": "failed"},
+    {"participant_id": "synthetic_precommitment_03", "arm": "precommitment", "outcome": 0, "reason": "timeout"},
+    {"participant_id": "synthetic_precommitment_04", "arm": "precommitment", "outcome": 0, "reason": "voluntary_stop"},
+    {"participant_id": "synthetic_precommitment_05", "arm": "precommitment", "outcome": null, "reason": "technical_unknown"}
+  ]
+}

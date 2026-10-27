@@ -1,0 +1,20 @@
+{
+  "name": "@ata/web",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@ata/contracts": "1.1.0",
+    "@ata/engine": "1.1.0",
+    "@ata/runner": "1.1.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.6"
+  },
+  "license": "MIT"
+}

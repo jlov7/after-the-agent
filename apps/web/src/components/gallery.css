@@ -1,0 +1,13 @@
+.recording-gallery { padding: 1.25rem; border: 1px solid var(--edge); border-radius: 9px; background: #151f23; color: inherit; }
+.recording-gallery header { display: flex; justify-content: space-between; align-items: start; gap: 1rem; }
+.recording-gallery h2, .recording-gallery h3 { margin: 0 0 .5rem; }
+.recording-gallery ul { padding: 0; list-style: none; }
+.recording-gallery li { padding: 1rem 0; border-top: 1px solid var(--edge); }
+.gallery-actions { display: flex; flex-wrap: wrap; gap: .65rem; }
+.recording-gallery button { min-height: 44px; white-space: normal; }
+.gallery-hash { overflow-wrap: anywhere; font: .8rem monospace; }
+.gallery-category { font-weight: 700; }
+.gallery-empty { padding: .8rem; border-left: 3px solid var(--amber); }
+.recording-gallery [role=alert] { color: #ffb9ad; }
+.recording-gallery :focus-visible { outline: 3px solid var(--mint); outline-offset: 3px; }
+@media (max-width: 500px) { .recording-gallery header { flex-wrap: wrap; } .gallery-actions > button { flex: 1 1 100%; } }

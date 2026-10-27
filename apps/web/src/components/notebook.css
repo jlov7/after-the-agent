@@ -1,0 +1,15 @@
+.attempt-notebook { padding: 1.25rem; border: 1px solid var(--edge); border-radius: 9px; background: #151f23; color: inherit; }
+.attempt-notebook header { display: flex; gap: 1rem; justify-content: space-between; align-items: start; }
+.attempt-notebook h2, .attempt-notebook h3 { margin: 0 0 .5rem; }
+.attempt-notebook form, .notebook-actions { display: flex; flex-wrap: wrap; gap: .65rem; align-items: end; }
+.attempt-notebook label { display: grid; gap: .35rem; flex: 1 1 12rem; }
+.attempt-notebook input { min-height: 44px; width: 100%; min-width: 0; padding: .5rem; font: inherit; border: 1px solid currentColor; border-radius: 4px; }
+.attempt-notebook button { min-height: 44px; white-space: normal; }
+.attempt-notebook ul { padding: 0; list-style: none; }
+.attempt-notebook li { margin-top: 1rem; padding: 1rem 0; border-top: 1px solid var(--edge); }
+.notebook-hash { font-family: monospace; font-size: .8rem; overflow-wrap: anywhere; }
+.notebook-preview { border: 1px solid var(--edge); padding: 1rem; margin: 1rem 0; border-radius: 6px; }
+.notebook-preview li { overflow-wrap: anywhere; }
+.attempt-notebook [role=alert] { color: #ffb9ad; }
+.attempt-notebook :focus-visible { outline: 3px solid var(--mint); outline-offset: 3px; }
+@media (max-width: 500px) { .attempt-notebook header { flex-wrap: wrap; } .notebook-actions > button { flex: 1 1 100%; } }

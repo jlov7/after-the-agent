@@ -1,0 +1,10 @@
+.ata-edit-receipt,.ata-failure-explanation{margin-block:1rem;padding:1rem;border:1px solid var(--edge,#3e5159);border-radius:.6rem;background:var(--panel,#151f23);color:var(--ink,#eeeae1);overflow-wrap:anywhere}
+.ata-edit-receipt p,.ata-failure-explanation p{margin-block:.5rem}
+.ata-edit-receipt ul,.ata-failure-explanation ul{padding-inline-start:1.4rem}
+.ata-pulse-scroll{max-width:100%;overflow-x:auto}
+.ata-pulse-timeline table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+.ata-pulse-timeline caption{text-align:left;padding-block:.5rem;font-size:.85rem}
+.ata-pulse-timeline th,.ata-pulse-timeline td{border:1px solid var(--edge,#3e5159);padding:.35rem;min-width:2rem;text-align:center}
+.ata-pulse-timeline th[scope=row]{text-align:left}
+.ata-pulse-timeline .ata-pulse-output{background:#dae9dc;color:#183c24;font-weight:700}
+.ata-pulse-timeline .ata-pulse-duplicate{background:#f5d2b9;color:#552808;font-weight:800}
