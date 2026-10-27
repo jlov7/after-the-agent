@@ -144,3 +144,5 @@ Operational study plans and participant materials are excluded from this public
 source. The local rehearsal gives both conditions identical facts, trace, timing and
 handover. Its examples are synthetic and ineligible for research. No human
 recovery benefit, learning effect or production-system transfer is established.
+
+<sub>This is a personal research and development project. It is not affiliated with, endorsed by, or sponsored by my employer. Any views expressed are my own.</sub>
