@@ -12,7 +12,7 @@
     "@ata/contracts": "1.1.0",
     "@ata/engine": "1.1.0",
     "@ata/runner": "1.1.0",
-    "react": "19.3.0",
+    "react": "19.3.1",
     "react-dom": "19.3.0",
     "zod": "4.6.6"
   },
