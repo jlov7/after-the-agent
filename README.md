@@ -4,6 +4,8 @@ A five-minute browser instrument about repairing a system after an agent has
 configured it. Take over a small light installation, find the fault and restore
 its pattern while keeping legitimate work intact.
 
+[Play in your browser](https://after-the-agent.vercel.app/)
+
 Changing a setting can leave the old work in flight. Here you can see that work
 in the queue, follow it to an output, and check whether your repair survives
 future changes. The same deterministic engine also runs through a local MCP
