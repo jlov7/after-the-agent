@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
   "status": "passed",
-  "started_at": "2026-10-27T13:17:36.617Z",
-  "finished_at": "2026-10-27T13:17:44.548Z",
+  "started_at": "2026-10-28T16:42:16.004Z",
+  "finished_at": "2026-10-28T16:42:23.486Z",
   "inputs": {
-    "source_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+    "source_commit": "bb41a87d03a7f020dad15541d35423fefda81a4f",
     "node": "v24.19.0",
     "npm": "12.0.0",
     "lock_sha256": "afac5d170451276d8add052902e8873c2e2f18e03ed9465a97791b3414fe4525",
     "static_base": "/after-the-agent/",
     "platform": "darwin",
     "arch": "arm64",
-    "source_date_epoch": "1793106311",
+    "source_date_epoch": "1793205452",
     "build_input_paths": [
       ".gitattributes",
       ".github/ISSUE_TEMPLATE/bug_report.yml",
@@ -321,9 +321,10 @@
       "tests/ui/v1-release.spec.ts",
       "tsconfig.build.json",
       "tsconfig.json",
+      "vercel.json",
       "vitest.config.ts"
     ],
-    "build_input_paths_sha256": "e0b3cc171614a1d8a995e91bbbe22752fbaf3f829b481423197292a8acfe9b09"
+    "build_input_paths_sha256": "8aad8739414ee9cb049ca85bdef71ab9dbb84569c1997b6161fc5d39024511f5"
   },
   "commands": [
     {
@@ -332,7 +333,7 @@
       "signal": null,
       "error": null,
       "log": "evidence/twelve/reproducible/source-archive.log",
-      "log_sha256": "0427814b568616a590d96e0fad63636d1a052ab396412b2ea64023a8f85f90df"
+      "log_sha256": "8f30ba73389422f17e8944af8e7a9530739142447553ea6e1b8db46c503e0405"
     },
     {
       "name": "a-extract",
@@ -348,7 +349,7 @@
       "signal": null,
       "error": null,
       "log": "evidence/twelve/reproducible/a-install.log",
-      "log_sha256": "d0f9e048a7aac067961759a43b5dcd1dd179f86adc34856875607239b2128b7a"
+      "log_sha256": "75d52084fd700d77d9262698a10626dcc5a4e9571c55877e992a2e66a26830b7"
     },
     {
       "name": "a-build",
@@ -356,7 +357,7 @@
       "signal": null,
       "error": null,
       "log": "evidence/twelve/reproducible/a-build.log",
-      "log_sha256": "d73d9982f1bc5bd2553e1b2c288009a2d053bd56e90ed008bacd74e466766175"
+      "log_sha256": "a194e512d65009b10b82775bcb5173c80672a7cc636af230d44f07c3bcf9488c"
     },
     {
       "name": "b-extract",
@@ -372,7 +373,7 @@
       "signal": null,
       "error": null,
       "log": "evidence/twelve/reproducible/b-install.log",
-      "log_sha256": "d0f9e048a7aac067961759a43b5dcd1dd179f86adc34856875607239b2128b7a"
+      "log_sha256": "4558edbf1e7d22ba136b5a7d10142e20c30b72862999c454c06220bec7e17efb"
     },
     {
       "name": "b-build",
@@ -380,7 +381,7 @@
       "signal": null,
       "error": null,
       "log": "evidence/twelve/reproducible/b-build.log",
-      "log_sha256": "3e52cea8e0bc98b2627d20244dc5c07f70f27e3f68e551fdfbc9a4bac5111ae1"
+      "log_sha256": "2b22a4573bc2602f8b6b2e7034aebb90444d8a42d8fdce561d0dd2dd005661aa"
     }
   ],
   "builds": [

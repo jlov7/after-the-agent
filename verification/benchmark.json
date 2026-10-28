@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "status": "passed",
   "historical_baseline": false,
-  "started_at": "2026-10-27T13:17:44.857Z",
-  "finished_at": "2026-10-27T13:17:59.297Z",
-  "source_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "started_at": "2026-10-28T16:42:23.769Z",
+  "finished_at": "2026-10-28T16:42:38.036Z",
+  "source_commit": "bb41a87d03a7f020dad15541d35423fefda81a4f",
   "environment": {
     "node": "v24.19.0",
     "platform": "darwin",
@@ -26,57 +26,57 @@
       "round": 1,
       "scenario": "stale-queue",
       "recipe": "guard enabled, inherited stale job retained",
-      "meaningful_ready_ms": 199.7,
+      "meaningful_ready_ms": 234.4,
       "interaction_samples": [
         {
-          "elapsed_ms": 26.4,
+          "elapsed_ms": 27,
           "changed": true
         },
         {
-          "elapsed_ms": 28.6,
+          "elapsed_ms": 29.4,
           "changed": true
         },
         {
-          "elapsed_ms": 29.6,
+          "elapsed_ms": 29.4,
           "changed": true
         },
         {
-          "elapsed_ms": 28.9,
+          "elapsed_ms": 29.4,
           "changed": true
         },
         {
-          "elapsed_ms": 28.8,
+          "elapsed_ms": 29.8,
           "changed": true
         }
       ],
       "scoring_samples": [
         {
-          "elapsed_ms": 57.2,
-          "request_id": "ef4c5bcb-9cf4-4c76-a7e0-d3b10fcad8e4",
+          "elapsed_ms": 56.3,
+          "request_id": "9671bcdd-8b60-448d-91ee-a659536e9494",
           "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 29.9,
-          "request_id": "7206ec14-b0b4-4d62-aaa1-42cad0e1852e",
+          "elapsed_ms": 30,
+          "request_id": "5d804da4-cb20-473d-8924-c5c8eddee162",
           "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 29.7,
-          "request_id": "4df07b9e-826a-463f-a67e-6372b82fd19e",
+          "elapsed_ms": 29.8,
+          "request_id": "82d58556-cc09-4c00-bad2-1be6ac559f0a",
           "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 29.4,
-          "request_id": "9679bdf1-bf6a-4f37-86fc-513166a8cc9c",
+          "elapsed_ms": 30.6,
+          "request_id": "c35594db-1404-44ae-ac8b-3d5791dd8f1f",
           "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
           "worker_status": "pass",
           "verdict": "Repair held",
@@ -84,7 +84,7 @@
         },
         {
           "elapsed_ms": 30.1,
-          "request_id": "711643e1-4ad7-4a73-8652-f70c767089e4",
+          "request_id": "298fa7dd-9dfc-4240-86da-95ad0da31a47",
           "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
           "worker_status": "pass",
           "verdict": "Repair held",
@@ -93,25 +93,33 @@
       ],
       "interaction": {
         "samples": 5,
-        "median_ms": 28.799999952316284,
-        "p95_ms": 29.600000023841858,
-        "max_ms": 29.600000023841858
+        "median_ms": 29.40000000037253,
+        "p95_ms": 29.800000000745058,
+        "max_ms": 29.800000000745058
       },
       "scoring": {
         "samples": 5,
-        "median_ms": 29.899999976158142,
-        "p95_ms": 57.199999928474426,
-        "max_ms": 57.199999928474426
+        "median_ms": 30.09999999962747,
+        "p95_ms": 56.30000000074506,
+        "max_ms": 56.30000000074506
       }
     },
     {
       "round": 1,
       "scenario": "duplicate-clock",
       "recipe": "standby disabled, its inherited duplicate selected and dropped",
-      "meaningful_ready_ms": 167.1,
+      "meaningful_ready_ms": 164.7,
       "interaction_samples": [
         {
-          "elapsed_ms": 29.4,
+          "elapsed_ms": 29.5,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.3,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.9,
           "changed": true
         },
         {
@@ -119,22 +127,14 @@
           "changed": true
         },
         {
-          "elapsed_ms": 29.1,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.6,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 30,
+          "elapsed_ms": 29.3,
           "changed": true
         }
       ],
       "scoring_samples": [
         {
-          "elapsed_ms": 29.4,
-          "request_id": "acebbd91-456a-4d94-86b3-f13157cba34b",
+          "elapsed_ms": 30.1,
+          "request_id": "607dd80b-2e1d-485c-b95f-4fa68800f584",
           "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
           "worker_status": "pass",
           "verdict": "Repair held",
@@ -142,31 +142,31 @@
         },
         {
           "elapsed_ms": 29.8,
-          "request_id": "9124fefa-c4f5-473b-b031-51022ce80e0d",
+          "request_id": "b6c2ed6b-6c42-4cbc-abc0-79539caa068b",
           "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 30.2,
-          "request_id": "17b516c8-6368-4e32-b5bc-561446c60097",
+          "elapsed_ms": 29.8,
+          "request_id": "4313432f-ddb7-463b-9dea-f120eda2ba3c",
           "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 30.1,
-          "request_id": "b9c3a4d1-3944-41ea-adfa-40ac37356c54",
+          "elapsed_ms": 30,
+          "request_id": "75333cb1-b7c7-49a5-9a57-06d3d81a6c5b",
           "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 29.3,
-          "request_id": "2def3c79-2df4-468b-a0c9-a97e6a5ade2c",
+          "elapsed_ms": 29.6,
+          "request_id": "704e651d-6773-4d81-812a-49ea439b742b",
           "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
           "worker_status": "pass",
           "verdict": "Repair held",
@@ -175,115 +175,25 @@
       ],
       "interaction": {
         "samples": 5,
-        "median_ms": 29.59999990463257,
-        "p95_ms": 30,
-        "max_ms": 30
+        "median_ms": 29.5,
+        "p95_ms": 29.899999998509884,
+        "max_ms": 29.899999998509884
       },
       "scoring": {
         "samples": 5,
-        "median_ms": 29.799999952316284,
-        "p95_ms": 30.199999928474426,
-        "max_ms": 30.199999928474426
+        "median_ms": 29.800000000745058,
+        "p95_ms": 30.100000001490116,
+        "max_ms": 30.100000001490116
       }
     },
     {
       "round": 1,
       "scenario": "cached-gate",
       "recipe": "gate switched to live; inherited state retained",
-      "meaningful_ready_ms": 166.9,
+      "meaningful_ready_ms": 167.7,
       "interaction_samples": [
         {
-          "elapsed_ms": 29.2,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 28.8,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.7,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.6,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.6,
-          "changed": true
-        }
-      ],
-      "scoring_samples": [
-        {
-          "elapsed_ms": 29.7,
-          "request_id": "6ab2c3fd-93cd-4cd8-8f61-065323b2a69b",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 29.6,
-          "request_id": "aa086023-e4e3-44c2-a365-b38470a7ca6b",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 30.3,
-          "request_id": "333300c6-7c36-43ac-9565-b18f5d35fd69",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 30.1,
-          "request_id": "6c4a5685-59de-4d0d-8c10-a9b07d3321b5",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 30.2,
-          "request_id": "9b09cbe9-b03f-4c7f-b0c5-bab5cdf74daf",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        }
-      ],
-      "interaction": {
-        "samples": 5,
-        "median_ms": 29.600000023841858,
-        "p95_ms": 29.700000047683716,
-        "max_ms": 29.700000047683716
-      },
-      "scoring": {
-        "samples": 5,
-        "median_ms": 30.100000023841858,
-        "p95_ms": 30.299999952316284,
-        "max_ms": 30.299999952316284
-      }
-    },
-    {
-      "round": 2,
-      "scenario": "stale-queue",
-      "recipe": "guard enabled, inherited stale job retained",
-      "meaningful_ready_ms": 166.8,
-      "interaction_samples": [
-        {
-          "elapsed_ms": 27.4,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.1,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.7,
+          "elapsed_ms": 27.9,
           "changed": true
         },
         {
@@ -291,129 +201,55 @@
           "changed": true
         },
         {
-          "elapsed_ms": 29.4,
+          "elapsed_ms": 29.2,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.3,
           "changed": true
         }
       ],
       "scoring_samples": [
         {
-          "elapsed_ms": 54.6,
-          "request_id": "ce6530f9-634f-4d41-a8af-a864926725e7",
-          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "elapsed_ms": 29.8,
+          "request_id": "fbf446ca-e15c-4e0e-b928-1db92fda3201",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 30.1,
-          "request_id": "270a2b00-1c21-4f6b-97f2-8557b2f34680",
-          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 30.2,
-          "request_id": "668bb43b-2495-4da0-9fb8-75f81bb2c6ad",
-          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 30.5,
-          "request_id": "99223c4a-a5bb-46e5-98e4-ac42111ad42e",
-          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 30.2,
-          "request_id": "bba32b91-9140-4ab5-bbb0-b0615d092f96",
-          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        }
-      ],
-      "interaction": {
-        "samples": 5,
-        "median_ms": 29.299999952316284,
-        "p95_ms": 29.699999928474426,
-        "max_ms": 29.699999928474426
-      },
-      "scoring": {
-        "samples": 5,
-        "median_ms": 30.200000047683716,
-        "p95_ms": 54.59999990463257,
-        "max_ms": 54.59999990463257
-      }
-    },
-    {
-      "round": 2,
-      "scenario": "duplicate-clock",
-      "recipe": "standby disabled, its inherited duplicate selected and dropped",
-      "meaningful_ready_ms": 180.8,
-      "interaction_samples": [
-        {
-          "elapsed_ms": 29.1,
-          "changed": true
         },
         {
           "elapsed_ms": 29.5,
-          "changed": true
+          "request_id": "67fe609d-6a39-4cf1-bff8-ee67b3fb8270",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
         },
         {
-          "elapsed_ms": 29.8,
-          "changed": true
+          "elapsed_ms": 29.2,
+          "request_id": "43e023a0-a55f-4211-b412-a2831f224321",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
         },
         {
-          "elapsed_ms": 30,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.8,
-          "changed": true
-        }
-      ],
-      "scoring_samples": [
-        {
-          "elapsed_ms": 29.5,
-          "request_id": "f9b42d65-007a-4798-8c1f-20f2e5c198d4",
-          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "elapsed_ms": 30.8,
+          "request_id": "fcb627b0-4d63-49d5-8ab7-9bba9b47a1c2",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
           "elapsed_ms": 31,
-          "request_id": "a2593963-17e1-4745-871a-ec1bb96c9484",
-          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 30.3,
-          "request_id": "8bd88f1e-f8b2-4e52-916a-8e3eb2414b9b",
-          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 28.7,
-          "request_id": "b8da61bd-2577-4bb0-a4e1-ed4f6f0b5106",
-          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 29.9,
-          "request_id": "2357a76b-b9cf-4092-9c76-f77212937f95",
-          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "request_id": "3f8937a0-effa-4250-bacf-6abc36564bbc",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
@@ -421,130 +257,48 @@
       ],
       "interaction": {
         "samples": 5,
-        "median_ms": 29.799999952316284,
-        "p95_ms": 30,
-        "max_ms": 30
+        "median_ms": 29.200000001117587,
+        "p95_ms": 29.300000000745058,
+        "max_ms": 29.300000000745058
       },
       "scoring": {
         "samples": 5,
-        "median_ms": 29.899999976158142,
+        "median_ms": 29.800000000745058,
         "p95_ms": 31,
         "max_ms": 31
       }
     },
     {
       "round": 2,
-      "scenario": "cached-gate",
-      "recipe": "gate switched to live; inherited state retained",
-      "meaningful_ready_ms": 165.2,
-      "interaction_samples": [
-        {
-          "elapsed_ms": 28.8,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.1,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.4,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.6,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.8,
-          "changed": true
-        }
-      ],
-      "scoring_samples": [
-        {
-          "elapsed_ms": 29.8,
-          "request_id": "43e3b971-ea20-4c6e-8dd6-19e43f9446e6",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 29.3,
-          "request_id": "ff8b6a06-c93d-4fd5-bb2d-8c6a8619049e",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 29.5,
-          "request_id": "08416cb7-1368-4f9c-85a1-4bbf9d73b194",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 29.9,
-          "request_id": "8115da89-5cdd-4c5c-8742-6edbdee30a78",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 29.3,
-          "request_id": "95ed16ac-a6bf-44c1-af9d-787c243c73be",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        }
-      ],
-      "interaction": {
-        "samples": 5,
-        "median_ms": 29.399999976158142,
-        "p95_ms": 29.799999952316284,
-        "max_ms": 29.799999952316284
-      },
-      "scoring": {
-        "samples": 5,
-        "median_ms": 29.5,
-        "p95_ms": 29.899999976158142,
-        "max_ms": 29.899999976158142
-      }
-    },
-    {
-      "round": 3,
       "scenario": "stale-queue",
       "recipe": "guard enabled, inherited stale job retained",
-      "meaningful_ready_ms": 186.7,
+      "meaningful_ready_ms": 169.4,
       "interaction_samples": [
-        {
-          "elapsed_ms": 27.1,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29.3,
-          "changed": true
-        },
         {
           "elapsed_ms": 28.2,
           "changed": true
         },
         {
-          "elapsed_ms": 28.4,
+          "elapsed_ms": 29.2,
           "changed": true
         },
         {
-          "elapsed_ms": 24.9,
+          "elapsed_ms": 29.5,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.8,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.5,
           "changed": true
         }
       ],
       "scoring_samples": [
         {
-          "elapsed_ms": 59.3,
-          "request_id": "c443d3cb-1ab9-4ae6-bae3-a4af1071843f",
+          "elapsed_ms": 55.9,
+          "request_id": "16f528b3-8a5c-485c-b460-41b0d7f89705",
           "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
           "worker_status": "pass",
           "verdict": "Repair held",
@@ -552,31 +306,31 @@
         },
         {
           "elapsed_ms": 29.7,
-          "request_id": "a0858b2e-babe-40d7-9f73-d7061317559b",
+          "request_id": "42ec51ff-93aa-4a0e-a46b-3a780bcbd889",
           "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 29.3,
-          "request_id": "d9d07752-db7c-436f-aa36-76db9e1a880b",
+          "elapsed_ms": 30.1,
+          "request_id": "7baf6c2d-c549-493c-884b-53fd14641023",
           "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 30.3,
-          "request_id": "b55595b8-1010-45df-a06b-996dbb001334",
+          "elapsed_ms": 29.6,
+          "request_id": "26ea61a1-6b17-40e3-be66-92122f39415f",
           "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 30,
-          "request_id": "9bbf4abe-a0dd-4609-844b-6d90838d7112",
+          "elapsed_ms": 29.1,
+          "request_id": "1819cd94-4cdc-4893-b7c0-9dff1974b911",
           "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
           "worker_status": "pass",
           "verdict": "Repair held",
@@ -585,29 +339,33 @@
       ],
       "interaction": {
         "samples": 5,
-        "median_ms": 28.199999928474426,
-        "p95_ms": 29.300000071525574,
-        "max_ms": 29.300000071525574
+        "median_ms": 29.5,
+        "p95_ms": 29.800000000745058,
+        "max_ms": 29.800000000745058
       },
       "scoring": {
         "samples": 5,
-        "median_ms": 30,
-        "p95_ms": 59.300000071525574,
-        "max_ms": 59.300000071525574
+        "median_ms": 29.699999999254942,
+        "p95_ms": 55.899999998509884,
+        "max_ms": 55.899999998509884
       }
     },
     {
-      "round": 3,
+      "round": 2,
       "scenario": "duplicate-clock",
       "recipe": "standby disabled, its inherited duplicate selected and dropped",
-      "meaningful_ready_ms": 172.4,
+      "meaningful_ready_ms": 162.7,
       "interaction_samples": [
         {
-          "elapsed_ms": 28.9,
+          "elapsed_ms": 29.2,
           "changed": true
         },
         {
-          "elapsed_ms": 29.7,
+          "elapsed_ms": 29.3,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 30.4,
           "changed": true
         },
         {
@@ -615,26 +373,38 @@
           "changed": true
         },
         {
-          "elapsed_ms": 29.3,
-          "changed": true
-        },
-        {
-          "elapsed_ms": 29,
+          "elapsed_ms": 29.4,
           "changed": true
         }
       ],
       "scoring_samples": [
         {
-          "elapsed_ms": 30,
-          "request_id": "e1c3f7be-e3a0-462a-8e91-93d0c531c801",
+          "elapsed_ms": 29.8,
+          "request_id": "df22ad4e-a51f-4070-adc3-1c004f341f8e",
           "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 28.9,
-          "request_id": "baef8159-92f7-4e7d-986e-0c47676ee183",
+          "elapsed_ms": 29.1,
+          "request_id": "c42c36c4-6168-4bab-9387-5e0aeeb7beb7",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.1,
+          "request_id": "3e163a1e-59af-4d19-9e3a-b7b06014b82a",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.2,
+          "request_id": "5d36a091-6a15-4972-8116-7e0e1857fcd2",
           "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
           "worker_status": "pass",
           "verdict": "Repair held",
@@ -642,23 +412,7 @@
         },
         {
           "elapsed_ms": 29.7,
-          "request_id": "2be49953-a134-4a15-90df-fdc65791b851",
-          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 29.4,
-          "request_id": "34fbb12a-9f5e-4eb3-9c89-5e408d87e066",
-          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 30,
-          "request_id": "e8751d81-3c2b-4bc9-8ce2-c66948377e5a",
+          "request_id": "bc666e01-754f-4394-8c2d-965248b357d7",
           "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
           "worker_status": "pass",
           "verdict": "Repair held",
@@ -667,48 +421,64 @@
       ],
       "interaction": {
         "samples": 5,
-        "median_ms": 29.300000071525574,
-        "p95_ms": 30.90000009536743,
-        "max_ms": 30.90000009536743
+        "median_ms": 29.40000000037253,
+        "p95_ms": 30.90000000037253,
+        "max_ms": 30.90000000037253
       },
       "scoring": {
         "samples": 5,
-        "median_ms": 29.700000047683716,
-        "p95_ms": 30,
-        "max_ms": 30
+        "median_ms": 29.200000001117587,
+        "p95_ms": 29.799999998882413,
+        "max_ms": 29.799999998882413
       }
     },
     {
-      "round": 3,
+      "round": 2,
       "scenario": "cached-gate",
       "recipe": "gate switched to live; inherited state retained",
-      "meaningful_ready_ms": 183,
+      "meaningful_ready_ms": 169,
       "interaction_samples": [
         {
-          "elapsed_ms": 26.9,
+          "elapsed_ms": 29.5,
           "changed": true
         },
         {
-          "elapsed_ms": 29.1,
+          "elapsed_ms": 29.2,
           "changed": true
         },
         {
-          "elapsed_ms": 29.8,
+          "elapsed_ms": 30.5,
           "changed": true
         },
         {
-          "elapsed_ms": 28.4,
+          "elapsed_ms": 29.6,
           "changed": true
         },
         {
-          "elapsed_ms": 28.3,
+          "elapsed_ms": 28.8,
           "changed": true
         }
       ],
       "scoring_samples": [
         {
-          "elapsed_ms": 28.2,
-          "request_id": "9b2f1516-a2d8-4b71-b770-ea362e35398f",
+          "elapsed_ms": 29.1,
+          "request_id": "a9f8b563-3740-4c13-9f34-1b6b41473837",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.9,
+          "request_id": "b5169700-6a65-427d-a2c8-849f5a2b1ed5",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30,
+          "request_id": "d5672fb5-cb7d-4597-93fe-42167704ab4f",
           "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
           "worker_status": "pass",
           "verdict": "Repair held",
@@ -716,31 +486,15 @@
         },
         {
           "elapsed_ms": 29.6,
-          "request_id": "534516cd-3659-4cf0-a29f-96249de45b08",
+          "request_id": "a1d729e5-6621-4084-9ea1-44302781be3a",
           "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
           "worker_status": "pass",
           "verdict": "Repair held",
           "twelve_cases": true
         },
         {
-          "elapsed_ms": 28.7,
-          "request_id": "4d9e96f2-0ac1-43a8-843d-2e502929c07c",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 28.5,
-          "request_id": "fe9e96bd-0800-4fa9-a401-b054b1f58295",
-          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
-          "worker_status": "pass",
-          "verdict": "Repair held",
-          "twelve_cases": true
-        },
-        {
-          "elapsed_ms": 28.3,
-          "request_id": "3afd9b50-b9f5-4130-8651-26016ee006a1",
+          "elapsed_ms": 30,
+          "request_id": "f3ddfebc-f854-40c9-a13f-35e8644bc5c9",
           "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
           "worker_status": "pass",
           "verdict": "Repair held",
@@ -749,30 +503,276 @@
       ],
       "interaction": {
         "samples": 5,
-        "median_ms": 28.399999976158142,
-        "p95_ms": 29.799999952316284,
-        "max_ms": 29.799999952316284
+        "median_ms": 29.5,
+        "p95_ms": 30.5,
+        "max_ms": 30.5
       },
       "scoring": {
         "samples": 5,
-        "median_ms": 28.5,
-        "p95_ms": 29.59999990463257,
-        "max_ms": 29.59999990463257
+        "median_ms": 29.90000000037253,
+        "p95_ms": 30,
+        "max_ms": 30
+      }
+    },
+    {
+      "round": 3,
+      "scenario": "stale-queue",
+      "recipe": "guard enabled, inherited stale job retained",
+      "meaningful_ready_ms": 165.6,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 28.5,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.4,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.5,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.2,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 28.8,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 55.8,
+          "request_id": "107dccd2-26f6-4b06-805e-acbf7065ea66",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.9,
+          "request_id": "aba3d3a3-0449-4c6e-8902-68e5af5df14c",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.3,
+          "request_id": "a507fa2b-eb2a-453f-b664-d71b9165145a",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.8,
+          "request_id": "57af9330-a671-4c36-b756-da7af2999a1e",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.3,
+          "request_id": "cfec35a7-4b89-4e8f-a4a7-d27f9ef74466",
+          "candidate_sha256": "7f2456b34270a74af5fe2e39db83767e43c0f0957be91ae4020795410ee05849",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 29.199999999254942,
+        "p95_ms": 29.5,
+        "max_ms": 29.5
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 30.300000000745058,
+        "p95_ms": 55.79999999888241,
+        "max_ms": 55.79999999888241
+      }
+    },
+    {
+      "round": 3,
+      "scenario": "duplicate-clock",
+      "recipe": "standby disabled, its inherited duplicate selected and dropped",
+      "meaningful_ready_ms": 162.2,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 29.7,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 30,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.2,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 30.7,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 29.7,
+          "request_id": "6e747e35-1bda-400c-9bf1-b1c9323bae24",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.9,
+          "request_id": "9080f177-a602-445a-894c-596930441656",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.1,
+          "request_id": "64f95369-88e3-437e-b1d7-034074bbc3e2",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.6,
+          "request_id": "f52aa101-b2e1-40d7-9bd7-8888448b4cfe",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.4,
+          "request_id": "2b4aa166-e900-4f85-bf72-2a5904e7c867",
+          "candidate_sha256": "4234d9287170f36904ba0f3176f4772252006fe2d2f9f5ea642bcdaa10880df7",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 29.699999999254942,
+        "p95_ms": 30.700000001117587,
+        "max_ms": 30.700000001117587
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 29.700000001117587,
+        "p95_ms": 30.09999999962747,
+        "max_ms": 30.09999999962747
+      }
+    },
+    {
+      "round": 3,
+      "scenario": "cached-gate",
+      "recipe": "gate switched to live; inherited state retained",
+      "meaningful_ready_ms": 165.8,
+      "interaction_samples": [
+        {
+          "elapsed_ms": 28.6,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.1,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.3,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.8,
+          "changed": true
+        },
+        {
+          "elapsed_ms": 29.5,
+          "changed": true
+        }
+      ],
+      "scoring_samples": [
+        {
+          "elapsed_ms": 29.3,
+          "request_id": "8f4c51ee-6775-445a-a6b3-06414453c1f7",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.8,
+          "request_id": "339785b1-c89a-45c0-a3be-dd297cffc61e",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 29.8,
+          "request_id": "a38be85e-5921-47eb-8ffe-f1e694ae47e3",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.1,
+          "request_id": "0e3bf92e-21f7-4c00-934d-62453a0dc1ce",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        },
+        {
+          "elapsed_ms": 30.2,
+          "request_id": "657c5775-4488-4076-85be-666d2d208f5b",
+          "candidate_sha256": "08a2b5d26af6e0e8cc46f2dc9ee32249d871d84085b2f1506e0a64b279b24b30",
+          "worker_status": "pass",
+          "verdict": "Repair held",
+          "twelve_cases": true
+        }
+      ],
+      "interaction": {
+        "samples": 5,
+        "median_ms": 29.299999998882413,
+        "p95_ms": 29.800000000745058,
+        "max_ms": 29.800000000745058
+      },
+      "scoring": {
+        "samples": 5,
+        "median_ms": 29.800000000745058,
+        "p95_ms": 30.200000001117587,
+        "max_ms": 30.200000001117587
       }
     }
   ],
   "summary": {
     "interaction": {
       "samples": 45,
-      "median_ms": 29.3,
-      "p95_ms": 30,
+      "median_ms": 29.4,
+      "p95_ms": 30.5,
       "max_ms": 30.9
     },
     "scoring": {
       "samples": 45,
       "median_ms": 29.8,
-      "p95_ms": 54.6,
-      "max_ms": 59.3
+      "p95_ms": 55.8,
+      "max_ms": 56.3
     }
   },
   "thresholds": {
@@ -962,6 +962,6 @@
   ],
   "page_errors": [],
   "external_requests": [],
-  "artifact_sha256": "8d8d49709477464e4ee60ec01f10a11ad4ed53c826a1a0adaed40e41bd3cbc65",
+  "artifact_sha256": "19a207f117fdf34cd120a76083af9fcfe1ec3a53bcc9bca850d3978fb1da96e8",
   "claim_ceiling": "Local browser timing on the recorded machine, not user completion time or universal device performance."
 }

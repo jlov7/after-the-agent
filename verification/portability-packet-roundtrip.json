@@ -1,6 +1,6 @@
 {
-  "packet_sha256": "16cc31b31c6e2dcbd6fcd024ffcd8fc8878b8ffa7f49f1b5f90f5c3120bd30e5",
-  "attempt_sha256": "931ed3504be97e23292c1d4e6d3988efeeddc3fd3be1ff08f4400ad02edb4f1b",
+  "packet_sha256": "45e4ca7e2cc861b7dd2cb7697865f7fb1eeb83b36a5639239af9a1eec36629a8",
+  "attempt_sha256": "b80dff08122b5b57e0d731977aa07e00983e74941d3257d6a866fb9f54b1298e",
   "exact_bytes": true,
   "original_deadline_preserved": true,
   "live_board_unchanged": true,

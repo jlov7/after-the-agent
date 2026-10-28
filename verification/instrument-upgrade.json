@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "implementation_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "implementation_commit": "bb41a87d03a7f020dad15541d35423fefda81a4f",
   "evidence_class": "automated_software_verification",
   "tests": [
     {
@@ -81,7 +81,7 @@
     },
     {
       "path": "evidence/ui-browser/screenshots/continuation-inspection.png",
-      "sha256": "a52c9c1558dbb08bb4d48a1ff8dd6dcdf2de8da6c3a6dd36c62c2593f1b1eda6"
+      "sha256": "fde8c491123ce15f79d59bc187532e4ed42c0bce1ad8244aae284d6ef6159464"
     },
     {
       "path": "evidence/ui-browser/screenshots/mobile-edit.png",

@@ -1,8 +1,8 @@
 # Build report
 
-Local software verification **passed** on 2026-10-27T13:18:02.820Z.
+Local software verification **passed** on 2026-10-28T16:42:40.045Z.
 
-Checked source commit: `b9ac341e2df4d9fab318e5857cf410bd680106a2`. The generated report
+Checked source commit: `bb41a87d03a7f020dad15541d35423fefda81a4f`. The generated report
 and this document are retained afterward; they do not claim that a later source
 change was tested. [Portable command evidence](verification/product-verification.json)
 records actual exits and runtime/dependency versions. Raw machine-specific logs
@@ -26,8 +26,8 @@ and final-drain checks ran. 11
 named broken behaviors were detected; the valid standby-only repair was accepted.
 [Mutation evidence](verification/mutants.json) and
 [browser timings](verification/benchmark.json) are retained. Timing p95 was
-30 ms for interaction and
-54.6 ms for rendered twelve-case scoring, against
+30.5 ms for interaction and
+55.8 ms for rendered twelve-case scoring, against
 fixed 100/150 ms local ceilings.
 
 The public packaging profile preserves 18 upstream reference files byte for byte

@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "evidence_class": "local_software_verification",
-  "implementation_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "implementation_commit": "bb41a87d03a7f020dad15541d35423fefda81a4f",
   "clean_at_start": true,
-  "started_at": "2026-10-27T13:12:38.124Z",
-  "finished_at": "2026-10-27T13:18:02.820Z",
+  "started_at": "2026-10-28T16:37:35.129Z",
+  "finished_at": "2026-10-28T16:42:40.045Z",
   "software": {
     "status": "passed"
   },
@@ -18,14 +18,14 @@
         "python",
         "scripts/verify_reference.py",
         "--manifest",
-        "PUBLIC_REFERENCE_MANIFEST.json",
+        "REFERENCE_MANIFEST.json",
         "--expected-manifest-sha",
-        "b30d96406f0b7344e135bd4f09b70a29543ef3d4e2d6e23ed72d421e33e18901"
+        "2a1e32b4cf42b1c94c802f9a1822d4878959f652a5afedb4b3cd52123184597f"
       ],
       "scope": "retained_reference",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:38.155Z",
-      "finished_at": "2026-10-27T13:12:38.201Z",
+      "started_at": "2026-10-28T16:37:35.153Z",
+      "finished_at": "2026-10-28T16:37:35.208Z",
       "tests": null,
       "log": "verification/commands/gate-external-reference.log",
       "original_log_sha256": "d8d7c6c7f0137289351f0e551dea1354c40df49594849c3fb267b4a73fa4b7ca",
@@ -46,8 +46,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:38.202Z",
-      "finished_at": "2026-10-27T13:12:38.237Z",
+      "started_at": "2026-10-28T16:37:35.208Z",
+      "finished_at": "2026-10-28T16:37:35.237Z",
       "tests": null,
       "log": "verification/commands/gate-candidate-reference.log",
       "original_log_sha256": "d8d7c6c7f0137289351f0e551dea1354c40df49594849c3fb267b4a73fa4b7ca",
@@ -62,12 +62,12 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:38.237Z",
-      "finished_at": "2026-10-27T13:12:40.044Z",
+      "started_at": "2026-10-28T16:37:35.237Z",
+      "finished_at": "2026-10-28T16:37:36.308Z",
       "tests": null,
       "log": "verification/commands/gate-clean-install.log",
-      "original_log_sha256": "9a007833bd2867facdcd23331a43bcff527c798d2aeca86c58dd11c38da87dfb",
-      "published_log_sha256": "9a007833bd2867facdcd23331a43bcff527c798d2aeca86c58dd11c38da87dfb"
+      "original_log_sha256": "28dcc18ab2e4c79a0fe09e860f6e21e7f0528b09d9573384a69c0378c6c03db0",
+      "published_log_sha256": "28dcc18ab2e4c79a0fe09e860f6e21e7f0528b09d9573384a69c0378c6c03db0"
     },
     {
       "name": "generate-contracts",
@@ -78,8 +78,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:40.044Z",
-      "finished_at": "2026-10-27T13:12:40.261Z",
+      "started_at": "2026-10-28T16:37:36.308Z",
+      "finished_at": "2026-10-28T16:37:36.511Z",
       "tests": null,
       "log": "verification/commands/gate-generate-contracts.log",
       "original_log_sha256": "d8a81b2b31bdd224a77a166630780e594fe09c29badd0a24d7f8aefe9596bfb0",
@@ -94,8 +94,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:40.270Z",
-      "finished_at": "2026-10-27T13:12:42.971Z",
+      "started_at": "2026-10-28T16:37:36.520Z",
+      "finished_at": "2026-10-28T16:37:38.838Z",
       "tests": null,
       "log": "verification/commands/gate-typecheck.log",
       "original_log_sha256": "96e493f0a920e01d173c68f0f49f24a51f8653cbcd2ef42e3ad398fd4a487c06",
@@ -110,8 +110,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:42.972Z",
-      "finished_at": "2026-10-27T13:12:44.716Z",
+      "started_at": "2026-10-28T16:37:38.838Z",
+      "finished_at": "2026-10-28T16:37:40.417Z",
       "tests": null,
       "log": "verification/commands/gate-lint.log",
       "original_log_sha256": "2325bacadad4b166ab86473754adc966adbfb16fcab6667ad860d0bfcaa03743",
@@ -129,8 +129,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:44.716Z",
-      "finished_at": "2026-10-27T13:12:45.509Z",
+      "started_at": "2026-10-28T16:37:40.417Z",
+      "finished_at": "2026-10-28T16:37:41.149Z",
       "tests": {
         "passed": 24,
         "failed": 0,
@@ -138,7 +138,7 @@
         "report": "evidence/gate-contract-tests.json"
       },
       "log": "verification/commands/gate-contract.log",
-      "original_log_sha256": "123b6c2acc6d3690d9678f4adaf470bc606cbb25dc55129452a99fc8d916bd0c",
+      "original_log_sha256": "47689855bf951dc57bf57f8d9e4675c5446e58b76c917c8f4408ea5e1f899895",
       "published_log_sha256": "5bf0674e2294f67e0af3419c05a6fe8e1d5df8ff756cde75f707dbeaf430310b"
     },
     {
@@ -153,8 +153,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:45.509Z",
-      "finished_at": "2026-10-27T13:12:47.812Z",
+      "started_at": "2026-10-28T16:37:41.149Z",
+      "finished_at": "2026-10-28T16:37:43.242Z",
       "tests": {
         "passed": 130,
         "failed": 0,
@@ -162,7 +162,7 @@
         "report": "evidence/gate-engine-tests.json"
       },
       "log": "verification/commands/gate-engine.log",
-      "original_log_sha256": "a2f012a9a58670a3ae2e800750b5249b661071ace2ce33d3f15bd51e83a11570",
+      "original_log_sha256": "903d20f5bbf377cd895122654ed169ec173ac840bd5200530fcbd3d35f27526f",
       "published_log_sha256": "9e57db21e9200944565be9c857e9e07e0bd2bfac0d89c59b172e27b6c6654a65"
     },
     {
@@ -177,8 +177,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:47.812Z",
-      "finished_at": "2026-10-27T13:12:52.883Z",
+      "started_at": "2026-10-28T16:37:43.243Z",
+      "finished_at": "2026-10-28T16:37:47.387Z",
       "tests": {
         "passed": 76,
         "failed": 0,
@@ -186,7 +186,7 @@
         "report": "evidence/gate-oracle-tests.json"
       },
       "log": "verification/commands/gate-oracle.log",
-      "original_log_sha256": "77e762ee234c38c165decf246d19ee4ecb1c1a99da9434f356768f95c141ab99",
+      "original_log_sha256": "2a61086bab833dd748696bf5bb4bca24e34035ae732b46d27533c0698399d03c",
       "published_log_sha256": "594a52a44a8f83030e8ff65e00634f012f08479413e78f0f2f71e43eb1824505"
     },
     {
@@ -201,8 +201,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:52.884Z",
-      "finished_at": "2026-10-27T13:12:53.723Z",
+      "started_at": "2026-10-28T16:37:47.387Z",
+      "finished_at": "2026-10-28T16:37:48.099Z",
       "tests": {
         "passed": 40,
         "failed": 0,
@@ -210,7 +210,7 @@
         "report": "evidence/gate-replay-tests.json"
       },
       "log": "verification/commands/gate-replay.log",
-      "original_log_sha256": "0e5c9c1fe03044f05c090b60f0c252e0204b28d68b5b21c952b81d8f0c1cf241",
+      "original_log_sha256": "100892e832a008ad48ac2dc6fb028d1eab2e82ec3652249c623eac2b04a39eaa",
       "published_log_sha256": "39d9d438194975abdfd8098c298f22cb0e062e2adcd6842b9a336529c94185d3"
     },
     {
@@ -225,8 +225,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:12:53.723Z",
-      "finished_at": "2026-10-27T13:13:01.487Z",
+      "started_at": "2026-10-28T16:37:48.099Z",
+      "finished_at": "2026-10-28T16:37:54.618Z",
       "tests": {
         "passed": 55,
         "failed": 0,
@@ -234,7 +234,7 @@
         "report": "evidence/gate-mcp-tests.json"
       },
       "log": "verification/commands/gate-mcp.log",
-      "original_log_sha256": "af7ac8a353ed11db27b06a634b80c20359e7f60b8f568f85e760e39112b38e31",
+      "original_log_sha256": "a9736ccc90a36c30553d3554591298063d054c7d5f4f3ba208e7b6c7b4330c67",
       "published_log_sha256": "db1fa38b05962f0b93a8e8e2e246b2f1a2872ec462ca20bfa52e82edb68c8f12"
     },
     {
@@ -249,8 +249,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:13:01.487Z",
-      "finished_at": "2026-10-27T13:13:03.338Z",
+      "started_at": "2026-10-28T16:37:54.619Z",
+      "finished_at": "2026-10-28T16:37:56.092Z",
       "tests": {
         "passed": 1,
         "failed": 0,
@@ -258,7 +258,7 @@
         "report": "evidence/gate-mutants-tests.json"
       },
       "log": "verification/commands/gate-mutants.log",
-      "original_log_sha256": "ce8499b1b89e38cfab8ababc7e1bdb4c114df4c7b34f6f6f241b02dcf195928a",
+      "original_log_sha256": "1b456e1454591a84e424b8bc49a92240bcf1543a42bd1d68afd5cf154d0f0b06",
       "published_log_sha256": "489d513476dc3e100a6a6ca9aab2381a73c7bd6b3f182ebac4e214c046bf4406"
     },
     {
@@ -279,8 +279,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:13:03.340Z",
-      "finished_at": "2026-10-27T13:13:03.707Z",
+      "started_at": "2026-10-28T16:37:56.092Z",
+      "finished_at": "2026-10-28T16:37:56.397Z",
       "tests": {
         "passed": 72,
         "failed": 0,
@@ -288,8 +288,8 @@
         "report": "evidence/gate-python-reference.log"
       },
       "log": "verification/commands/gate-python-reference.log",
-      "original_log_sha256": "097dfece434510c7eea35fbc6210bc81f66a6ec1bef67a41b741170644cdc712",
-      "published_log_sha256": "097dfece434510c7eea35fbc6210bc81f66a6ec1bef67a41b741170644cdc712"
+      "original_log_sha256": "de6a3f5e67338af798d4aa91b7f4f64a30450ba561c1aed5d676d29d3986412e",
+      "published_log_sha256": "de6a3f5e67338af798d4aa91b7f4f64a30450ba561c1aed5d676d29d3986412e"
     },
     {
       "name": "power-planning",
@@ -308,8 +308,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:13:03.707Z",
-      "finished_at": "2026-10-27T13:13:03.755Z",
+      "started_at": "2026-10-28T16:37:56.397Z",
+      "finished_at": "2026-10-28T16:37:56.423Z",
       "tests": null,
       "log": "verification/commands/gate-power-planning.log",
       "original_log_sha256": "1b241ab641fcb3b5e2533da1341530307c635a0b92584736e08e39ae0a08db0e",
@@ -327,8 +327,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:13:03.755Z",
-      "finished_at": "2026-10-27T13:13:03.805Z",
+      "started_at": "2026-10-28T16:37:56.423Z",
+      "finished_at": "2026-10-28T16:37:56.451Z",
       "tests": null,
       "log": "verification/commands/gate-synthetic-analysis.log",
       "original_log_sha256": "fcd03b5c1395506eb20f62d8a80bb4225552d2f1eb531d4226437f5215740d12",
@@ -343,12 +343,12 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:13:03.805Z",
-      "finished_at": "2026-10-27T13:13:05.698Z",
+      "started_at": "2026-10-28T16:37:56.452Z",
+      "finished_at": "2026-10-28T16:37:57.965Z",
       "tests": null,
       "log": "verification/commands/gate-build.log",
-      "original_log_sha256": "4bfab57d64410f2ef500c1d7ea02fd03fda16c26e4b0dd05f0f8e199e155c410",
-      "published_log_sha256": "4bfab57d64410f2ef500c1d7ea02fd03fda16c26e4b0dd05f0f8e199e155c410"
+      "original_log_sha256": "c0b0c98b98ca59dee5d99a7d4d4a9c0a5dda7d9900d535cc830881181b3e8244",
+      "published_log_sha256": "c0b0c98b98ca59dee5d99a7d4d4a9c0a5dda7d9900d535cc830881181b3e8244"
     },
     {
       "name": "ui",
@@ -361,8 +361,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:13:05.698Z",
-      "finished_at": "2026-10-27T13:15:44.676Z",
+      "started_at": "2026-10-28T16:37:57.965Z",
+      "finished_at": "2026-10-28T16:40:27.246Z",
       "tests": {
         "passed": 138,
         "failed": 0,
@@ -370,8 +370,8 @@
         "report": "evidence/gate-ui-tests.json"
       },
       "log": "verification/commands/gate-ui.log",
-      "original_log_sha256": "37b881665fc0b0e8234b8d58852291249ddc342be3e6ad202208191fc487a92d",
-      "published_log_sha256": "37b881665fc0b0e8234b8d58852291249ddc342be3e6ad202208191fc487a92d"
+      "original_log_sha256": "1f094d1a96011d9cb0a3fc08dc663a6b736784789d8765f6bd5f7046500a2d49",
+      "published_log_sha256": "1f094d1a96011d9cb0a3fc08dc663a6b736784789d8765f6bd5f7046500a2d49"
     },
     {
       "name": "cross-browser",
@@ -384,8 +384,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:15:44.677Z",
-      "finished_at": "2026-10-27T13:17:36.054Z",
+      "started_at": "2026-10-28T16:40:27.247Z",
+      "finished_at": "2026-10-28T16:42:15.469Z",
       "tests": {
         "passed": 56,
         "failed": 0,
@@ -393,8 +393,8 @@
         "report": "evidence/gate-cross-browser-tests.json"
       },
       "log": "verification/commands/gate-cross-browser.log",
-      "original_log_sha256": "7a2136893103f1e9d963ba9a19a2d4f60c775eabad6a278c9b1d3ace5ce96400",
-      "published_log_sha256": "7a2136893103f1e9d963ba9a19a2d4f60c775eabad6a278c9b1d3ace5ce96400"
+      "original_log_sha256": "a829cdca5b993b14d62db1f3c3d9292bdb50c791cf7bdd42625e998fc3c9248e",
+      "published_log_sha256": "a829cdca5b993b14d62db1f3c3d9292bdb50c791cf7bdd42625e998fc3c9248e"
     },
     {
       "name": "complete-packet",
@@ -405,8 +405,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:17:36.076Z",
-      "finished_at": "2026-10-27T13:17:36.459Z",
+      "started_at": "2026-10-28T16:42:15.491Z",
+      "finished_at": "2026-10-28T16:42:15.872Z",
       "tests": null,
       "log": "verification/commands/gate-complete-packet.log",
       "original_log_sha256": "f603b3ad9a3880168fde403ccb6cd6a0d4a22ca0552b4a2f59e1cafa4865cf07",
@@ -421,8 +421,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:17:36.459Z",
-      "finished_at": "2026-10-27T13:17:44.557Z",
+      "started_at": "2026-10-28T16:42:15.872Z",
+      "finished_at": "2026-10-28T16:42:23.491Z",
       "tests": null,
       "log": "verification/commands/gate-reproducible-builds.log",
       "original_log_sha256": "a2e3fe2d0256a8e22d94b409fb630a058b57014c5d03306ca02bacf3914c7e6b",
@@ -437,12 +437,12 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:17:44.581Z",
-      "finished_at": "2026-10-27T13:17:59.351Z",
+      "started_at": "2026-10-28T16:42:23.511Z",
+      "finished_at": "2026-10-28T16:42:38.077Z",
       "tests": null,
       "log": "verification/commands/gate-benchmark.log",
-      "original_log_sha256": "82912afb969ff2b9c2351158e0613bcce44435ba20a3213ddde6973eaa25f0b2",
-      "published_log_sha256": "82912afb969ff2b9c2351158e0613bcce44435ba20a3213ddde6973eaa25f0b2"
+      "original_log_sha256": "2dd9a8fb303087b0868798f7419e36c12485e02583430ea877c94dbf6c1f75ab",
+      "published_log_sha256": "2dd9a8fb303087b0868798f7419e36c12485e02583430ea877c94dbf6c1f75ab"
     },
     {
       "name": "secret-scan",
@@ -452,8 +452,8 @@
       ],
       "scope": "product",
       "exit_code": 0,
-      "started_at": "2026-10-27T13:17:59.352Z",
-      "finished_at": "2026-10-27T13:18:02.225Z",
+      "started_at": "2026-10-28T16:42:38.078Z",
+      "finished_at": "2026-10-28T16:42:39.840Z",
       "tests": null,
       "log": "verification/commands/gate-secret-scan.log",
       "original_log_sha256": "03db7f9eaee678c8acbd22b5b8a95d0d8fc36fe7f708abf1d824eee27bafc7c9",
@@ -573,7 +573,7 @@
       "path": "evidence/portability/browser/packet-roundtrip.json",
       "description": "complete browser-exported packet reopens without changing its embedded attempt, live board, deadline or provenance ceiling",
       "status": "passed",
-      "sha256": "97e4b67d0684dc13f853a79260f558f1c8ece2803e7041552c92b0103f15ad9d"
+      "sha256": "d317ecd751c06f95ccff06ff15d0aa33a2cb23e5e0dab0cf212ea5b5f4c19cd4"
     },
     {
       "path": "evidence/portability/browser/notebook-roundtrip.json",
@@ -585,7 +585,7 @@
       "path": "evidence/portability/browser/autosave-rescue.json",
       "description": "an abandoned retained autosave remains exactly downloadable without reviving it",
       "status": "passed",
-      "sha256": "221e821656cae838df86c7631e7e31d5ca806d6e065b28b1ff93357dab19b690"
+      "sha256": "38799e56c0af16e8f89e624459697639cf35d6f246316f0d8c166526f8f05912"
     },
     {
       "path": "evidence/portability/browser/offline-audit.json",
@@ -597,7 +597,7 @@
       "path": "evidence/portability/software.json",
       "description": "four bounded additions, source substitution and corruption/conflict/quota rejection, keyboard phone reflow and actual cache eviction were exercised",
       "status": "passed",
-      "sha256": "13f88595b3c9d42cc9b17227d987658f677202ac384a00a239d7894d8fb7b3da"
+      "sha256": "fab6e1741e77b8fd7dafce42953c1fac7c7b4d623ee397b34359741451d90051"
     },
     {
       "path": "evidence/genuine-browser/verification.json",
@@ -633,19 +633,19 @@
       "path": "evidence/twelve/reproducible/receipt.json",
       "description": "two isolated clean installs produce byte-identical static artifacts and a changed-file negative control is detected",
       "status": "passed",
-      "sha256": "448384444a138c2bff9e8857a7ddb60479f8275fb67279b346f7e4babdfa6ad1"
+      "sha256": "31e90072cf9048d195175a0fc68aa9eccaf6f8d7bb7486aa277dfd14df486f1b"
     },
     {
       "path": "evidence/twelve/software.json",
       "description": "all twelve approved additions and their actual production browser/reproducibility evidence",
       "status": "passed",
-      "sha256": "c64110ad43bc83bcc5454d4da24a27c5daf2c2f1fd8ccd8625c7710893d14912"
+      "sha256": "6a56b34f3cc48d2ab6fac5cee7347bda54b5c5857bce1446cd614d04c12fbd7f"
     },
     {
       "path": "evidence/instrument-upgrade.json",
       "description": "the five additive features, original-state and deadline isolation, keyboard reflow and rehearsal exclusion were exercised",
       "status": "passed",
-      "sha256": "6e41108ed31cb50c17328858c174c3a1a0efdb42fc509ebd17d08de0422f6d64"
+      "sha256": "ed41783984b6e56453af8db4b8a826139d03418295c271a9584eb6c1d4b65a64"
     },
     {
       "path": "evidence/offline-verification.json",
@@ -657,7 +657,7 @@
       "path": "evidence/full-roadmap/browser-diagnostic.json",
       "description": "an actual browser-exported counterexample independently reproduced as a diagnostic mismatch",
       "status": "passed",
-      "sha256": "cb0d9a31e30af2e8f2ef81b1ea197778df16248d29ab4d669ddb07ae88eddcd5"
+      "sha256": "957226ed3089d7c8fc67e55f8e155114302c9ca97c490fdc44e4dc34ce42d192"
     },
     {
       "path": "evidence/full-roadmap/stateful-negative-control.json",
@@ -669,19 +669,19 @@
       "path": "evidence/full-roadmap/software.json",
       "description": "the sixteen-feature software scope with genuine model content explicitly separate",
       "status": "passed",
-      "sha256": "e10a4ac19c036f986c43a9155ad2b956201276577157735bcf4b3e7bf9f1b2cd"
+      "sha256": "6f2e0d4f0b246616b4c4da924fc6f6e2d6fd69f345988bba5246d13cc3710992"
     },
     {
       "path": "evidence/quality/benchmark.json",
       "description": "three rounds of request-bound real browser interaction and twelve-case scoring stay within the fixed baseline-derived ceilings",
       "status": "passed",
-      "sha256": "382d9d4df3d20c73bc4c0d3ca4757a4cf184ad9d7698b561a832b6c42c7c395c"
+      "sha256": "bb15ff75882b16e8ad392780102a67ddc93a0523e01a28e26f0ac9b661010406"
     },
     {
       "path": "evidence/secret-scan.json",
       "description": "current files and intended Git history contain no scanner findings",
       "status": "passed",
-      "sha256": "c2584370dcefd3a8e65c57c5008bb38553db89637dec12ac321ea12554f4a572"
+      "sha256": "9b7c843b9956bff7df6146d6f529c31f228fd44db3b35ad6cfbc309d7887861b"
     },
     {
       "path": "evidence/oracle-conformance.json",
@@ -723,23 +723,23 @@
       "path": "evidence/recording-dry-run/behavioral-verification.json",
       "description": "retained actual MCP fixture passes all twelve anchored independent continuations",
       "status": "passed",
-      "sha256": "b3e95f6fe5bae739ab8c5e5a4fd823a4359612fb945e555b6b25f53001fea366"
+      "sha256": "bef7fa99d6b911c639826553620438896e075e46efa498fe1a126f54c16296c9"
     },
     {
       "path": "evidence/recording-behavior-no-clock/behavioral-verification.json",
       "description": "complete no-clock recording is retained as a target-behavior failure",
       "status": "passed",
-      "sha256": "f49c9fbebf00e86254d1c92bba8e5687ef0462ec915997773df1f7c507fe286e"
+      "sha256": "8b3fbea8294c9d3bd07d7482753c3ba4a4935b637e920e0ad4e529bf66b79bd8"
     },
     {
       "path": "evidence/recording-behavior-duplicate-clock/behavioral-verification.json",
       "description": "complete duplicate-clock recording is retained as a target-behavior failure",
       "status": "passed",
-      "sha256": "9c5dde24e37d64e655d70e794fe806e1ddcb08d4df49e59a800611a6117a368d"
+      "sha256": "16f4b17471bda97ca1ec3456756651f5de983ff1b36831deebf90ada7ef0818b"
     }
   ],
   "environment": {
-    "captured_at": "2026-10-27T13:18:02.314Z",
+    "captured_at": "2026-10-28T16:42:39.877Z",
     "node": "v24.19.0",
     "npm": "12.0.0",
     "uv": "uv 0.13.5 (Homebrew 2026-10-22 aarch64-apple-darwin)",
@@ -964,10 +964,10 @@
     "reference": {
       "manifest_sha256": "2a1e32b4cf42b1c94c802f9a1822d4878959f652a5afedb4b3cd52123184597f",
       "profile": {
-        "profile": "public-1",
-        "manifest_file": "PUBLIC_REFERENCE_MANIFEST.json",
+        "profile": "original",
+        "manifest_file": "REFERENCE_MANIFEST.json",
         "upstream_manifest_sha256": "2a1e32b4cf42b1c94c802f9a1822d4878959f652a5afedb4b3cd52123184597f",
-        "packaging_sha256": "b30d96406f0b7344e135bd4f09b70a29543ef3d4e2d6e23ed72d421e33e18901",
+        "packaging_sha256": "2a1e32b4cf42b1c94c802f9a1822d4878959f652a5afedb4b3cd52123184597f",
         "files": [
           {
             "path": "contracts/board.schema.json",
@@ -983,7 +983,7 @@
           },
           {
             "path": "docs/06_RESEARCH_PROTOCOL.md",
-            "sha256": "5327c740e874889648e985f1602eb22ce2ccbff0c8e2a996a7d6b0ab4e3dde6d"
+            "sha256": "c41e24077ee2ec8e4b13fb3eef011443e0b8b77d8bca12ab362aafe948883fb6"
           },
           {
             "path": "fixtures/continuation-policy.json",
@@ -1046,11 +1046,11 @@
             "sha256": "c8331d40f9e96c7b9abb48e652dd7d7dc7c448b3df8dda3ea03592a6c9750855"
           }
         ],
-        "identical_upstream_files": 18,
-        "protocol_derivative": true
+        "identical_upstream_files": 19,
+        "protocol_derivative": false
       }
     },
-    "product_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+    "product_commit": "bb41a87d03a7f020dad15541d35423fefda81a4f",
     "dirty_at_start": "",
     "m0_only": false
   },
@@ -1112,8 +1112,8 @@
     },
     {
       "path": "verification/commands/gate-clean-install.log",
-      "bytes": 228,
-      "sha256": "9a007833bd2867facdcd23331a43bcff527c798d2aeca86c58dd11c38da87dfb"
+      "bytes": 231,
+      "sha256": "28dcc18ab2e4c79a0fe09e860f6e21e7f0528b09d9573384a69c0378c6c03db0"
     },
     {
       "path": "verification/commands/gate-generate-contracts.log",
@@ -1163,7 +1163,7 @@
     {
       "path": "verification/commands/gate-python-reference.log",
       "bytes": 10912,
-      "sha256": "097dfece434510c7eea35fbc6210bc81f66a6ec1bef67a41b741170644cdc712"
+      "sha256": "de6a3f5e67338af798d4aa91b7f4f64a30450ba561c1aed5d676d29d3986412e"
     },
     {
       "path": "verification/commands/gate-power-planning.log",
@@ -1178,17 +1178,17 @@
     {
       "path": "verification/commands/gate-build.log",
       "bytes": 4811,
-      "sha256": "4bfab57d64410f2ef500c1d7ea02fd03fda16c26e4b0dd05f0f8e199e155c410"
+      "sha256": "c0b0c98b98ca59dee5d99a7d4d4a9c0a5dda7d9900d535cc830881181b3e8244"
     },
     {
       "path": "verification/commands/gate-ui.log",
-      "bytes": 21416,
-      "sha256": "37b881665fc0b0e8234b8d58852291249ddc342be3e6ad202208191fc487a92d"
+      "bytes": 21419,
+      "sha256": "1f094d1a96011d9cb0a3fc08dc663a6b736784789d8765f6bd5f7046500a2d49"
     },
     {
       "path": "verification/commands/gate-cross-browser.log",
-      "bytes": 10716,
-      "sha256": "7a2136893103f1e9d963ba9a19a2d4f60c775eabad6a278c9b1d3ace5ce96400"
+      "bytes": 10718,
+      "sha256": "a829cdca5b993b14d62db1f3c3d9292bdb50c791cf7bdd42625e998fc3c9248e"
     },
     {
       "path": "verification/commands/gate-complete-packet.log",
@@ -1202,8 +1202,8 @@
     },
     {
       "path": "verification/commands/gate-benchmark.log",
-      "bytes": 350,
-      "sha256": "82912afb969ff2b9c2351158e0613bcce44435ba20a3213ddde6973eaa25f0b2"
+      "bytes": 352,
+      "sha256": "2dd9a8fb303087b0868798f7419e36c12485e02583430ea877c94dbf6c1f75ab"
     },
     {
       "path": "verification/commands/gate-secret-scan.log",
@@ -1217,33 +1217,33 @@
     },
     {
       "path": "verification/benchmark.json",
-      "bytes": 29875,
-      "sha256": "4996ec3056860d45f0dd4568b898cd63c8feffe0177b0194bbb4d1d4acff1114"
+      "bytes": 29878,
+      "sha256": "61d93c90b6929070a476caeaf548b019b218bfe189b714dbb3586f960ef32969"
     },
     {
       "path": "verification/instrument-upgrade.json",
       "bytes": 3632,
-      "sha256": "6e41108ed31cb50c17328858c174c3a1a0efdb42fc509ebd17d08de0422f6d64"
+      "sha256": "ed41783984b6e56453af8db4b8a826139d03418295c271a9584eb6c1d4b65a64"
     },
     {
       "path": "verification/full-roadmap.json",
       "bytes": 8245,
-      "sha256": "e10a4ac19c036f986c43a9155ad2b956201276577157735bcf4b3e7bf9f1b2cd"
+      "sha256": "6f2e0d4f0b246616b4c4da924fc6f6e2d6fd69f345988bba5246d13cc3710992"
     },
     {
       "path": "verification/twelve-additions.json",
       "bytes": 6326,
-      "sha256": "c64110ad43bc83bcc5454d4da24a27c5daf2c2f1fd8ccd8625c7710893d14912"
+      "sha256": "6a56b34f3cc48d2ab6fac5cee7347bda54b5c5857bce1446cd614d04c12fbd7f"
     },
     {
       "path": "verification/portability.json",
       "bytes": 3406,
-      "sha256": "13f88595b3c9d42cc9b17227d987658f677202ac384a00a239d7894d8fb7b3da"
+      "sha256": "fab6e1741e77b8fd7dafce42953c1fac7c7b4d623ee397b34359741451d90051"
     },
     {
       "path": "verification/v1.json",
       "bytes": 11579,
-      "sha256": "77a6d7af3b4d52b1c88bddd01408465dfe6dd9ce6e063f60b01e0544f25119d7"
+      "sha256": "59827cf7adfba6f713140574a83b4df04b7346e774457bbfba2bb6d4820d541d"
     },
     {
       "path": "verification/clarity/construction-oracle.json",
@@ -1257,8 +1257,8 @@
     },
     {
       "path": "verification/clarity/chromium/result-1440.png",
-      "bytes": 154752,
-      "sha256": "3a93e20059b1aebcc8a08070512c97df2408fd8c058afce87782b3d050590310"
+      "bytes": 154755,
+      "sha256": "db5d9921a0c83ab40c9c8c1a4c537b0a1aea51fe246cb1b5ad10e23f4cfa347c"
     },
     {
       "path": "verification/clarity/chromium/journey-390.json",
@@ -1267,8 +1267,8 @@
     },
     {
       "path": "verification/clarity/chromium/result-390.png",
-      "bytes": 71013,
-      "sha256": "f1b1c6ed81211acf8ae59a0165b70d36098938963504c7c54e307d65c4227213"
+      "bytes": 70946,
+      "sha256": "da1fb60ec52eb8b74c66d03ce8fa3fe42706d66c11c6da0b369438d7656ae70e"
     },
     {
       "path": "verification/clarity/firefox/journey-1440.json",
@@ -1287,8 +1287,8 @@
     },
     {
       "path": "verification/clarity/firefox/result-390.png",
-      "bytes": 82997,
-      "sha256": "55216a6040335869dede760007d19e5e6f5c4f98b73d8c23b0e7463b4a082c0d"
+      "bytes": 83288,
+      "sha256": "f6bb32a8b4f3d3e9bf1658f5565635f6a3e48e0bf8109531b501e0955b27dbbb"
     },
     {
       "path": "verification/clarity/webkit/journey-1440.json",
@@ -1322,28 +1322,28 @@
     },
     {
       "path": "verification/v1/chromium/cached-gate-1440-result.png",
-      "bytes": 151447,
-      "sha256": "6531dcf29a3432caa36e0b4fb05aacd31743a424749a2e104bb4ed00a06a4bc7"
+      "bytes": 151452,
+      "sha256": "4b154124f6907487a63add45b2ecf6fddc1433a97213adc01ece45e90173f0db"
     },
     {
       "path": "verification/v1/chromium/cached-gate-320-board.png",
-      "bytes": 63122,
-      "sha256": "3ef202e76c313fb012e024a8ef9fa8bedd9c4d864216766c58b52747320fff79"
+      "bytes": 63148,
+      "sha256": "cade9bf3f8929d7e777c19700969a52e5fff35c3eed36e61993485ebc58a5656"
     },
     {
       "path": "verification/v1/chromium/cached-gate-320-result.png",
-      "bytes": 69367,
-      "sha256": "3e0de79939259a134538e203fd9919d23e2240545ee7db64bd6542c49f271ee5"
+      "bytes": 69393,
+      "sha256": "b364782e03df1339d5d9a084b1841cf2605b10c4b814735eb4efc45ab84c56b2"
     },
     {
       "path": "verification/v1/chromium/cached-gate-390-board.png",
-      "bytes": 76975,
-      "sha256": "18aecad1d719bca0acb8667ffcbbe1b4c2492602de0731f76c4154c5a9d21c59"
+      "bytes": 76876,
+      "sha256": "2771c05d09fbaf796938871c383b573e10d8ea613655c675e4030b680d9ac4f7"
     },
     {
       "path": "verification/v1/chromium/cached-gate-390-result.png",
-      "bytes": 71110,
-      "sha256": "f7145dc320cfe163bd3ab125676ed10cfc355eb21a0b700efcb43f0cd4c1c924"
+      "bytes": 71131,
+      "sha256": "e6c3b81262979b6c3f70e36674baa97564a67a6de6f124726053006b3345bc6a"
     },
     {
       "path": "verification/v1/chromium/duplicate-clock-1440-board.png",
@@ -1542,13 +1542,13 @@
     },
     {
       "path": "verification/v1/firefox/stale-queue-320-board.png",
-      "bytes": 72265,
-      "sha256": "cc3bf5f683ae759b55cc04ca5b4737309e4208b5972d12745f1a1322630a06b7"
+      "bytes": 72447,
+      "sha256": "f5700a9c5e4c342b7c66b4997d9c1b197d7f86390073e427e77aebc61e190d3b"
     },
     {
       "path": "verification/v1/firefox/stale-queue-320-result.png",
-      "bytes": 79506,
-      "sha256": "7b69802529ad8164b18b03e8004f051eb6ab9c30fc1f11fbec49011d80081f68"
+      "bytes": 79675,
+      "sha256": "dfda769230c4222d27e884154b042ab0897562f4eab0f9737e90528b65ed33da"
     },
     {
       "path": "verification/v1/firefox/stale-queue-390-board.png",
@@ -1577,13 +1577,13 @@
     },
     {
       "path": "verification/v1/webkit/cached-gate-320-board.png",
-      "bytes": 74759,
-      "sha256": "930f4dc8ce808f4e51c0c2866954488289d2903dfbcd960fbadf44deca93bbab"
+      "bytes": 74479,
+      "sha256": "d4409501fec739f05e11891249b2577e0be798ee5529a4e76ef0ed2ebd360271"
     },
     {
       "path": "verification/v1/webkit/cached-gate-320-result.png",
-      "bytes": 83033,
-      "sha256": "01786daf3c943a6d8cb51a029f89f9540a2e959c4a440ad19fadc65c783cab2c"
+      "bytes": 82807,
+      "sha256": "698f7be7acd3c10a401b7bc6f801edf3ef467f8dee28aec7f1a62a374d587f66"
     },
     {
       "path": "verification/v1/webkit/cached-gate-390-board.png",
@@ -1647,13 +1647,13 @@
     },
     {
       "path": "verification/v1/webkit/offline-repair.png",
-      "bytes": 636177,
-      "sha256": "f425e7cb167706cc677c285f5a876b5910000a85080bdfb86350d1c8327fba24"
+      "bytes": 636025,
+      "sha256": "817875edd3b3b2ec64634048a39c4c5c415339913434d0f47202a0808c6aea30"
     },
     {
       "path": "verification/v1/webkit/stale-queue-1440-board.png",
-      "bytes": 179478,
-      "sha256": "7665ff81cd14048761a0d82ae53ab1bc8ea1aebe0a9371aafef9565bd5d94de7"
+      "bytes": 179351,
+      "sha256": "e4943e3a14c301cb447ac5ed527a4d63f77e3b5afc1825fb52460430b91236ea"
     },
     {
       "path": "verification/v1/webkit/stale-queue-1440-failure.png",
@@ -1688,7 +1688,7 @@
     {
       "path": "verification/portability-packet-roundtrip.json",
       "bytes": 302,
-      "sha256": "97e4b67d0684dc13f853a79260f558f1c8ece2803e7041552c92b0103f15ad9d"
+      "sha256": "d317ecd751c06f95ccff06ff15d0aa33a2cb23e5e0dab0cf212ea5b5f4c19cd4"
     },
     {
       "path": "verification/portability-notebook-roundtrip.json",
@@ -1698,7 +1698,7 @@
     {
       "path": "verification/portability-autosave-rescue.json",
       "bytes": 160,
-      "sha256": "221e821656cae838df86c7631e7e31d5ca806d6e065b28b1ff93357dab19b690"
+      "sha256": "38799e56c0af16e8f89e624459697639cf35d6f246316f0d8c166526f8f05912"
     },
     {
       "path": "verification/portability-offline-audit.json",
@@ -1707,8 +1707,8 @@
     },
     {
       "path": "verification/reproducible-builds.json",
-      "bytes": 45048,
-      "sha256": "448384444a138c2bff9e8857a7ddb60479f8275fb67279b346f7e4babdfa6ad1"
+      "bytes": 45069,
+      "sha256": "31e90072cf9048d195175a0fc68aa9eccaf6f8d7bb7486aa277dfd14df486f1b"
     },
     {
       "path": "verification/full-packet.json",
@@ -1728,7 +1728,7 @@
     {
       "path": "verification/recording-status.json",
       "bytes": 2125,
-      "sha256": "36a3c1ca7d1aedef6e6f744d0d7679a7b895a28e553e4d6e64d774f5fdf8f66d"
+      "sha256": "9ffe5631667442cf7e3b490f542c52d53ebc17ca72a5253dc22a17b943c240ab"
     },
     {
       "path": "verification/offline.json",
@@ -1743,7 +1743,7 @@
     {
       "path": "verification/browser-diagnostic.json",
       "bytes": 5465,
-      "sha256": "cb0d9a31e30af2e8f2ef81b1ea197778df16248d29ab4d669ddb07ae88eddcd5"
+      "sha256": "957226ed3089d7c8fc67e55f8e155114302c9ca97c490fdc44e4dc34ce42d192"
     },
     {
       "path": "verification/screenshots/concept-lessons.png",
@@ -1752,8 +1752,8 @@
     },
     {
       "path": "verification/screenshots/continuation-inspection.png",
-      "bytes": 742471,
-      "sha256": "a52c9c1558dbb08bb4d48a1ff8dd6dcdf2de8da6c3a6dd36c62c2593f1b1eda6"
+      "bytes": 742342,
+      "sha256": "fde8c491123ce15f79d59bc187532e4ed42c0bce1ad8244aae284d6ef6159464"
     },
     {
       "path": "verification/screenshots/mobile-edit.png",
@@ -1772,8 +1772,8 @@
     },
     {
       "path": "verification/screenshots/notebook.png",
-      "bytes": 100165,
-      "sha256": "5e89e027e4ff8b8dfbafe3cad02f0add38bf2d20693da6b3a949e177a9017016"
+      "bytes": 101007,
+      "sha256": "7026734bf2cde46afc19401e0d484a3c06b65d296fb79fffe6c744ba82d1e383"
     },
     {
       "path": "verification/screenshots/gallery.png",
@@ -1787,8 +1787,8 @@
     },
     {
       "path": "verification/screenshots/html-report.png",
-      "bytes": 86038,
-      "sha256": "3386a8e187d95c7f3ff18e2dd65c526d5df72695159acd3dea229c85a48f8cde"
+      "bytes": 86437,
+      "sha256": "a90a9605e2c0461966319a9b90167b072716442de0668baa5bb23ca4c21a0bf0"
     },
     {
       "path": "verification/screenshots/capture-inspector-390-200.png",
@@ -1798,7 +1798,7 @@
     {
       "path": "verification/screenshots/offline-reopened.png",
       "bytes": 69218,
-      "sha256": "cf3bc3bac484e93e7faebc1f20ba9183fc2e14519adc61b5030b0a216a9f7ae2"
+      "sha256": "de470c81b1a241f4b39ceb10af33b7947635259eaaeb6b7b0a40f8e779498bdb"
     },
     {
       "path": "verification/screenshots/workbench-narrow.png",
@@ -1842,18 +1842,18 @@
     },
     {
       "path": "verification/screenshots/portability-packet.png",
-      "bytes": 383340,
-      "sha256": "afffe359257d729915348511d2b3d9d26fc7c7a0b042a771e603dd911377b6a1"
+      "bytes": 384365,
+      "sha256": "e7fe24b41f5a188d0747e030da74b27b203fa7298868d928122e683ad8f88653"
     },
     {
       "path": "verification/screenshots/portability-notebook.png",
-      "bytes": 158988,
-      "sha256": "82803292826f227ae96d08457a0bc2efd5ad2b041640450674ddac5dfeced740"
+      "bytes": 159698,
+      "sha256": "defb792111b0b9a46f5dce20727ba82d89c1aca93d494010f393ebb7707cb5ce"
     },
     {
       "path": "verification/screenshots/portability-autosave.png",
-      "bytes": 39369,
-      "sha256": "3253470930c7762efd6a849716c115e837dde8396d17c9bebc0a26d3a7215eb5"
+      "bytes": 40123,
+      "sha256": "c6b7be41da3c0e1f42b9df4e0bfbe36a8b812c06762825ee502643c7d0570e64"
     },
     {
       "path": "verification/screenshots/portability-offline-audit.png",
@@ -1862,8 +1862,8 @@
     },
     {
       "path": "verification/screenshots/portability-notebook-phone-zoom.png",
-      "bytes": 469907,
-      "sha256": "f87d4a1dafd23f1f62faf75dc32e25a533ec53ed8b177b34ef2d1b14f6511c12"
+      "bytes": 469646,
+      "sha256": "40400a930ec3ba01bec71710a28508d9238649c57033745b310f2d5f2ee86a40"
     }
   ],
   "log_transformation": "Known local source/runtime<local> prefixes and remaining machine paths replaced with <local>. Original and published log hashes remain distinct. Full raw artifacts stay local.",

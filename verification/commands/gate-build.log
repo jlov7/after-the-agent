@@ -59,7 +59,7 @@ dist/assets/ReplayViewer-vk0eEuVR.js                 16.90 kB │ gzip:   5.59 k
 dist/assets/src-D8qxA5nX.js                         147.25 kB │ gzip:  44.49 kB
 dist/assets/index-DQR3NFym.js                       441.74 kB │ gzip: 133.39 kB
 
-✓ built in 367ms
+✓ built in 270ms
 npm notice run after-the-agent@1.1.0 build
 npm notice run npm run build:packages && npm run build --workspace @ata/web
 npm notice run after-the-agent@1.1.0 build:packages

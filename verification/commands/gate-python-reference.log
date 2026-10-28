@@ -73,6 +73,6 @@ test_one_candidate_cannot_have_two_settled_boundaries (test_suite_binding.SuiteB
 test_same_prefix_including_redundant_command_allows_different_suffixes (test_suite_binding.SuiteBindingTests.test_same_prefix_including_redundant_command_allows_different_suffixes) ... ok
 
 ----------------------------------------------------------------------
-Ran 72 tests in 0.299s
+Ran 72 tests in 0.243s
 
 OK

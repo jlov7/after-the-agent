@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "implementation_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "implementation_commit": "bb41a87d03a7f020dad15541d35423fefda81a4f",
   "evidence_class": "automated_software_verification",
   "features": [
     {
@@ -233,7 +233,7 @@
     },
     {
       "path": "evidence/ui-browser/screenshots/notebook.png",
-      "sha256": "5e89e027e4ff8b8dfbafe3cad02f0add38bf2d20693da6b3a949e177a9017016"
+      "sha256": "7026734bf2cde46afc19401e0d484a3c06b65d296fb79fffe6c744ba82d1e383"
     },
     {
       "path": "evidence/ui-browser/screenshots/gallery.png",
@@ -245,7 +245,7 @@
     },
     {
       "path": "evidence/ui-browser/screenshots/html-report.png",
-      "sha256": "3386a8e187d95c7f3ff18e2dd65c526d5df72695159acd3dea229c85a48f8cde"
+      "sha256": "a90a9605e2c0461966319a9b90167b072716442de0668baa5bb23ca4c21a0bf0"
     },
     {
       "path": "evidence/ui-browser/screenshots/capture-inspector-390-200.png",
@@ -253,7 +253,7 @@
     },
     {
       "path": "evidence/ui-browser/screenshots/offline-reopened.png",
-      "sha256": "cf3bc3bac484e93e7faebc1f20ba9183fc2e14519adc61b5030b0a216a9f7ae2"
+      "sha256": "de470c81b1a241f4b39ceb10af33b7947635259eaaeb6b7b0a40f8e779498bdb"
     }
   ],
   "offline_release_id": "dc677c0b05c296644c4de4de32218c396d222242ac3ff301ac2725e52055c322",

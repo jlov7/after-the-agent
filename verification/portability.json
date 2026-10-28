@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "implementation_commit": "b9ac341e2df4d9fab318e5857cf410bd680106a2",
+  "implementation_commit": "bb41a87d03a7f020dad15541d35423fefda81a4f",
   "evidence_class": "automated_local_software",
   "features": [
     "Packet browser inspection",
@@ -68,15 +68,15 @@
   "screenshots": [
     {
       "path": "evidence/portability/browser/packet.png",
-      "sha256": "afffe359257d729915348511d2b3d9d26fc7c7a0b042a771e603dd911377b6a1"
+      "sha256": "e7fe24b41f5a188d0747e030da74b27b203fa7298868d928122e683ad8f88653"
     },
     {
       "path": "evidence/portability/browser/notebook.png",
-      "sha256": "82803292826f227ae96d08457a0bc2efd5ad2b041640450674ddac5dfeced740"
+      "sha256": "defb792111b0b9a46f5dce20727ba82d89c1aca93d494010f393ebb7707cb5ce"
     },
     {
       "path": "evidence/portability/browser/autosave.png",
-      "sha256": "3253470930c7762efd6a849716c115e837dde8396d17c9bebc0a26d3a7215eb5"
+      "sha256": "c6b7be41da3c0e1f42b9df4e0bfbe36a8b812c06762825ee502643c7d0570e64"
     },
     {
       "path": "evidence/portability/browser/offline-audit.png",
@@ -84,7 +84,7 @@
     },
     {
       "path": "evidence/portability/browser/notebook-phone-zoom.png",
-      "sha256": "f87d4a1dafd23f1f62faf75dc32e25a533ec53ed8b177b34ef2d1b14f6511c12"
+      "sha256": "40400a930ec3ba01bec71710a28508d9238649c57033745b310f2d5f2ee86a40"
     }
   ],
   "worker_forbidden_dependencies": [],
