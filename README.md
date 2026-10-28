@@ -17,9 +17,6 @@ Ordinary access logs depend on whoever serves the page.
 
 ## Play locally
 
-The release ZIP includes a prebuilt site and a short start command in its
-`READ_ME.md`. No hosted demo is published with this package.
-
 To run from source, use Node **24.19.0** and npm **12.0.0**:
 
 ```sh
