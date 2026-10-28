@@ -10,6 +10,11 @@ collector. Human usability and
 research outcomes remain unobserved and are not claims of this release.
 Publication itself is an owner decision.
 
+The owner approved the public instrument at
+[after-the-agent.vercel.app](https://after-the-agent.vercel.app/). Its
+[hosted verification record](../verification/hosted-release.json) records the
+checked revision, live browser journeys and all hosted file hashes.
+
 ## Before uploading
 
 1. Use the prepared public source directory and its fresh Git history. Preserve
@@ -48,6 +53,15 @@ use `BASE=/`. The checked distribution uses `/after-the-agent/`. Serve the
 contents of `apps/web/dist` at the matching path and retain all worker, source
 excerpt, recording and license assets. Vite preview is a local check server.
 
+The root `vercel.json` configures the npm 12 build and serves `apps/web/dist`.
+Use Node 24.x, no environment variables and no analytics or toolbar injection.
+The offline edition checks the exact bytes of every asset, including HTML.
+The content security policy permits runtime compilation for bundled Ajv
+validators. Browser schema inputs are bundled or code-defined; uploaded files
+supply validation data. Removing that permission requires precompiled validators
+and another browser check. The service worker and release manifest revalidate
+instead of retaining a stale deployment.
+
 The manual Pages workflow verifies the source before building/deploying and
 uses the `public-release` environment. Configure any required reviewers in that
 environment before dispatching it. Do not dispatch until publication is approved.
@@ -64,6 +78,5 @@ with pinned action revisions, read-only verification permissions, no persisted
 checkout credentials and no privileged untrusted pull-request execution.
 Subpath handling follows [Vite's production build documentation](https://vite.dev/guide/build).
 
-Hosted configuration, deployment and post-deploy verification remain unobserved
-until performed against the chosen remote. Research launch, provider calls and
-recruitment are separate decisions.
+Future deployments need fresh checks against their actual URL. Research launch,
+provider calls and recruitment are separate decisions.

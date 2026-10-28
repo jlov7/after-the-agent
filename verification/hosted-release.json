@@ -1,0 +1,1053 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-28T16:55:31.593Z",
+  "url": "https://after-the-agent.vercel.app/",
+  "browser_verified_commit": "43764f279512d0ce973cc3a93cf193012e2e5a65",
+  "deployment_id": "dpl_BEZUwyFBVhpk1CJx5qBdrZyCJFcU",
+  "local_gate": {
+    "commit": "bb41a87d03a7f020dad15541d35423fefda81a4f",
+    "commands": 22,
+    "tests_passed": 592,
+    "status": "passed",
+    "evidence": "product-verification.json"
+  },
+  "hosted_browser": {
+    "status": "passed",
+    "passed": 36,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "assertion_timeout_ms": 30000,
+    "reason_for_hosted_timeout": "Real network download of the offline edition exceeded the five-second local assertion wait. Integrity and behavior assertions are unchanged.",
+    "tests": [
+      {
+        "title": "plain repair feedback and distinct progress/evidence files at 1440px",
+        "file": "clarity.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 2045
+          }
+        ]
+      },
+      {
+        "title": "plain repair feedback and distinct progress/evidence files at 390px",
+        "file": "clarity.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 1836
+          }
+        ]
+      },
+      {
+        "title": "plain repair feedback and distinct progress/evidence files at 1440px",
+        "file": "clarity.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 2486
+          }
+        ]
+      },
+      {
+        "title": "plain repair feedback and distinct progress/evidence files at 390px",
+        "file": "clarity.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 2189
+          }
+        ]
+      },
+      {
+        "title": "plain repair feedback and distinct progress/evidence files at 1440px",
+        "file": "clarity.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 2325
+          }
+        ]
+      },
+      {
+        "title": "plain repair feedback and distinct progress/evidence files at 390px",
+        "file": "clarity.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 1915
+          }
+        ]
+      },
+      {
+        "title": "actual genuine default replays unchanged calls and separates the controller fault, then reproduces failed and repaired checks",
+        "file": "genuine-recording.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 2508
+          }
+        ]
+      },
+      {
+        "title": "genuine source-bound resume preserves the original deadline and cannot accept a changed source",
+        "file": "genuine-recording.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 1825
+          }
+        ]
+      },
+      {
+        "title": "public gallery qualifies the actual genuine content and keeps the fixture distinct",
+        "file": "genuine-recording.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 1851
+          }
+        ]
+      },
+      {
+        "title": "actual genuine default replays unchanged calls and separates the controller fault, then reproduces failed and repaired checks",
+        "file": "genuine-recording.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 2435
+          }
+        ]
+      },
+      {
+        "title": "genuine source-bound resume preserves the original deadline and cannot accept a changed source",
+        "file": "genuine-recording.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 2216
+          }
+        ]
+      },
+      {
+        "title": "public gallery qualifies the actual genuine content and keeps the fixture distinct",
+        "file": "genuine-recording.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 1817
+          }
+        ]
+      },
+      {
+        "title": "actual genuine default replays unchanged calls and separates the controller fault, then reproduces failed and repaired checks",
+        "file": "genuine-recording.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 2517
+          }
+        ]
+      },
+      {
+        "title": "genuine source-bound resume preserves the original deadline and cannot accept a changed source",
+        "file": "genuine-recording.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 1797
+          }
+        ]
+      },
+      {
+        "title": "public gallery qualifies the actual genuine content and keeps the fixture distinct",
+        "file": "genuine-recording.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 2351
+          }
+        ]
+      },
+      {
+        "title": "offline installation waits for selected source and editing ownership before accepting its first click",
+        "file": "v1-offline-repair.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 6086
+          }
+        ]
+      },
+      {
+        "title": "explicit offline repair restores an evicted cache and preserves autosave and notebook bytes",
+        "file": "v1-offline-repair.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 11572
+          }
+        ]
+      },
+      {
+        "title": "offline installation waits for selected source and editing ownership before accepting its first click",
+        "file": "v1-offline-repair.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 7997
+          }
+        ]
+      },
+      {
+        "title": "explicit offline repair restores an evicted cache and preserves autosave and notebook bytes",
+        "file": "v1-offline-repair.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 13254
+          }
+        ]
+      },
+      {
+        "title": "offline installation waits for selected source and editing ownership before accepting its first click",
+        "file": "v1-offline-repair.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 5727
+          }
+        ]
+      },
+      {
+        "title": "explicit offline repair restores an evicted cache and preserves autosave and notebook bytes",
+        "file": "v1-offline-repair.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 12168
+          }
+        ]
+      },
+      {
+        "title": "all three faults, retained results, restoration and packet inspection at 1440px",
+        "file": "v1-release.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 4854
+          }
+        ]
+      },
+      {
+        "title": "all three faults, retained results, restoration and packet inspection at 390px",
+        "file": "v1-release.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 5318
+          }
+        ]
+      },
+      {
+        "title": "all three faults, retained results, restoration and packet inspection at 320px",
+        "file": "v1-release.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 4733
+          }
+        ]
+      },
+      {
+        "title": "keyboard repair, settings navigation and focused controls remain usable at 320px, 200% zoom and reduced motion",
+        "file": "v1-release.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 1569
+          }
+        ]
+      },
+      {
+        "title": "phone pointer focus does not move a clock checkbox between press and release",
+        "file": "v1-release.spec.ts",
+        "browser": "chromium",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 964
+          }
+        ]
+      },
+      {
+        "title": "all three faults, retained results, restoration and packet inspection at 1440px",
+        "file": "v1-release.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 5941
+          }
+        ]
+      },
+      {
+        "title": "all three faults, retained results, restoration and packet inspection at 390px",
+        "file": "v1-release.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 5896
+          }
+        ]
+      },
+      {
+        "title": "all three faults, retained results, restoration and packet inspection at 320px",
+        "file": "v1-release.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 6158
+          }
+        ]
+      },
+      {
+        "title": "keyboard repair, settings navigation and focused controls remain usable at 320px, 200% zoom and reduced motion",
+        "file": "v1-release.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 2017
+          }
+        ]
+      },
+      {
+        "title": "phone pointer focus does not move a clock checkbox between press and release",
+        "file": "v1-release.spec.ts",
+        "browser": "firefox",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 992
+          }
+        ]
+      },
+      {
+        "title": "all three faults, retained results, restoration and packet inspection at 1440px",
+        "file": "v1-release.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 6413
+          }
+        ]
+      },
+      {
+        "title": "all three faults, retained results, restoration and packet inspection at 390px",
+        "file": "v1-release.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 6015
+          }
+        ]
+      },
+      {
+        "title": "all three faults, retained results, restoration and packet inspection at 320px",
+        "file": "v1-release.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 7132
+          }
+        ]
+      },
+      {
+        "title": "keyboard repair, settings navigation and focused controls remain usable at 320px, 200% zoom and reduced motion",
+        "file": "v1-release.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 1857
+          }
+        ]
+      },
+      {
+        "title": "phone pointer focus does not move a clock checkbox between press and release",
+        "file": "v1-release.spec.ts",
+        "browser": "webkit",
+        "results": [
+          {
+            "status": "passed",
+            "duration_ms": 1114
+          }
+        ]
+      }
+    ]
+  },
+  "hosted_files": {
+    "status": "passed",
+    "checked_at": "2026-10-28T16:54:14.220Z",
+    "url": "https://after-the-agent.vercel.app/",
+    "release_id": "59ece9df2e5a90e16411bf050d46e505300f71a9c01af04c3841696304fb4fde",
+    "files": [
+      {
+        "path": "annotations-worker-dependency-inventory.json",
+        "status": 200,
+        "bytes": 7240,
+        "sha256": "4f0646244538d995904716a1bd8008ffd9ddb02c52ccf80161091fafee99058d",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/annotations.worker-Z2NoEQGw.js",
+        "status": 200,
+        "bytes": 271907,
+        "sha256": "5e268941679dda75c4559f1ba3a05495e24a407dceb201a53fbdd1206842ebfc",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/AttemptNotebook-6nApxDGB.css",
+        "status": 200,
+        "bytes": 1178,
+        "sha256": "9d24d5483384845dc21aba1f30e839e9745c664a1635849a957d5ae588d86193",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/AttemptNotebook-Balaoba9.js",
+        "status": 200,
+        "bytes": 14412,
+        "sha256": "c81c21bf3038963a3894d5d2f1be17f7d05fb4162fb009b2ee2c56ca2f5f8149",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/backup.worker-D20aNzLY.js",
+        "status": 200,
+        "bytes": 254851,
+        "sha256": "2fd11bc4216c5eab14336307a1bf2aad29133ee7278cc9342d64a5cff2cc9f8a",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/CaptureRunInspector-CvVQo7Pk.css",
+        "status": 200,
+        "bytes": 715,
+        "sha256": "b04b661f1fec160ca7fff880087eece4b1e6bb1a79594e76999be278fa214f4a",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/CaptureRunInspector-D5DnrIKT.js",
+        "status": 200,
+        "bytes": 6458,
+        "sha256": "11744d3083081a1d0aa4da2569514c02fc0b9e27b4846763f8ed6031aeadd978",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/client-Cj32_eor.js",
+        "status": 200,
+        "bytes": 7846,
+        "sha256": "3cbdc5ad1d91e0ff541b99590f07d04ff61102ae0ab2e607f21bf9373a9e6fb2",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/continuation.worker-CNAXfoXr.js",
+        "status": 200,
+        "bytes": 254110,
+        "sha256": "4d28db5b0689d2e50b04e6d33bdd3f68b066fba979c5d9158f52ef05b15b7b7e",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/curated-DTGrUw2U.js",
+        "status": 200,
+        "bytes": 3723,
+        "sha256": "21bdd8fcba3686eba981920cb2b1b1ecad8a543658daca1bc059d8b1988027f9",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/diagnostic-BnKj2p2B.js",
+        "status": 200,
+        "bytes": 2012,
+        "sha256": "90a24970c67de59ff7e2c6433d8f2d84804085088c2ad5d170f4f9864fc777d2",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/engine-C-9hByQb.js",
+        "status": 200,
+        "bytes": 8331,
+        "sha256": "df18a43b448aba1825710fd39921679b044d3230f0c3bd5c5dff0a43aa06a048",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/evaluate-browser-CkUZtrGu.js",
+        "status": 200,
+        "bytes": 4171,
+        "sha256": "50b157ce79e3f8e87de7c11d928b7024fe50ebadeb9ac34713ae249378421b34",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/evaluation.worker-BZylw9U3.js",
+        "status": 200,
+        "bytes": 166902,
+        "sha256": "7e9243d877f2868cc3d3972ee21736101b073572cc3d5a02abc4741ae4025295",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/evidence-report-pqM57--g.js",
+        "status": 200,
+        "bytes": 4628,
+        "sha256": "6d37f8ed0e3861324de4444ef8c6c9f896df2505baaf29e0d473038050890f2b",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/EvidencePanel-Cqj7PuD6.js",
+        "status": 200,
+        "bytes": 3870,
+        "sha256": "457aea0f09ac705c88ca8b21b39c41238dd81d980b1832752c979fcc2d19b534",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/gallery-zDmRshus.js",
+        "status": 200,
+        "bytes": 2012,
+        "sha256": "20b918d6171e9d759da24a8c2663b215ca4f16f2d267e53ff2f4dac720d4a53d",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/index-D194S0kU.css",
+        "status": 200,
+        "bytes": 21324,
+        "sha256": "22f20172aa738e80ff150143ec3ad4303ef9851acc2868ba19edc124c969a936",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/index-oONNRW3L.js",
+        "status": 200,
+        "bytes": 441439,
+        "sha256": "eecae1893e6c8ac80ac23d9928ce64ac851599a1046b4131bfdaea6ff37d55e4",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/inspection.worker-C9v9GgSU.js",
+        "status": 200,
+        "bytes": 256206,
+        "sha256": "2d15696124397e108c2a136fbea2b05b1718e7fe262d9e09ae4fb65d09faef3f",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/InspectionPanel-B7tzAwNc.css",
+        "status": 200,
+        "bytes": 2512,
+        "sha256": "b6d5e76e3dc899224770f6dfb14736390b4d781057611abffe42dbb0bbfd3f1b",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/InspectionPanel-DV7m2uBy.js",
+        "status": 200,
+        "bytes": 14967,
+        "sha256": "57c5feaae062c3fa9a76e5d175990436c307440ccbd26ffa3a7ca715d38d0391",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/inspector-7Cj8yDUU.js",
+        "status": 200,
+        "bytes": 1504,
+        "sha256": "f14d1b020248d357abbc41fd49dc984bdd6cbabe6210ed5d5797f85350e2dd7c",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/jsx-runtime-DOKszBjJ.js",
+        "status": 200,
+        "bytes": 8230,
+        "sha256": "12cf0146f84ca6d36e4a31f4251e33c6a53ba64aa56101b8d94d63963ff1d865",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/LearningLab-C2B5kto5.js",
+        "status": 200,
+        "bytes": 6162,
+        "sha256": "9e4dd775ee1b8cc9e8d6492c71e8612ee3b56097442a6f41de229009a98cecca",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/LearningLab-TnphN-My.css",
+        "status": 200,
+        "bytes": 883,
+        "sha256": "47f8c1014f7bb9c38c4fb886a07d6d670ca5ef38ff325595d0b1aefeacc13308",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/manifest-BpkgelBE.js",
+        "status": 200,
+        "bytes": 1747,
+        "sha256": "5f2eca448d213ebb5fd7b800ceb899962559e7a5c13c3f2c0ef9deaffaf08694",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/protocol-DFwdxoTZ.js",
+        "status": 200,
+        "bytes": 1300,
+        "sha256": "4635bcf7b2a40264babfe5228a8bc3f501d4ad526399e0b8fe7a3099f6d87d30",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/receipt-C-ARTbpZ.js",
+        "status": 200,
+        "bytes": 1870,
+        "sha256": "64afa361eeac27d7ec6e7b261326218549cfc39e9aaa09d1c9f4a652b72653aa",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/recording-schema-Crv3w8Kg.js",
+        "status": 200,
+        "bytes": 5240,
+        "sha256": "61f86242783b69474ba974f56a8814e18d416e8e3de9dfb60cdc3b4f912a428d",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/RecordingGallery-CQqfXltg.css",
+        "status": 200,
+        "bytes": 891,
+        "sha256": "1a6144c0110f5862c8245c157e3866b10489ba08fcbbb9a7ccec234efd6a5292",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/RecordingGallery-DjwyCEyZ.js",
+        "status": 200,
+        "bytes": 2400,
+        "sha256": "0675fb114127d286407bf8770011a6014600ac62fd4918a657c25c7cdf4f0f30",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/reference-port-hobI1bfN.js",
+        "status": 200,
+        "bytes": 3186,
+        "sha256": "9a5c21d6e12cb63d3683312ee309cf1ae6753ab39370249d8ac8fe62e146aabf",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/repair.worker-aTRZKCmx.js",
+        "status": 200,
+        "bytes": 262584,
+        "sha256": "ebc9c18c2958f3673f76d28d7acb32cb801246c10499f39eae2ab3461aaee7b7",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/RepairLab-Bs4ezOzY.css",
+        "status": 200,
+        "bytes": 814,
+        "sha256": "1675183ab2e2c327482bb9835f371c13e057dfca914d6bdcf63ac7ed7eaa7847",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/RepairLab-CqHwNkXm.js",
+        "status": 200,
+        "bytes": 7266,
+        "sha256": "f752fd1fdff36e5d1a14987ed3d3d488463c0192944a5c5c20ca6770800d1ca0",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/replay.worker-Av3bxlyC.js",
+        "status": 200,
+        "bytes": 287619,
+        "sha256": "c64c6bf087250130a768a0929cca217b96faacd6b87866568800783b7466a42d",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/ReplayViewer-2QfikaGo.js",
+        "status": 200,
+        "bytes": 16885,
+        "sha256": "1e8f8508f04c1bfceb1885732966859e425c7331a8096eae936ac397ac856ff0",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/ReplayViewer-CXCYJ_p0.css",
+        "status": 200,
+        "bytes": 1419,
+        "sha256": "067c1765eb01236c9bbee2563b0bdddc509e886008038e7a33c09cd4ef8be696",
+        "content_type": "text/css; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/src-D8qxA5nX.js",
+        "status": 200,
+        "bytes": 147250,
+        "sha256": "93c92a5bdbda3acd107ce035617102ffbfedf1416f9a6e54b0708dfbf0bb3abe",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "assets/Study-0j3YPe43.js",
+        "status": 200,
+        "bytes": 7228,
+        "sha256": "4118e5d509029a007d27ce993da5aabc3420eac98e6c8f5a099775bb22901d01",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "continuation-worker-dependency-inventory.json",
+        "status": 200,
+        "bytes": 7006,
+        "sha256": "eaa52bfaed159468c265564efeefbdb9046add20b28802ab811f7b325f7c9184",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "dependency-inventory.json",
+        "status": 200,
+        "bytes": 11520,
+        "sha256": "ca43e3e7a0e1a775f906b70e436257f7926282cf339229e2b8ef9815aa31eaa0",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "docs/engine-and-contracts.txt",
+        "status": 200,
+        "bytes": 17702,
+        "sha256": "afa63ef8639fed58e23b31a7edf36344c3cd6312225b5a76c94f9956b66d5954",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "docs/product-spec.txt",
+        "status": 200,
+        "bytes": 11822,
+        "sha256": "0d20022a083a55d0a2b381005b9bcc365929f2b40b1d3209bf78aa2d7ad59344",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "docs/research-protocol.txt",
+        "status": 200,
+        "bytes": 22195,
+        "sha256": "5327c740e874889648e985f1602eb22ce2ccbff0c8e2a996a7d6b0ab4e3dde6d",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "docs/source-map.html",
+        "status": 200,
+        "bytes": 1223,
+        "sha256": "157bd4f05576139c27056add812bdbf449b31e4b71ab52b3654fdadc4089d50f",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "docs/source-map.txt",
+        "status": 200,
+        "bytes": 770,
+        "sha256": "49bee466b5f4621a1e148f252d82549d97731a0c155b4597868ab0229f6f6503",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "icons/icon-192.png",
+        "status": 200,
+        "bytes": 3966,
+        "sha256": "603105e74badc2b3f74e8aae0af4d03c7432750fe04c798cf9428d1ba6419b2a",
+        "content_type": "image/png",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "icons/icon-512.png",
+        "status": 200,
+        "bytes": 13691,
+        "sha256": "486653f1a82f1f5a6c6995cadc4d727f672f38f8fbe97b5184d8c9003ce671ff",
+        "content_type": "image/png",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "bytes": 1013,
+        "sha256": "d3894d72c09bf8df5153a46b23b731da9efb9aa27cb78e0e50cfeec5e7e0b104",
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "lab-worker-dependency-inventory.json",
+        "status": 200,
+        "bytes": 7191,
+        "sha256": "00c2119edef7d61dd3d4b6657c6100a47015f6a1a8917cd571ca8b16d0c3bee1",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "LICENSE.txt",
+        "status": 200,
+        "bytes": 1085,
+        "sha256": "85c0b4254d946bd7086f973bf4d1912c94e220d7df50f7235ba336cd10e4e9d2",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "manifest.webmanifest",
+        "status": 200,
+        "bytes": 519,
+        "sha256": "7e3d488892eb484322de8adf78dea915ff2c5a3d3a70a1ae9d6df77c0e53fbe4",
+        "content_type": "application/manifest+json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "notebook-worker-dependency-inventory.json",
+        "status": 200,
+        "bytes": 7280,
+        "sha256": "8557eacbed443dc0e7843e72eed1d7e098b87f44a545d45d6a53cf8d1b2b3c9b",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "recording-worker-dependency-inventory.json",
+        "status": 200,
+        "bytes": 7095,
+        "sha256": "4e7e9fcec6dd6466455b586e1968a56e9379c245da1eeb9e5e5ff910c4b34f31",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "recordings/curated/codex-2026-10-20-001-qualification.json",
+        "status": 200,
+        "bytes": 32959,
+        "sha256": "6b02826213607f4303a86a74597631bbaad8ceaf4f1592679322e06f5cabec72",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "recordings/curated/codex-2026-10-20-001.json",
+        "status": 200,
+        "bytes": 9685,
+        "sha256": "918d85ee5ebf68c1af4fa3f2d1e9be49d11f5c08fd932cc35fb80d50f4690310",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "recordings/curated/codex-2026-10-26-001-qualification.json",
+        "status": 200,
+        "bytes": 32960,
+        "sha256": "bf5058428b1366988f18958987b322ff1dcaebaab76ad2ef33daeaeaf457b62e",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "recordings/curated/codex-2026-10-26-001.json",
+        "status": 200,
+        "bytes": 18394,
+        "sha256": "9af8adac33ce0bfbd0a1ee30225825debfabe5a981f897ad10ebd000f0e5a292",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "recordings/fixtures/behavior-fixture.json",
+        "status": 200,
+        "bytes": 32959,
+        "sha256": "180822967bfd0b26408e6da4670b5a60482546fd347145e2525678a4d64b4fee",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "recordings/fixtures/manifest-fixture.json",
+        "status": 200,
+        "bytes": 448,
+        "sha256": "db5124fbaf65509359671cd94d64542394fa00c8b4594d2a11737550fb43f40c",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "recordings/fixtures/recording-fixture.json",
+        "status": 200,
+        "bytes": 13282,
+        "sha256": "6eeb0ae954189ae0b14b22730f4173e112d5b0e83a38c529b7fc44ebba6bd5e6",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "recordings/gallery.json",
+        "status": 200,
+        "bytes": 2358,
+        "sha256": "a14b608c5a5e6f0edcd1dc82207cfa04bdabce5b267df310d8d3e62c5391539d",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "recordings/manifest.json",
+        "status": 200,
+        "bytes": 474,
+        "sha256": "e1d5bc0a3e5a8faacda215242c723595f739af6c6f9ee0701bbb179688efadb9",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "replay-worker-dependency-inventory.json",
+        "status": 200,
+        "bytes": 7322,
+        "sha256": "091c6e7dad671a0aef9b55dad9bcad4c6ba32a9e90496ebf30943f5f3d17cbe0",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "source/App.tsx.txt",
+        "status": 200,
+        "bytes": 48057,
+        "sha256": "4c48be6bef9529756591b066382f4843e4355f60d02e005ffb5e09814acf2790",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "source/curated.ts.txt",
+        "status": 200,
+        "bytes": 6632,
+        "sha256": "f3385d204b8305590d26634ab11d25bd3be7d5fd5ca887cc1bee51218d1addab",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "source/engine.ts.txt",
+        "status": 200,
+        "bytes": 14940,
+        "sha256": "64af2619ee064a04a49cab09c97c394a47cb197c6b52b1f68145ac62c22c07b4",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "source/evaluation-core.ts.txt",
+        "status": 200,
+        "bytes": 2865,
+        "sha256": "1ad7d6f961a0ad0c1d258d132eb747a0b10a925d1a0bbd8c133d2ad4a1bbc408",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "source/reference-port.ts.txt",
+        "status": 200,
+        "bytes": 6175,
+        "sha256": "febb4ec18ee29ec72caa1dba5ee7bfb70f566c20812f2ab7c4cbaaf53a5122dc",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "source/session.ts.txt",
+        "status": 200,
+        "bytes": 37823,
+        "sha256": "a883a8a980d327a41dfb6ca996ec7ce89c7c444cf60c2806b25e4b106c9476ba",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.txt",
+        "status": 200,
+        "bytes": 10774,
+        "sha256": "640cdf6504db797c0fe00cca160cc2269feb253205d88b1dbb275aa640a3b625",
+        "content_type": "text/plain; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "third-party-inventory.json",
+        "status": 200,
+        "bytes": 1669,
+        "sha256": "c710a7714af978b97838f14d4d0e4576503d6d9798c44398950c220139653a4f",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "worker-dependency-inventory.json",
+        "status": 200,
+        "bytes": 6120,
+        "sha256": "8c9a9411eb401b4e778b1239fd3ce6603ef7dd8a1010808cbb380b29dac1b54c",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "sw.js",
+        "status": 200,
+        "bytes": 18629,
+        "sha256": "13065351f48f2c97adc235b53b1a425431a2daa3233d356ea15c673e9eaf5588",
+        "content_type": "application/javascript; charset=utf-8",
+        "cache_control": "no-cache"
+      },
+      {
+        "path": "release-manifest.json",
+        "status": 200,
+        "bytes": 12680,
+        "sha256": "b043f9f0b31be60c35852b6033352f80137e26d2d098774d40b90cf04af57c80",
+        "content_type": "application/json; charset=utf-8",
+        "cache_control": "no-cache"
+      }
+    ],
+    "missing_asset_status": 404
+  },
+  "resolved_launch_issue": "The first hosting policy blocked bundled Ajv schema compilation. The corrected policy permits that compilation while retaining same-origin script and connection restrictions. All browser schema inputs are bundled or code-defined.",
+  "boundaries": {
+    "human_observation": "not_run",
+    "research_collection": "disabled",
+    "live_model_calls_by_visitors": false,
+    "github_actions": "disabled"
+  }
+}

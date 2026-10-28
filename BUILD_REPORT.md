@@ -8,6 +8,15 @@ change was tested. [Portable command evidence](verification/product-verification
 records actual exits and runtime/dependency versions. Raw machine-specific logs
 remain local.
 
+The [hosted instrument](https://after-the-agent.vercel.app/) was verified on
+28 October 2026 at `43764f279512d0ce973cc3a93cf193012e2e5a65`. All 36 live
+Chromium, Firefox and WebKit checks passed, including all three faults, phone
+and keyboard use, saved-attempt restoration and offline cache repair. All 77
+hosted files matched the local root-domain build byte for byte. The
+[hosted verification record](verification/hosted-release.json) retains the
+individual checks, file hashes and corrected hosting-policy issue. Application
+code and dependencies are unchanged from the full local gate above.
+
 | Suite | Passed | Failed | Skipped |
 | --- | ---: | ---: | ---: |
 | contract | 24 | 0 | 0 |
@@ -58,15 +67,15 @@ V1 adds replay-validated stale-restore rejection, ownership-race protection, ver
 | Genuine assessed-model recording | Passed: one observed, unchanged, replayed and qualified subscription run |
 | Human usability | Unobserved; automated interaction is software evidence |
 | Research | Collection disabled; synthetic rehearsal only, no study launched |
-| Hosted CI and deployment | Not run |
+| Vercel build and deployment | Passed; 36 live browser checks and 77 matching hosted files |
+| GitHub Actions | Disabled; the full verification gate ran locally |
 
 The MIT license covers the source. The build emits exact bundled dependency
 licenses. The default genuine recording replays locally. Public play sends no research events or
 participant text to a server/model. Browser scores and hashes are local
 consistency evidence, not authoritative research receipts or provider provenance.
 
-The known limits are unmeasured first-use conceptual difficulty and learning benefit,
-unobserved unfamiliar-human/assistive-technology use and unobserved hosted
-configuration. Research service/review/sample/budget decisions
-and recruitment are separate work. No public release action was performed by
-this local verification. Follow [publication steps](docs/PUBLICATION.md) when approved.
+The known limits are unmeasured first-use conceptual difficulty and learning
+benefit, and unobserved unfamiliar-human/assistive-technology use. Research
+service/review/sample/budget decisions and recruitment are separate work.
+See [publication steps](docs/PUBLICATION.md) for the deployment procedure.
