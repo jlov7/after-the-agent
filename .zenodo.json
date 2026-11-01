@@ -1,0 +1,27 @@
+{
+  "title": "After the Agent",
+  "upload_type": "software",
+  "version": "1.1.0",
+  "description": "<p>After the Agent is an experimental browser instrument for repairing inherited configuration and queued work in a simulated light installation. A deterministic engine supports browser interaction, a local Model Context Protocol server and a headless runner. An independent Python oracle checks repairs against twelve fixed future scenarios.</p><p>The source includes a retained model setup demonstration, separately labelled authored fixtures and reproducible software checks. Human usability, recovery benefit, learning effects and transfer to production systems have not been established. Research collection is disabled.</p>",
+  "creators": [
+    {
+      "name": "Lovell, Jason Mark",
+      "orcid": "0009-0001-6300-9155"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "human-agent interaction",
+    "system recovery",
+    "deterministic simulation",
+    "Model Context Protocol"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/jlov7/after-the-agent",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

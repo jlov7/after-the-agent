@@ -79,4 +79,5 @@ The acceptance gate exercises the actual selected default in a production
 browser, distinguishes the fixture, reproduces failed and repaired exports
 with Python, and checks source-bound resume and the original deadline. It
 never makes another model request. Human usability remains unobserved.
-Research collection remains disabled. Hosted CI and deployment have not run.
+Research collection remains disabled. Hosted checks are recorded separately in
+[BUILD_REPORT.md](../BUILD_REPORT.md).
