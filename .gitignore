@@ -11,3 +11,4 @@ releases/
 .env*
 .agent/local/
 evidence/
+/apps/web/public/incident-replay/

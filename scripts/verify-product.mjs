@@ -93,6 +93,7 @@ try {
   if (git(['diff', '--', 'packages/contracts/src/generated']) !== '') throw new Error('Generated canonical contracts differ from committed source');
   run('typecheck', 'npm', ['run', 'typecheck']);
   run('lint', 'npm', ['run', 'lint']);
+  run('incident-replay', 'npm', ['run', 'test:incident-replay']);
   for (const name of testNames) {
     const report = `evidence/gate-${name}-tests.json`;
     run(name, 'npm', ['run', `test:${name}`, '--', '--reporter=json', `--outputFile=${report}`], { kind: 'vitest', report, timeout: 240000 });

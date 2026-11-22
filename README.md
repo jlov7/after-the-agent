@@ -6,6 +6,18 @@ its pattern while keeping legitimate work intact.
 
 [Play in your browser](https://after-the-agent.vercel.app/)
 
+## Try the incident replay
+
+Choose what to do after a stock reservation times out, then see what the ledger
+actually stored. During local development, select **Try the incident replay** on
+the landing page. The replay is synthetic and keeps decisions in the browser.
+
+Run `node scripts/incident-replay.mjs` to regenerate the five traces and their
+decision verdicts directly from SQLite. Add `--html /path/to/replay.html` for
+an offline, standalone player. `npm run test:incident-replay` checks the traces,
+scoring and generated views. See the [pilot protocol](incident-replay/PILOT.md)
+for the proposed human comparison.
+
 Changing a setting can leave the old work in flight. Here you can see that work
 in the queue, follow it to an output, and check whether your repair survives
 future changes. The same deterministic engine also runs through a local MCP

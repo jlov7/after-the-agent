@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "generate:incident-replay": "node ../../scripts/incident-replay.mjs --site public/incident-replay",
+    "predev": "npm run generate:incident-replay",
+    "prebuild": "npm run generate:incident-replay",
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1"

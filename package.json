@@ -20,6 +20,7 @@
     "lint": "eslint .",
     "test:contract": "vitest run tests/contract",
     "test:engine": "vitest run tests/engine",
+    "test:incident-replay": "node --test scripts/incident-replay.test.mjs",
     "test:oracle": "npm run build:packages && vitest run tests/oracle",
     "test:replay": "vitest run tests/replay",
     "test:mcp": "npm run build:packages && vitest run tests/mcp",
