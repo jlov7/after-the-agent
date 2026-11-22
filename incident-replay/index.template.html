@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Incident replay | After the Agent</title>
+  <style>/* REPLAY_STYLES */</style>
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <a href="https://after-the-agent.vercel.app/">After the Agent</a>
+      <span>Practice simulation</span>
+    </header>
+    <section class="intro" aria-labelledby="title">
+      <h1 id="title">Would you retry?</h1>
+      <p>An agent tried to reserve stock. Its reply never arrived. Take over the run and decide what to do next.</p>
+    </section>
+    <nav aria-label="Replay cases" class="cases" id="cases"></nav>
+    <article class="workspace" aria-labelledby="case-heading">
+      <div class="panel evidence">
+        <p class="eyebrow" id="case-number"></p>
+        <h2 id="case-heading" tabindex="-1" aria-describedby="case-number">Reservation timed out</h2>
+        <p id="request"></p>
+        <dl class="trace">
+          <dt>Agent summary</dt><dd>Reservation failed. Retry suggested.</dd>
+          <dt>Observed trace</dt><dd id="trace"></dd>
+          <dt>Provider record</dt><dd id="provider" role="status">Unchecked</dd>
+        </dl>
+        <button id="check" class="secondary" type="button">Check provider record</button>
+      </div>
+      <div class="panel decision">
+        <h2>Choose the next action</h2>
+        <p>Retry sends a new write for the originally approved quantity.</p>
+        <div class="actions" aria-label="Actions">
+          <button data-action="retry" type="button">Retry the reservation</button>
+          <button data-action="reconcile" type="button">Confirm the existing reservation</button>
+          <button data-action="hold" type="button">Hold for review</button>
+        </div>
+      </div>
+      <section class="panel outcome" id="outcome" aria-labelledby="outcome-heading" hidden>
+        <p class="eyebrow" id="outcome-type"></p>
+        <h2 id="outcome-heading" tabindex="-1" aria-describedby="outcome-type"></h2>
+        <p id="reason"></p>
+        <dl class="counts">
+          <div><dt>Ledger before your action</dt><dd id="before"></dd></div>
+          <div><dt>Ledger after your action</dt><dd id="after"></dd></div>
+          <div id="retry-comparison"><dt>If you had retried</dt><dd id="retry-effect"></dd></div>
+        </dl>
+        <button type="button" id="next" class="secondary">Try the next case</button>
+      </section>
+    </article>
+    <noscript>Enable JavaScript to play the replay. It runs offline.</noscript>
+    <footer>Fictional inventory. This file contains the SQLite fixture results and reveals them when you choose.</footer>
+  </main>
+  <script type="application/json" id="replay-data">/* REPLAY_DATA */</script>
+  <script>/* REPLAY_PLAYER */</script>
+</body>
+</html>
